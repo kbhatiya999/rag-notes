@@ -17,4 +17,4 @@ Open browser: `http://127.0.0.1:8000`
 
 Stop server: `Ctrl + C`
 
-Next: **Upload to GitHub**
+Next: [Upload to GitHub](github.md)

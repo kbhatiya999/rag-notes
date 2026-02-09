@@ -14,4 +14,4 @@ For future changes:
 git add . && git commit -m "Update" && git push
 ```
 
-Next: **Deploy to GitHub Pages**
+Next: [Deploy to GitHub Pages](github-pages.md)
