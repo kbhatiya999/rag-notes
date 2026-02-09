@@ -397,24 +397,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deploy to GitHub Pages
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -431,69 +413,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-deploy-your-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Deploy your site
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-visit-your-website" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Visit your website
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-update-your-website" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to update your website
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -527,58 +446,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-deploy-your-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Deploy your site
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-visit-your-website" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Visit your website
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-update-your-website" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to update your website
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -598,33 +465,14 @@
 
 
 <h1 id="deploy-to-github-pages">Deploy to GitHub Pages</h1>
-<p>Turn your notes into a real website that anyone can visit. It's free!</p>
-<h2 id="step-1-deploy-your-site">Step 1: Deploy your site</h2>
-<p>Run this one command:</p>
+<p>Deploy your site:</p>
 <pre><code class="language-bash">uv run mkdocs gh-deploy
 </code></pre>
-<p>That's it! Wait 2-3 minutes.</p>
-<h2 id="step-2-visit-your-website">Step 2: Visit your website</h2>
-<p>Your website is now live at:</p>
-<pre><code>https://YOUR-USERNAME.github.io/my-notes/
+<p>This builds your site and uploads it to GitHub. Wait 2-3 minutes.</p>
+<p>Your site is live at: <code>https://YOUR-USERNAME.github.io/rag-notes/</code></p>
+<p>To update after changes:</p>
+<pre><code class="language-bash">git add . &amp;&amp; git commit -m &quot;Update&quot; &amp;&amp; git push &amp;&amp; uv run mkdocs gh-deploy
 </code></pre>
-<p>Replace <code>YOUR-USERNAME</code> with your GitHub username.</p>
-<h2 id="how-to-update-your-website">How to update your website</h2>
-<p>After making changes to your notes:</p>
-<pre><code class="language-bash">git add .
-git commit -m &quot;Updated notes&quot;
-git push
-uv run mkdocs gh-deploy
-</code></pre>
-<p>Your website will update in a few minutes.</p>
-<h2 id="summary">Summary</h2>
-<p>You now have:</p>
-<ol>
-<li><strong>A notes folder</strong> - Write text files in the <code>docs</code> folder</li>
-<li><strong>A backup on GitHub</strong> - Your files are saved online</li>
-<li><strong>A live website</strong> - Anyone can read your notes</li>
-</ol>
-<p>Just write, save, and deploy. That's all there is to it!</p>
 
 
 

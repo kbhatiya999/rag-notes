@@ -371,24 +371,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Upload to GitHub
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -405,80 +387,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-save-your-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Save your work
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-github-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Create a GitHub repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-check-it-worked" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Check it worked
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-save-future-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to save future changes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What's next?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -540,69 +448,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-save-your-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Save your work
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-create-a-github-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Create a GitHub repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-check-it-worked" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Check it worked
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-save-future-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to save future changes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What's next?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -622,32 +467,15 @@
 
 
 <h1 id="upload-to-github">Upload to GitHub</h1>
-<p>GitHub is a website that stores your files online for free. We'll put your notes there.</p>
-<h2 id="step-1-save-your-work">Step 1: Save your work</h2>
-<p>First, save all your files:</p>
+<p>Save and upload your project:</p>
 <pre><code class="language-bash">git add .
+git commit -m &quot;Initial commit&quot;
+gh repo create rag-notes --source=. --remote=origin --push --public
 </code></pre>
-<p>Then create a save point (called a "commit"):</p>
-<pre><code class="language-bash">git commit -m &quot;My first save&quot;
+<p>For future changes:</p>
+<pre><code class="language-bash">git add . &amp;&amp; git commit -m &quot;Update&quot; &amp;&amp; git push
 </code></pre>
-<h2 id="step-2-create-a-github-repository">Step 2: Create a GitHub repository</h2>
-<p>This command does everything for you - creates a place on GitHub and uploads your files:</p>
-<pre><code class="language-bash">gh repo create my-notes --source=. --remote=origin --push --public
-</code></pre>
-<p><strong>Want it private?</strong> Change <code>--public</code> to <code>--private</code></p>
-<h2 id="step-3-check-it-worked">Step 3: Check it worked</h2>
-<pre><code class="language-bash">git remote -v
-</code></pre>
-<p>You should see a GitHub URL. Your files are now on GitHub!</p>
-<h2 id="how-to-save-future-changes">How to save future changes</h2>
-<p>Whenever you update your notes, run these commands:</p>
-<pre><code class="language-bash">git add .
-git commit -m &quot;Updated my notes&quot;
-git push
-</code></pre>
-<p>That's it! Your changes are saved online.</p>
-<h2 id="whats-next">What's next?</h2>
-<p>Your files are on GitHub. Now let's make them into a live website - go to <strong>Deploy to GitHub Pages</strong>.</p>
+<p>Next: <strong>Deploy to GitHub Pages</strong></p>
 
 
 
