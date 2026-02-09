@@ -12,23 +12,32 @@ Create your own notes website from scratch. No experience needed.
 
 A black window will open. This is where you type commands.
 
-## Step 2: Create your project
+## Step 2: Create a projects folder (optional)
 
-Type this and press Enter:
-
-```bash
-uv init my-notes --no-package
-```
-
-This creates a new folder called `my-notes` with your project inside.
-
-## Step 3: Go into that folder
+If you want to keep your projects organized:
 
 ```bash
-cd my-notes
+mkdir -p ~/RAGprojects
+cd ~/RAGprojects
 ```
 
-## Step 4: Install the website tools
+## Step 3: Create your project
+
+```bash
+uv init rag-notes --no-package
+```
+
+This creates a new folder called `rag-notes` with your project inside.
+
+## Step 4: Go into that folder
+
+```bash
+cd rag-notes
+```
+
+You're now in: `~/RAGprojects/rag-notes`
+
+## Step 5: Install the website tools
 
 ```bash
 uv add mkdocs mkdocs-material
@@ -36,7 +45,7 @@ uv add mkdocs mkdocs-material
 
 Wait for it to finish. This downloads the tools you need.
 
-## Step 5: Create the docs folder
+## Step 6: Create the docs folder
 
 ```bash
 uv run mkdocs new .
@@ -44,13 +53,13 @@ uv run mkdocs new .
 
 This creates a `docs` folder. Your notes go in here.
 
-## Step 6: Start your website
+## Step 7: Start your website
 
 ```bash
 uv run mkdocs serve --livereload
 ```
 
-## Step 7: See your website
+## Step 8: See your website
 
 1. Open your web browser (Chrome, Safari, etc.)
 2. Go to: `http://127.0.0.1:8000`
