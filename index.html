@@ -375,6 +375,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#deploying-to-github-pages-free-hosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploying to GitHub Pages (Free Hosting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-github-pages-after-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating GitHub Pages After Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -503,6 +525,28 @@
     <span class="md-ellipsis">
       
         Pushing Future Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-to-github-pages-free-hosting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploying to GitHub Pages (Free Hosting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-github-pages-after-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating GitHub Pages After Changes
       
     </span>
   </a>
@@ -640,6 +684,29 @@ git push
 </code></pre>
 <p>Or as a shorthand:</p>
 <pre><code class="language-bash">git add . &amp;&amp; git commit -m &quot;Your message&quot; &amp;&amp; git push
+</code></pre>
+<h3 id="deploying-to-github-pages-free-hosting">Deploying to GitHub Pages (Free Hosting)</h3>
+<p>Host your docs for free using GitHub Pages. First, update <code>mkdocs.yml</code> with:</p>
+<pre><code class="language-yaml">site_url: https://&lt;your-username&gt;.github.io/rag-notes/
+repo_url: https://github.com/&lt;your-username&gt;/rag-notes
+repo_name: rag-notes
+</code></pre>
+<p>Then deploy:</p>
+<pre><code class="language-bash">uv run mkdocs gh-deploy
+</code></pre>
+<p>This builds your site and pushes it to the <code>gh-pages</code> branch on GitHub. Your docs are now live at:</p>
+<pre><code>https://&lt;your-username&gt;.github.io/rag-notes/
+</code></pre>
+<p><strong>Note:</strong> The first deployment may take a few minutes. Refresh the link after a couple of minutes.</p>
+<h3 id="updating-github-pages-after-changes">Updating GitHub Pages After Changes</h3>
+<p>After you make changes and push to GitHub:</p>
+<pre><code class="language-bash">git add .
+git commit -m &quot;Update docs&quot;
+git push
+uv run mkdocs gh-deploy
+</code></pre>
+<p>Or combine into one command:</p>
+<pre><code class="language-bash">git add . &amp;&amp; git commit -m &quot;Update docs&quot; &amp;&amp; git push &amp;&amp; uv run mkdocs gh-deploy
 </code></pre>
 <h2 id="running-locally-daily-workflow">Running Locally (Daily Workflow)</h2>
 <p>In your project directory (<code>~/RAGprojects/rag-notes</code>), start the documentation server with live reload:</p>
