@@ -1,4 +1,4 @@
-# Setup
+# Getting Started
 
 Create your own notes website from scratch. No experience needed.
 
@@ -12,41 +12,23 @@ Create your own notes website from scratch. No experience needed.
 
 A black window will open. This is where you type commands.
 
-## Step 2: Go to your Documents folder
+## Step 2: Create your project
 
 Type this and press Enter:
 
 ```bash
-cd ~/Documents
+uv init my-notes --no-package
 ```
 
-This takes you to your Documents folder.
+This creates a new folder called `my-notes` with your project inside.
 
-## Step 3: Create a folder for your notes
-
-Type this and press Enter:
-
-```bash
-mkdir my-notes
-```
-
-This creates a new folder called `my-notes`.
-
-## Step 4: Go into that folder
+## Step 3: Go into that folder
 
 ```bash
 cd my-notes
 ```
 
-## Step 5: Create the project
-
-```bash
-uv init . --no-package
-```
-
-This sets up your project. You'll see some new files appear.
-
-## Step 6: Install the website tools
+## Step 4: Install the website tools
 
 ```bash
 uv add mkdocs mkdocs-material
@@ -54,7 +36,7 @@ uv add mkdocs mkdocs-material
 
 Wait for it to finish. This downloads the tools you need.
 
-## Step 7: Create the docs folder
+## Step 5: Create the docs folder
 
 ```bash
 uv run mkdocs new .
@@ -62,13 +44,13 @@ uv run mkdocs new .
 
 This creates a `docs` folder. Your notes go in here.
 
-## Step 8: Start your website
+## Step 6: Start your website
 
 ```bash
 uv run mkdocs serve --livereload
 ```
 
-## Step 9: See your website
+## Step 7: See your website
 
 1. Open your web browser (Chrome, Safari, etc.)
 2. Go to: `http://127.0.0.1:8000`
