@@ -394,10 +394,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#initial-project-setup" class="md-nav__link">
+  <a href="#step-1-open-terminal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initial Project Setup
+        Step 1: Open Terminal
       
     </span>
   </a>
@@ -405,10 +405,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#theme-configuration-mkdocsyml" class="md-nav__link">
+  <a href="#step-2-create-a-new-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Theme Configuration (mkdocs.yml)
+        Step 2: Create a new project
       
     </span>
   </a>
@@ -416,10 +416,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-locally" class="md-nav__link">
+  <a href="#step-3-go-into-the-folder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running Locally
+        Step 3: Go into the folder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-install-the-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Install the tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-create-the-website-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Create the website structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-see-your-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: See your website
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's next?
       
     </span>
   </a>
@@ -525,10 +569,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#initial-project-setup" class="md-nav__link">
+  <a href="#step-1-open-terminal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Initial Project Setup
+        Step 1: Open Terminal
       
     </span>
   </a>
@@ -536,10 +580,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#theme-configuration-mkdocsyml" class="md-nav__link">
+  <a href="#step-2-create-a-new-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Theme Configuration (mkdocs.yml)
+        Step 2: Create a new project
       
     </span>
   </a>
@@ -547,10 +591,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-locally" class="md-nav__link">
+  <a href="#step-3-go-into-the-folder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running Locally
+        Step 3: Go into the folder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-install-the-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Install the tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-create-the-website-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Create the website structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-see-your-website" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: See your website
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's next?
       
     </span>
   </a>
@@ -578,48 +666,32 @@
 
 
 <h1 id="setup">Setup</h1>
-<h2 id="initial-project-setup">Initial Project Setup</h2>
-<p>Initialize the project with <code>uv</code>:</p>
-<pre><code class="language-bash">uv init rag-notes --no-package
+<p>Follow these steps to create your own notes website.</p>
+<h2 id="step-1-open-terminal">Step 1: Open Terminal</h2>
+<p>Open the Terminal app on your computer.</p>
+<h2 id="step-2-create-a-new-project">Step 2: Create a new project</h2>
+<p>Type this and press Enter:</p>
+<pre><code class="language-bash">uv init my-notes --no-package
 </code></pre>
-<p>Navigate into the project:</p>
-<pre><code class="language-bash">cd rag-notes
+<p>This creates a new folder called <code>my-notes</code>.</p>
+<h2 id="step-3-go-into-the-folder">Step 3: Go into the folder</h2>
+<pre><code class="language-bash">cd my-notes
 </code></pre>
-<p>Now you're in: <code>~/RAGprojects/rag-notes</code></p>
-<p>Add MkDocs dependencies:</p>
+<h2 id="step-4-install-the-tools">Step 4: Install the tools</h2>
 <pre><code class="language-bash">uv add mkdocs mkdocs-material
 </code></pre>
-<p>Initialize the MkDocs structure:</p>
+<p>This installs MkDocs (the tool that makes websites from text files).</p>
+<h2 id="step-5-create-the-website-structure">Step 5: Create the website structure</h2>
 <pre><code class="language-bash">uv run mkdocs new .
 </code></pre>
-<h2 id="theme-configuration-mkdocsyml">Theme Configuration (mkdocs.yml)</h2>
-<p>Your project's appearance is controlled by <code>mkdocs.yml</code>:</p>
-<pre><code class="language-yaml">site_name: RAG Notes
-site_url: https://kbhatiya999.github.io/rag-notes/
-repo_url: https://github.com/kbhatiya999/rag-notes
-repo_name: rag-notes
-
-theme:
-  name: material
-  palette:
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-</code></pre>
-<p>After editing <code>mkdocs.yml</code>, restart <code>uv run mkdocs serve --livereload</code> to see changes.</p>
-<h2 id="running-locally">Running Locally</h2>
-<p>Start the documentation server with live reload:</p>
+<p>This creates a <code>docs</code> folder where you'll write your notes.</p>
+<h2 id="step-6-see-your-website">Step 6: See your website</h2>
 <pre><code class="language-bash">uv run mkdocs serve --livereload
 </code></pre>
-<p>Visit <code>http://127.0.0.1:8000</code> to preview your docs.</p>
+<p>Open your browser and go to: <code>http://127.0.0.1:8000</code></p>
+<p>You'll see your website! Any changes you make will show up automatically.</p>
+<h2 id="whats-next">What's next?</h2>
+<p>Your website is running on your computer. To share it with others, go to <strong>Upload to GitHub</strong>.</p>
 
 
 
