@@ -1,67 +1,53 @@
 # Setup
 
-## Initial Project Setup
+Follow these steps to create your own notes website.
 
-Initialize the project with `uv`:
+## Step 1: Open Terminal
+
+Open the Terminal app on your computer.
+
+## Step 2: Create a new project
+
+Type this and press Enter:
 
 ```bash
-uv init rag-notes --no-package
+uv init my-notes --no-package
 ```
 
-Navigate into the project:
+This creates a new folder called `my-notes`.
+
+## Step 3: Go into the folder
 
 ```bash
-cd rag-notes
+cd my-notes
 ```
 
-Now you're in: `~/RAGprojects/rag-notes`
-
-Add MkDocs dependencies:
+## Step 4: Install the tools
 
 ```bash
 uv add mkdocs mkdocs-material
 ```
 
-Initialize the MkDocs structure:
+This installs MkDocs (the tool that makes websites from text files).
+
+## Step 5: Create the website structure
 
 ```bash
 uv run mkdocs new .
 ```
 
-## Theme Configuration (mkdocs.yml)
+This creates a `docs` folder where you'll write your notes.
 
-Your project's appearance is controlled by `mkdocs.yml`:
-
-```yaml
-site_name: RAG Notes
-site_url: https://kbhatiya999.github.io/rag-notes/
-repo_url: https://github.com/kbhatiya999/rag-notes
-repo_name: rag-notes
-
-theme:
-  name: material
-  palette:
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-```
-
-After editing `mkdocs.yml`, restart `uv run mkdocs serve --livereload` to see changes.
-
-## Running Locally
-
-Start the documentation server with live reload:
+## Step 6: See your website
 
 ```bash
 uv run mkdocs serve --livereload
 ```
 
-Visit `http://127.0.0.1:8000` to preview your docs.
+Open your browser and go to: `http://127.0.0.1:8000`
+
+You'll see your website! Any changes you make will show up automatically.
+
+## What's next?
+
+Your website is running on your computer. To share it with others, go to **Upload to GitHub**.

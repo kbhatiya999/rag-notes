@@ -1,54 +1,46 @@
 # Deploy to GitHub Pages
 
-Host your docs for free using GitHub Pages.
+Turn your notes into a real website that anyone can visit. It's free!
 
-## Deploy Your Site
+## Step 1: Deploy your site
 
-Make sure your `mkdocs.yml` includes:
-
-```yaml
-site_url: https://<your-username>.github.io/rag-notes/
-repo_url: https://github.com/<your-username>/rag-notes
-repo_name: rag-notes
-```
-
-Then deploy:
+Run this one command:
 
 ```bash
 uv run mkdocs gh-deploy
 ```
 
-This builds your site and pushes it to the `gh-pages` branch on GitHub.
+That's it! Wait 2-3 minutes.
 
-## Access Your Live Site
+## Step 2: Visit your website
 
-Your docs are now live at:
+Your website is now live at:
 
 ```
-https://<your-username>.github.io/rag-notes/
+https://YOUR-USERNAME.github.io/my-notes/
 ```
 
-**Note:** The first deployment may take a few minutes. Refresh the link after 2-3 minutes.
+Replace `YOUR-USERNAME` with your GitHub username.
 
-## Update After Changes
+## How to update your website
 
-After making changes and pushing to GitHub:
+After making changes to your notes:
 
 ```bash
 git add .
-git commit -m "Update docs"
+git commit -m "Updated notes"
 git push
 uv run mkdocs gh-deploy
 ```
 
-Or combine into one command:
+Your website will update in a few minutes.
 
-```bash
-git add . && git commit -m "Update docs" && git push && uv run mkdocs gh-deploy
-```
+## Summary
 
-## How It Works
+You now have:
 
-- `mkdocs gh-deploy` builds your site and creates a `gh-pages` branch
-- GitHub Pages serves content from this branch automatically
-- Keep your source code on `main`, site is on `gh-pages`
+1. **A notes folder** - Write text files in the `docs` folder
+2. **A backup on GitHub** - Your files are saved online
+3. **A live website** - Anyone can read your notes
+
+Just write, save, and deploy. That's all there is to it!

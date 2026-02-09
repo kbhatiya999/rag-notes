@@ -1,21 +1,18 @@
 # RAG Notes
 
-Welcome to RAG Notes - a documentation site for keeping project notes and learning materials.
+A place to write notes using simple text files.
 
-This site is built with [MkDocs](https://www.mkdocs.org/) and the [Material theme](https://squidfunk.github.io/mkdocs-material/), hosted free on GitHub Pages.
+## What is this?
 
-## Getting Started
+This is a website made from text files. You write notes in simple text format (called Markdown), and it turns into a pretty website automatically.
 
-Use the navigation menu to explore the documentation. Start with **How To Setup Your Own Notes** to learn how to set up your own notes repository just like this one.
+## Why use this?
 
-## Features
+- **Free** - No cost to host your notes online
+- **Simple** - Just write text, no coding needed
+- **Shareable** - Anyone can view your notes with a link
+- **Dark mode** - Easy on the eyes at night
 
-- 📝 Simple Markdown-based documentation
-- 🌙 Dark mode support
-- 🚀 Free hosting on GitHub Pages
-- 📱 Mobile-friendly design
+## How to start?
 
-## Quick Links
-
-- [GitHub Repository](https://github.com/kbhatiya999/rag-notes)
-- [How To Setup Your Own Notes](How%20To%20Setup%20Page%20Like%20This/setup.md)
+Click on **How To Setup Your Own Notes** in the menu to create your own notes site step by step.
