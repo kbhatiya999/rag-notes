@@ -5,6 +5,7 @@ repo_name: rag-notes
 
 nav:
   - Home: index.md
+  - LightRAG Server Setup: lightrag-server-setup.md
   - How To Setup Your Own Notes:
     - Getting Started: "How To Setup Page Like This/getting-started.md"
     - Upload to GitHub: "How To Setup Page Like This/github.md"
