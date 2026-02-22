@@ -1021,46 +1021,46 @@
 <li>You need a command-line terminal. On Mac, use the built-in <strong>Terminal</strong> app.</li>
 <li>You need <code>uv</code>, a fast Python package installer.</li>
 </ul>
-<p>If you don't have <code>uv</code>, open your terminal and run:</p>
-<pre><code class="language-bash">curl -LsSf https://astral.sh/uv/install.sh | sh
-</code></pre>
-<p>Follow the on-screen instructions to add <code>uv</code> to your shell's <code>PATH</code>.</p>
+<p>If you don't have <code>uv</code>, open your terminal and run:
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div>
+Follow the on-screen instructions to add <code>uv</code> to your shell's <code>PATH</code>.</p>
 <h2 id="step-1-create-the-project">Step 1: Create the Project</h2>
 <p>Open your terminal and run these commands one by one.</p>
 <ol>
 <li>
 <p><strong>Create a main project folder and navigate into it:</strong>
-    <code>bash
-    mkdir -p ~/RAGprojects &amp;&amp; cd ~/RAGprojects</code></p>
+    <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/RAGprojects<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/RAGprojects
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Initialize a new project named <code>rag-notes</code>:</strong>
     This creates a virtual environment without any default packages.
-    <code>bash
-    uv init rag-notes --no-package</code></p>
+    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>init<span class="w"> </span>rag-notes<span class="w"> </span>--no-package
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Navigate into your new project directory:</strong>
-    <code>bash
-    cd rag-notes</code></p>
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>rag-notes
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Install MkDocs and the Material Theme:</strong>
     This gives you the documentation generator and the website theme.
-    <code>bash
-    uv add mkdocs mkdocs-material</code></p>
+    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Create the basic MkDocs file structure:</strong>
     This command sets up the <code>docs</code> folder and <code>mkdocs.yml</code> configuration file.
-    <code>bash
-    uv run mkdocs new .</code></p>
+    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>new<span class="w"> </span>.
+</code></pre></div></p>
 </li>
 </ol>
 <h2 id="step-2-run-the-local-server">Step 2: Run the Local Server</h2>
 <p>To see your website locally, run the development server:</p>
-<pre><code class="language-bash">uv run mkdocs serve --livereload
-</code></pre>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload
+</code></pre></div>
 <ul>
 <li><code>--livereload</code> automatically reloads the site when you save a file.</li>
 </ul>

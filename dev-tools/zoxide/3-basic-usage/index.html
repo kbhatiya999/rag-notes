@@ -1020,11 +1020,11 @@
 <h2 id="jumping-to-a-directory">Jumping to a Directory</h2>
 <p>Instead of <code>cd</code>, use <code>z</code> followed by a keyword from the directory path you want to go to.</p>
 <p>Let's say you've previously visited <code>/Users/myuser/RAGprojects/rag-notes</code>. You can now jump to it from anywhere by typing:</p>
-<pre><code class="language-sh"># Any of these will work
-z rag
-z notes
-z ragnotes
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Any of these will work</span>
+z<span class="w"> </span>rag
+z<span class="w"> </span>notes
+z<span class="w"> </span>ragnotes
+</code></pre></div>
 <p>Zoxide will find the best match and take you there.</p>
 <h2 id="interactive-search">Interactive Search</h2>
 <p>If <code>zoxide</code> isn't sure where you want to go, or if you just want to see a list of choices, you can use the interactive search feature (this requires <code>fzf</code> to be installed).</p>
@@ -1032,13 +1032,14 @@ z ragnotes
 <ol>
 <li>
 <p><strong>Type <code>zi</code> followed by a query</strong> and press <code>&lt;Enter&gt;</code>.
-    <code>sh
-    zi proj</code></p>
+    <div class="highlight"><pre><span></span><code>zi<span class="w"> </span>proj
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Use the arrow keys</strong> or type more letters to filter and select a directory from the list that appears.
-    <code>&gt; /Users/myuser/RAGprojects/
-      /Users/myuser/other-projects/</code></p>
+    <div class="highlight"><pre><span></span><code>&gt; /Users/myuser/RAGprojects/
+  /Users/myuser/other-projects/
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Press <code>&lt;Enter&gt;</code></strong> to jump to the selected directory.</p>
@@ -1049,8 +1050,8 @@ z ragnotes
 <p>Zoxide uses a ranking algorithm based on "frecency" — a combination of <strong>frequency</strong> and <strong>recency</strong>. This means it prioritizes directories that you visit often and have visited recently, which usually aligns with your current projects.</p>
 <h2 id="forcing-a-directory-to-be-added">Forcing a Directory to be Added</h2>
 <p>If you want to make sure a directory is added to <code>zoxide</code>'s database without having to <code>cd</code> into it, you can use the <code>zoxide add</code> command:</p>
-<pre><code class="language-sh">zoxide add /path/to/important/directory
-</code></pre>
+<div class="highlight"><pre><span></span><code>zoxide<span class="w"> </span>add<span class="w"> </span>/path/to/important/directory
+</code></pre></div>
 <p>This ensures it's available for future queries.</p>
 
 

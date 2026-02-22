@@ -1049,21 +1049,21 @@
 <ol>
 <li>
 <p><strong>Initialize Git and add all your files:</strong>
-    <code>bash
-    git init
-    git add .</code></p>
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
+git<span class="w"> </span>add<span class="w"> </span>.
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Commit your files:</strong>
     This creates a snapshot of your project's current state.
-    <code>bash
-    git commit -m "Initial commit"</code></p>
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Create a new repository on GitHub and push your code:</strong>
     This command uses the GitHub CLI to create a new public repository named <code>rag-notes</code>, sets it as the <code>origin</code> remote, and pushes your committed files to it.
-    <code>bash
-    gh repo create rag-notes --source=. --remote=origin --push --public</code></p>
+    <div class="highlight"><pre><span></span><code>gh<span class="w"> </span>repo<span class="w"> </span>create<span class="w"> </span>rag-notes<span class="w"> </span>--source<span class="o">=</span>.<span class="w"> </span>--remote<span class="o">=</span>origin<span class="w"> </span>--push<span class="w"> </span>--public
+</code></pre></div></p>
 <p>Follow the prompts to authenticate if you haven't already.</p>
 </li>
 </ol>
@@ -1094,14 +1094,14 @@ uh    uv run mkdocs gh-deploy</code></p>
 <li>
 <p><strong>Save and push your changes to GitHub:</strong>
     Run this command from your project root:
-    <code>bash
-    git add . &amp;&amp; git commit -m "Update notes" &amp;&amp; git push</code>
+    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update notes&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</code></pre></div>
     <em>(You can change the commit message "Update notes" to something descriptive.)</em></p>
 </li>
 <li>
 <p><strong>Re-deploy to GitHub Pages:</strong>
-    <code>bash
-    uv run mkdocs gh-deploy</code></p>
+    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div></p>
 </li>
 </ol>
 <p>That's it! Your changes will be live in a few minutes.</p>

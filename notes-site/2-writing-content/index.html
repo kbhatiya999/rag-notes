@@ -443,6 +443,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#adding-the-page-to-the-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding the Page to the Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-sub-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Sub-sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Step
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -950,6 +983,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#adding-the-page-to-the-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding the Page to the Navigation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-sub-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Sub-sections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Step
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -994,15 +1060,14 @@
 <li>Write your notes using Markdown syntax.</li>
 </ul>
 <p><strong>Example Markdown:</strong>
-```markdown</p>
-<h1 id="my-new-note">My New Note</h1>
-<p>This is a paragraph. You can use <strong>bold</strong>, <em>italics</em>, and <code>code</code>.</p>
-<ul>
-<li>Create</li>
-<li>bullet</li>
-<li>lists
-```</li>
-</ul>
+<div class="highlight"><pre><span></span><code><span class="gh"># My New Note</span>
+
+This is a paragraph. You can use <span class="gs">**bold**</span>, <span class="ge">*italics*</span>, and <span class="sb">`code`</span>.
+
+<span class="k">-</span><span class="w"> </span>Create
+<span class="k">-</span><span class="w"> </span>bullet
+<span class="k">-</span><span class="w"> </span>lists
+</code></pre></div></p>
 </li>
 </ol>
 <h2 id="adding-the-page-to-the-navigation">Adding the Page to the Navigation</h2>
@@ -1012,22 +1077,22 @@
 <li><strong>Find the <code>nav:</code> section:</strong> This is where the navigation structure is defined.</li>
 <li><strong>Add your new page:</strong> Add a new entry to the list. The format is <code>Page Title: path/to/your/file.md</code>.</li>
 </ol>
-<p><strong>Example <code>mkdocs.yml</code>:</strong></p>
-<pre><code class="language-yaml">nav:
-  - Home: index.md
-  - My First Note: my-first-note.md
-  - My New Note: my-new-note.md  # &lt;-- Add this line
-</code></pre>
+<p><strong>Example <code>mkdocs.yml</code>:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">My First Note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-first-note.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">My New Note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-new-note.md</span><span class="w">  </span><span class="c1"># &lt;-- Add this line</span>
+</code></pre></div></p>
 <p><strong>Instantly see the change:</strong> If your local server is running (<code>uv run mkdocs serve</code>), your website will automatically update with the new page in the navigation.</p>
 <h2 id="creating-sub-sections">Creating Sub-sections</h2>
 <p>You can create nested navigation by adding a sub-list under a main item.</p>
-<p><strong>Example <code>mkdocs.yml</code> with sub-sections:</strong></p>
-<pre><code class="language-yaml">nav:
-  - Home: index.md
-  - Tutorials:
-    - Git Basics: tutorials/git-basics.md
-    - Python Tips: tutorials/python-tips.md
-</code></pre>
+<p><strong>Example <code>mkdocs.yml</code> with sub-sections:</strong>
+<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Tutorials</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Git Basics</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tutorials/git-basics.md</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Python Tips</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tutorials/python-tips.md</span>
+</code></pre></div></p>
 <ul>
 <li>In this example, you would need to create a <code>tutorials/</code> folder inside your <code>docs/</code> directory.</li>
 <li>Then, place <code>git-basics.md</code> and <code>python-tips.md</code> inside <code>docs/tutorials/</code>.</li>
