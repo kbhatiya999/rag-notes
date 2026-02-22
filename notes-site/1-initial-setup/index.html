@@ -1018,56 +1018,26 @@
 <p>This guide shows you how to set up your own personal notes website from scratch.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li>You need a command-line terminal. On Mac, use the built-in <strong>Terminal</strong> app.</li>
-<li>You need <code>uv</code>, a fast Python package installer.</li>
+<li>Use the built-in <strong>Terminal</strong> app.</li>
+<li>You need <code>uv</code>. If you don't have it, run this first:
+    <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div></li>
 </ul>
-<p>If you don't have <code>uv</code>, open your terminal and run:
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-</code></pre></div>
-Follow the on-screen instructions to add <code>uv</code> to your shell's <code>PATH</code>.</p>
 <h2 id="step-1-create-the-project">Step 1: Create the Project</h2>
-<p>Open your terminal and run these commands one by one.</p>
-<ol>
-<li>
-<p><strong>Create a main project folder and navigate into it:</strong>
-    <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/RAGprojects<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/RAGprojects
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Initialize a new project named <code>rag-notes</code>:</strong>
-    This creates a virtual environment without any default packages.
-    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>init<span class="w"> </span>rag-notes<span class="w"> </span>--no-package
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Navigate into your new project directory:</strong>
-    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>rag-notes
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Install MkDocs and the Material Theme:</strong>
-    This gives you the documentation generator and the website theme.
-    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Create the basic MkDocs file structure:</strong>
-    This command sets up the <code>docs</code> folder and <code>mkdocs.yml</code> configuration file.
-    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>new<span class="w"> </span>.
-</code></pre></div></p>
-</li>
-</ol>
+<p>Open your terminal and paste this <strong>entire block</strong> to create your project in one go:</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/RAGprojects<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/RAGprojects
+uv<span class="w"> </span>init<span class="w"> </span>rag-notes<span class="w"> </span>--no-package
+<span class="nb">cd</span><span class="w"> </span>rag-notes
+uv<span class="w"> </span>add<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>new<span class="w"> </span>.
+</code></pre></div>
 <h2 id="step-2-run-the-local-server">Step 2: Run the Local Server</h2>
 <p>To see your website locally, run the development server:</p>
 <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload
 </code></pre></div>
-<ul>
-<li><code>--livereload</code> automatically reloads the site when you save a file.</li>
-</ul>
 <p>Open your web browser and go to <code>http://127.0.0.1:8000</code>. You should see the default MkDocs welcome page.</p>
 <p>To stop the server, go back to your terminal and press <code>Ctrl + C</code>.</p>
 <h2 id="next-step">Next Step</h2>
-<p>Now that your site is running locally, let's learn how to add and edit content.</p>
 <p><strong>Next:</strong> <a href="../2-writing-content/">2. Writing Content</a></p>
 
 

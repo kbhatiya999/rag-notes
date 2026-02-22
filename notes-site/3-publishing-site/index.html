@@ -461,10 +461,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-save-your-project-to-github" class="md-nav__link">
+  <a href="#step-1-save-push-to-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Save Your Project to GitHub
+        Step 1: Save &amp; Push to GitHub
       
     </span>
   </a>
@@ -472,10 +472,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-deploy-the-site-with-github-pages" class="md-nav__link">
+  <a href="#step-2-deploy-to-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Deploy the Site with GitHub Pages
+        Step 2: Deploy to GitHub Pages
       
     </span>
   </a>
@@ -483,21 +483,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-view-your-live-site" class="md-nav__link">
+  <a href="#how-to-update-your-site-later" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: View Your Live Site
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-update-your-site-in-the-future" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Update Your Site in the Future
+        How to Update Your Site Later
       
     </span>
   </a>
@@ -973,10 +962,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-save-your-project-to-github" class="md-nav__link">
+  <a href="#step-1-save-push-to-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Save Your Project to GitHub
+        Step 1: Save &amp; Push to GitHub
       
     </span>
   </a>
@@ -984,10 +973,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-deploy-the-site-with-github-pages" class="md-nav__link">
+  <a href="#step-2-deploy-to-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Deploy the Site with GitHub Pages
+        Step 2: Deploy to GitHub Pages
       
     </span>
   </a>
@@ -995,21 +984,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-view-your-live-site" class="md-nav__link">
+  <a href="#how-to-update-your-site-later" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: View Your Live Site
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-update-your-site-in-the-future" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Update Your Site in the Future
+        How to Update Your Site Later
       
     </span>
   </a>
@@ -1037,74 +1015,31 @@
 
 
 <h1 id="3-publishing-your-site">3. Publishing Your Site</h1>
-<p>This guide covers how to save your work to GitHub and deploy it as a live website using GitHub Pages.</p>
+<p>This guide covers how to save your work and deploy it as a live website using GitHub Pages.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>You need a <a href="https://github.com/">GitHub</a> account.</li>
 <li>You need the <a href="https://cli.github.com/">GitHub CLI</a> (<code>gh</code>) installed.</li>
 </ul>
-<h2 id="step-1-save-your-project-to-github">Step 1: Save Your Project to GitHub</h2>
-<p>These commands will initialize a Git repository, save your files, and upload them to a new GitHub repository.</p>
-<p>Run these from the root of your <code>rag-notes</code> project directory.</p>
-<ol>
-<li>
-<p><strong>Initialize Git and add all your files:</strong>
-    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
+<h2 id="step-1-save-push-to-github">Step 1: Save &amp; Push to GitHub</h2>
+<p>Run this <strong>entire block</strong> from the root of your <code>rag-notes</code> project directory to initialize Git, save your files, and push them to a brand new GitHub repository:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
 git<span class="w"> </span>add<span class="w"> </span>.
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Commit your files:</strong>
-    This creates a snapshot of your project's current state.
-    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Create a new repository on GitHub and push your code:</strong>
-    This command uses the GitHub CLI to create a new public repository named <code>rag-notes</code>, sets it as the <code>origin</code> remote, and pushes your committed files to it.
-    <div class="highlight"><pre><span></span><code>gh<span class="w"> </span>repo<span class="w"> </span>create<span class="w"> </span>rag-notes<span class="w"> </span>--source<span class="o">=</span>.<span class="w"> </span>--remote<span class="o">=</span>origin<span class="w"> </span>--push<span class="w"> </span>--public
-</code></pre></div></p>
-<p>Follow the prompts to authenticate if you haven't already.</p>
-</li>
-</ol>
-<h2 id="step-2-deploy-the-site-with-github-pages">Step 2: Deploy the Site with GitHub Pages</h2>
-<p>Now that your code is on GitHub, you can deploy it with a single command.</p>
-<ol>
-<li>
-<p><strong>Run the <code>gh-deploy</code> command:</strong>
-    This command, provided by <code>mkdocs</code>, builds the static HTML for your site and pushes it to a special <code>gh-pages</code> branch on your repository.
-    <code>bash
-uh    uv run mkdocs gh-deploy</code></p>
-</li>
-<li>
-<p><strong>Wait for the deployment:</strong>
-    It can take a minute or two for GitHub Pages to build and deploy your site.</p>
-</li>
-</ol>
-<h2 id="step-3-view-your-live-site">Step 3: View Your Live Site</h2>
-<p>Your website will be available at:</p>
-<p><code>https://YOUR-USERNAME.github.io/rag-notes/</code></p>
-<p>(Replace <code>YOUR-USERNAME</code> with your actual GitHub username.)</p>
-<h2 id="how-to-update-your-site-in-the-future">How to Update Your Site in the Future</h2>
-<p>Now that everything is set up, updating your site is a simple three-step process.</p>
-<ol>
-<li>
-<p><strong>Make your changes:</strong> Edit your Markdown files in the <code>docs/</code> directory.</p>
-</li>
-<li>
-<p><strong>Save and push your changes to GitHub:</strong>
-    Run this command from your project root:
-    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update notes&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
+gh<span class="w"> </span>repo<span class="w"> </span>create<span class="w"> </span>rag-notes<span class="w"> </span>--source<span class="o">=</span>.<span class="w"> </span>--remote<span class="o">=</span>origin<span class="w"> </span>--push<span class="w"> </span>--public
 </code></pre></div>
-    <em>(You can change the commit message "Update notes" to something descriptive.)</em></p>
-</li>
-<li>
-<p><strong>Re-deploy to GitHub Pages:</strong>
-    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
-</code></pre></div></p>
-</li>
-</ol>
-<p>That's it! Your changes will be live in a few minutes.</p>
+<p><em>(Follow any prompts from <code>gh</code> to authenticate if you haven't already).</em></p>
+<h2 id="step-2-deploy-to-github-pages">Step 2: Deploy to GitHub Pages</h2>
+<p>Once your code is on GitHub, deploy the actual website by running:</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+<p>Your website will be live in a minute or two at:
+<code>https://YOUR-USERNAME.github.io/rag-notes/</code>
+<em>(Replace <code>YOUR-USERNAME</code> with your GitHub username).</em></p>
+<h2 id="how-to-update-your-site-later">How to Update Your Site Later</h2>
+<p>Whenever you edit your notes in the future, just run this single line from your project root to save and publish the changes:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update notes&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
 
 
 
