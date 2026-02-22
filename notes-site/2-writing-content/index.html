@@ -444,6 +444,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#writing-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing Code Blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#adding-the-page-to-the-navigation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -984,6 +995,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#writing-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing Code Blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#adding-the-page-to-the-navigation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1070,6 +1092,15 @@ This is a paragraph. You can use <span class="gs">**bold**</span>, <span class="
 </code></pre></div></p>
 </li>
 </ol>
+<h2 id="writing-code-blocks">Writing Code Blocks</h2>
+<p>When writing technical notes, you will frequently use "fenced" code blocks with triple backticks (<code>```</code>).</p>
+<p><strong>Important Note on Indentation:</strong>
+By default, standard Markdown does not support fenced code blocks that are indented inside lists or blockquotes. If you indent a code block inside a numbered list, it will break the rendering. </p>
+<p>To fix this, we have enabled the <code>pymdownx.superfences</code> extension in your <code>mkdocs.yml</code> file. This extension allows you to safely nest code blocks anywhere!</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># This is already configured in your mkdocs.yml!</span>
+<span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
+</code></pre></div>
 <h2 id="adding-the-page-to-the-navigation">Adding the Page to the Navigation</h2>
 <p>To make your new page appear in the site's navigation menu, you need to edit the <code>mkdocs.yml</code> file.</p>
 <ol>
