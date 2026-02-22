@@ -416,10 +416,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-run-the-local-server" class="md-nav__link">
+  <a href="#step-3-use-the-recommended-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Run the Local Server
+        Step 3: Use the Recommended Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-run-the-local-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Run the Local Server
       
     </span>
   </a>
@@ -973,10 +984,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-run-the-local-server" class="md-nav__link">
+  <a href="#step-3-use-the-recommended-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Run the Local Server
+        Step 3: Use the Recommended Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-run-the-local-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Run the Local Server
       
     </span>
   </a>
@@ -1021,46 +1043,80 @@
 <li>You need a command-line terminal. On Mac, use the built-in <strong>Terminal</strong> app.</li>
 <li>You need <code>uv</code>, a fast Python package installer.</li>
 </ul>
-<p>If you don't have <code>uv</code>, open your terminal and run:</p>
-<pre><code class="language-bash">curl -LsSf https://astral.sh/uv/install.sh | sh
-</code></pre>
-<p>Follow the on-screen instructions to add <code>uv</code> to your shell's <code>PATH</code>.</p>
+<p>If you don't have <code>uv</code>, open your terminal and run:
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div>
+Follow the on-screen instructions to add <code>uv</code> to your shell's <code>PATH</code>.</p>
 <h2 id="step-1-create-the-project">Step 1: Create the Project</h2>
 <p>Open your terminal and run these commands one by one.</p>
 <ol>
 <li>
 <p><strong>Create a main project folder and navigate into it:</strong>
-    <code>bash
-    mkdir -p ~/RAGprojects &amp;&amp; cd ~/RAGprojects</code></p>
+    <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/RAGprojects<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/RAGprojects
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Initialize a new project named <code>rag-notes</code>:</strong>
     This creates a virtual environment without any default packages.
-    <code>bash
-    uv init rag-notes --no-package</code></p>
+    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>init<span class="w"> </span>rag-notes<span class="w"> </span>--no-package
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Navigate into your new project directory:</strong>
-    <code>bash
-    cd rag-notes</code></p>
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>rag-notes
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Install MkDocs and the Material Theme:</strong>
     This gives you the documentation generator and the website theme.
-    <code>bash
-    uv add mkdocs mkdocs-material</code></p>
+    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>add<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>Create the basic MkDocs file structure:</strong>
     This command sets up the <code>docs</code> folder and <code>mkdocs.yml</code> configuration file.
-    <code>bash
-    uv run mkdocs new .</code></p>
+    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>new<span class="w"> </span>.
+</code></pre></div></p>
 </li>
 </ol>
-<h2 id="step-2-run-the-local-server">Step 2: Run the Local Server</h2>
+<h2 id="step-3-use-the-recommended-configuration">Step 3: Use the Recommended Configuration</h2>
+<p>The <code>mkdocs new .</code> command creates a basic <code>mkdocs.yml</code> file. For a better experience with all the features we use in this guide, replace the entire content of that file with the template below.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># mkdocs.yml</span>
+<span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Notes</span>
+<span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://your-username.github.io/your-repo/</span>
+
+<span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+
+<span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+<span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Palette toggle for light mode</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-7</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Switch to dark mode</span>
+
+<span class="w">    </span><span class="c1"># Palette toggle for dark mode</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span>
+<span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-4</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Switch to light mode</span>
+
+<span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
+</code></pre></div>
+<ul>
+<li><strong>What this does:</strong></li>
+<li>Sets the theme to <code>material</code>.</li>
+<li>Adds a <strong>dark/light mode switcher</strong>.</li>
+<li>Enables the <code>superfences</code> extension for advanced code blocks.</li>
+<li>Sets up a basic navigation with a link to your <code>index.md</code> homepage.</li>
+</ul>
+<h2 id="step-4-run-the-local-server">Step 4: Run the Local Server</h2>
 <p>To see your website locally, run the development server:</p>
-<pre><code class="language-bash">uv run mkdocs serve --livereload
-</code></pre>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>serve<span class="w"> </span>--livereload
+</code></pre></div>
 <ul>
 <li><code>--livereload</code> automatically reloads the site when you save a file.</li>
 </ul>

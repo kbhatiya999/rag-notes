@@ -609,6 +609,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-3-create-the-configuration-file-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Create the Configuration File (.env)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Create the Configuration File (.env)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-settings-required-for-all-setups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Settings (Required for all setups)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-1-ollama-free-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Ollama (Free, Local)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-openai-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: OpenAI (Cloud)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-google-gemini-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3: Google Gemini (Cloud)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -950,6 +1011,67 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-3-create-the-configuration-file-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Create the Configuration File (.env)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Create the Configuration File (.env)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-settings-required-for-all-setups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Settings (Required for all setups)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-1-ollama-free-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 1: Ollama (Free, Local)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-openai-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 2: OpenAI (Cloud)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-google-gemini-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option 3: Google Gemini (Cloud)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -997,39 +1119,44 @@
 <li><strong>Open the Terminal app.</strong></li>
 <li>
 <p><strong>Copy and paste the entire code block below into your terminal, then press <code>Enter</code>.</strong> This will create and save the script in one go.</p>
-<p>```bash
-cat &gt; ~/LightRAG/lightrag-launcher.sh &lt;&lt; 'EOF'</p>
-<h1 id="binzsh">!/bin/zsh</h1>
-<h1 id="_1"></h1>
-<h1 id="lightrag-server-launcher">LightRAG Server Launcher</h1>
-<h1 id="wrapper-script-for-use-with-platypusapp">Wrapper script for use with Platypus.app</h1>
-<h1 id="_2"></h1>
-<h1 id="ensure-the-uv-tool-bin-directory-is-in-the-path">Ensure the uv tool bin directory is in the PATH</h1>
-<p>export PATH="$HOME/.local/bin:$PATH"</p>
-<h1 id="define-the-working-directory-where-data-and-configs-are-stored">Define the working directory where data and configs are stored</h1>
-<p>WORKING_DIR="$HOME/LightRAG"</p>
-<h1 id="create-the-data-directory-if-it-doesnt-exist">Create the data directory if it doesn't exist</h1>
-<p>mkdir -p "$WORKING_DIR"</p>
-<h1 id="change-to-the-working-directory-so-the-env-file-is-found">Change to the working directory so the .env file is found</h1>
-<p>cd "$WORKING_DIR"</p>
-<p>echo "Starting LightRAG Server..."
-echo "  Config: $WORKING_DIR/.env"
-echo "  Data:   $WORKING_DIR"
-echo ""
-echo "Loading configuration from .env file..."
-echo "Press Ctrl+C or Cmd+Q to stop the server"
-echo "----------------------------------------"</p>
-<h1 id="execute-the-server-using-the-working-directory">Execute the server, using the working directory</h1>
-<h1 id="all-other-settings-are-loaded-automatically-from-the-env-file">All other settings are loaded automatically from the .env file</h1>
-<p>exec lightrag-server --working-dir "$WORKING_DIR"
-EOF
-```</p>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>&gt;<span class="w"> </span>~/LightRAG/lightrag-launcher.sh<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+<span class="s">#!/bin/zsh</span>
+<span class="s">#</span>
+<span class="s"># LightRAG Server Launcher</span>
+<span class="s"># Wrapper script for use with Platypus.app</span>
+<span class="s">#</span>
+
+<span class="s"># Ensure the uv tool bin directory is in the PATH</span>
+<span class="s">export PATH=&quot;$HOME/.local/bin:$PATH&quot;</span>
+
+<span class="s"># Define the working directory where data and configs are stored</span>
+<span class="s">WORKING_DIR=&quot;$HOME/LightRAG&quot;</span>
+
+<span class="s"># Create the data directory if it doesn&#39;t exist</span>
+<span class="s">mkdir -p &quot;$WORKING_DIR&quot;</span>
+
+<span class="s"># Change to the working directory so the .env file is found</span>
+<span class="s">cd &quot;$WORKING_DIR&quot;</span>
+
+<span class="s">echo &quot;Starting LightRAG Server...&quot;</span>
+<span class="s">echo &quot;  Config: $WORKING_DIR/.env&quot;</span>
+<span class="s">echo &quot;  Data:   $WORKING_DIR&quot;</span>
+<span class="s">echo &quot;&quot;</span>
+<span class="s">echo &quot;Loading configuration from .env file...&quot;</span>
+<span class="s">echo &quot;Press Ctrl+C or Cmd+Q to stop the server&quot;</span>
+<span class="s">echo &quot;----------------------------------------&quot;</span>
+
+<span class="s"># Execute the server, using the working directory</span>
+<span class="s"># All other settings are loaded automatically from the .env file</span>
+<span class="s">exec lightrag-server --working-dir &quot;$WORKING_DIR&quot;</span>
+<span class="s">EOF</span>
+</code></pre></div>
 </li>
 <li>
 <p><strong>Make the script executable:</strong>
     After creating the script, you need to give it permission to run. Execute this command in your terminal:
-    <code>bash
-    chmod +x ~/LightRAG/lightrag-launcher.sh</code></p>
+    <div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>~/LightRAG/lightrag-launcher.sh
+</code></pre></div></p>
 </li>
 </ol>
 <h2 id="step-3-create-the-configuration-file-env">Step 3: Create the Configuration File (<code>.env</code>)</h2>
@@ -1057,66 +1184,66 @@ EOF
 <hr />
 <h3 id="general-settings-required-for-all-setups"><strong>General Settings (Required for all setups)</strong></h3>
 <p><em>Replace <code>yourusername</code> with your actual Mac username. You can find it by running <code>whoami</code> in the Terminal.</em></p>
-<pre><code class="language-ini"># --- General Server Settings ---
-HOST=127.0.0.1
-PORT=8020
-WEBUI_TITLE=My Personal RAG
-WEBUI_DESCRIPTION=A private RAG system powered by LightRAG
+<div class="highlight"><pre><span></span><code><span class="c1"># --- General Server Settings ---</span>
+<span class="na">HOST</span><span class="o">=</span><span class="s">127.0.0.1</span>
+<span class="na">PORT</span><span class="o">=</span><span class="s">8020</span>
+<span class="na">WEBUI_TITLE</span><span class="o">=</span><span class="s">My Personal RAG</span>
+<span class="na">WEBUI_DESCRIPTION</span><span class="o">=</span><span class="s">A private RAG system powered by LightRAG</span>
 
-# --- Directory Settings ---
-# Make sure to replace 'yourusername' with your actual username
-WORKING_DIR=/Users/yourusername/LightRAG
-INPUT_DIR=/Users/yourusername/LightRAG/inputs
+<span class="c1"># --- Directory Settings ---</span>
+<span class="c1"># Make sure to replace &#39;yourusername&#39; with your actual username</span>
+<span class="na">WORKING_DIR</span><span class="o">=</span><span class="s">/Users/yourusername/LightRAG</span>
+<span class="na">INPUT_DIR</span><span class="o">=</span><span class="s">/Users/yourusername/LightRAG/inputs</span>
 
-# --- Indexing Performance ---
-MAX_ASYNC=4
-MAX_PARALLEL_INSERT=2
-CHUNK_SIZE=1200
-CHUNK_OVERLAP_SIZE=100
-</code></pre>
+<span class="c1"># --- Indexing Performance ---</span>
+<span class="na">MAX_ASYNC</span><span class="o">=</span><span class="s">4</span>
+<span class="na">MAX_PARALLEL_INSERT</span><span class="o">=</span><span class="s">2</span>
+<span class="na">CHUNK_SIZE</span><span class="o">=</span><span class="s">1200</span>
+<span class="na">CHUNK_OVERLAP_SIZE</span><span class="o">=</span><span class="s">100</span>
+</code></pre></div>
 <hr />
 <h3 id="option-1-ollama-free-local"><strong>Option 1: Ollama (Free, Local)</strong></h3>
 <p>Use this for a completely local setup with Ollama.</p>
-<pre><code class="language-ini"># --- Model Settings: OLLAMA ---
-LLM_BINDING=ollama
-LLM_BINDING_HOST=http://localhost:11434
-LLM_MODEL=mistral-nemo:latest
-OLLAMA_LLM_NUM_CTX=32768
+<div class="highlight"><pre><span></span><code><span class="c1"># --- Model Settings: OLLAMA ---</span>
+<span class="na">LLM_BINDING</span><span class="o">=</span><span class="s">ollama</span>
+<span class="na">LLM_BINDING_HOST</span><span class="o">=</span><span class="s">http://localhost:11434</span>
+<span class="na">LLM_MODEL</span><span class="o">=</span><span class="s">mistral-nemo:latest</span>
+<span class="na">OLLAMA_LLM_NUM_CTX</span><span class="o">=</span><span class="s">32768</span>
 
-EMBEDDING_BINDING=ollama
-EMBEDDING_BINDING_HOST=http://localhost:11434
-EMBEDDING_MODEL=bge-m3:latest
-EMBEDDING_DIM=1024
-</code></pre>
+<span class="na">EMBEDDING_BINDING</span><span class="o">=</span><span class="s">ollama</span>
+<span class="na">EMBEDDING_BINDING_HOST</span><span class="o">=</span><span class="s">http://localhost:11434</span>
+<span class="na">EMBEDDING_MODEL</span><span class="o">=</span><span class="s">bge-m3:latest</span>
+<span class="na">EMBEDDING_DIM</span><span class="o">=</span><span class="s">1024</span>
+</code></pre></div>
 <hr />
 <h3 id="option-2-openai-cloud"><strong>Option 2: OpenAI (Cloud)</strong></h3>
 <p>Use this if you have an OpenAI API key.</p>
-<pre><code class="language-ini"># --- Model Settings: OPENAI ---
-LLM_BINDING=openai
-LLM_BINDING_HOST=https://api.openai.com/v1
-LLM_MODEL=gpt-4o
-LLM_BINDING_API_KEY=sk-your-api-key-here
+<div class="highlight"><pre><span></span><code><span class="c1"># --- Model Settings: OPENAI ---</span>
+<span class="na">LLM_BINDING</span><span class="o">=</span><span class="s">openai</span>
+<span class="na">LLM_BINDING_HOST</span><span class="o">=</span><span class="s">https://api.openai.com/v1</span>
+<span class="na">LLM_MODEL</span><span class="o">=</span><span class="s">gpt-4o</span>
+<span class="na">LLM_BINDING_API_KEY</span><span class="o">=</span><span class="s">sk-your-api-key-here</span>
 
-EMBEDDING_BINDING=openai
-EMBEDDING_BINDING_HOST=https://api.openai.com/v1
-EMBEDDING_MODEL=text-embedding-3-large
-EMBEDDING_BINDING_API_KEY=sk-your-api-key-here
-</code></pre>
+<span class="na">EMBEDDING_BINDING</span><span class="o">=</span><span class="s">openai</span>
+<span class="na">EMBEDDING_BINDING_HOST</span><span class="o">=</span><span class="s">https://api.openai.com/v1</span>
+<span class="na">EMBEDDING_MODEL</span><span class="o">=</span><span class="s">text-embedding-3-large</span>
+<span class="na">EMBEDDING_BINDING_API_KEY</span><span class="o">=</span><span class="s">sk-your-api-key-here</span>
+</code></pre></div>
 <hr />
 <h3 id="option-3-google-gemini-cloud"><strong>Option 3: Google Gemini (Cloud)</strong></h3>
 <p>Use this if you have a Google AI API key.</p>
-<pre><code class="language-ini"># --- Model Settings: GEMINI ---
-LLM_BINDING=gemini
-LLM_MODEL=gemini-2.5-flash
-LLM_BINDING_HOST=https://generativelanguage.googleapis.com
-LLM_BINDING_API_KEY=your-gemini-api-key-here
+<div class="highlight"><pre><span></span><code><span class="c1"># --- Model Settings: GEMINI ---</span>
+<span class="na">LLM_BINDING</span><span class="o">=</span><span class="s">gemini</span>
+<span class="na">LLM_MODEL</span><span class="o">=</span><span class="s">gemini-2.5-flash</span>
+<span class="na">LLM_BINDING_HOST</span><span class="o">=</span><span class="s">https://generativelanguage.googleapis.com</span>
+<span class="na">LLM_BINDING_API_KEY</span><span class="o">=</span><span class="s">your-gemini-api-key-here</span>
 
-EMBEDDING_BINDING=gemini
-EMBEDDING_MODEL=gemini-embedding-001
-EMBEDDING_BINDING_HOST=https://generativelanguage.googleapis.com
-EMBEDDING_BINDING_API_KEY=your-gemini-api-key-here
-EMBEDDING_DIM=1536
-</code></pre>
+<span class="na">EMBEDDING_BINDING</span><span class="o">=</span><span class="s">gemini</span>
+<span class="na">EMBEDDING_MODEL</span><span class="o">=</span><span class="s">gemini-embedding-001</span>
+<span class="na">EMBEDDING_BINDING_HOST</span><span class="o">=</span><span class="s">https://generativelanguage.googleapis.com</span>
+<span class="na">EMBEDDING_BINDING_API_KEY</span><span class="o">=</span><span class="s">your-gemini-api-key-here</span>
+<span class="na">EMBEDDING_DIM</span><span class="o">=</span><span class="s">1536</span>
+</code></pre></div>
 <hr />
 <ol>
 <li><strong>Save the <code>.env</code> file</strong> after you've added your chosen configuration.</li>
