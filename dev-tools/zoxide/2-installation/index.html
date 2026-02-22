@@ -976,28 +976,24 @@
 <p>This guide covers installing zoxide on macOS.</p>
 <h2 id="step-1-install-with-homebrew">Step 1: Install with Homebrew</h2>
 <p>The simplest way to install <code>zoxide</code> is with <a href="https://brew.sh/">Homebrew</a>, the standard package manager for macOS.</p>
-<p>To use zoxide's interactive search feature (which we highly recommend), you also need to install <code>fzf</code>.</p>
 <ol>
 <li><strong>Open your terminal.</strong></li>
 <li><strong>Run the install command:</strong>
-    <code>sh
-    brew install zoxide fzf</code>
-    This will download and install both programs.</li>
+    <code>bash
+    brew install zoxide</code>
+    This will download and install the <code>zoxide</code> program.</li>
 </ol>
 <h2 id="step-2-hook-zoxide-into-your-shell">Step 2: Hook Zoxide into Your Shell</h2>
 <p>For <code>zoxide</code> to work, it needs to be "hooked" into your shell. This allows it to track the directories you <code>cd</code> into.</p>
 <ol>
 <li>
 <p><strong>Open your shell's configuration file.</strong> This is most likely <code>~/.zshrc</code> if you're on a modern version of macOS.
-    <code>sh
+    <code>bash
     open -e ~/.zshrc</code></p>
 </li>
 <li>
 <p><strong>Add the initialization script.</strong> Add the following block to the very end of the file. This line runs the <code>zoxide init</code> command every time you start a new shell session.</p>
-<blockquote>
-<p><strong>Warning:</strong> If TextEdit opens, be careful! Sometimes macOS automatically converts standard straight quotes (<code>"</code>) into curly "Smart Quotes" (<code>“</code> or <code>”</code>). Ensure the quotes in the command below remain exactly as shown.</p>
-</blockquote>
-<p>```sh</p>
+<p>```bash</p>
 <h1 id="-zoxide-configuration-start-">--- Zoxide Configuration (start) ---</h1>
 <h1 id="enables-zoxide-a-smarter-cd-command">Enables zoxide, a smarter cd command.</h1>
 <p>eval "$(zoxide init zsh)"</p>
@@ -1006,13 +1002,13 @@
 </li>
 <li>
 <p><strong>Apply the changes.</strong> Save the file, and then either open a brand new terminal window or run the following command to apply the changes to your current session:
-    <code>sh
+    <code>bash
     source ~/.zshrc</code></p>
 </li>
 </ol>
 <h2 id="step-3-verify-the-installation">Step 3: Verify the Installation</h2>
 <p>You can check that <code>zoxide</code> is working by typing:</p>
-<pre><code class="language-sh">zoxide --version
+<pre><code class="language-bash">zoxide --version
 </code></pre>
 <p>If it prints a version number, the installation was successful.</p>
 <p><code>zoxide</code> will now start learning from your navigation habits. To build up its database, just <code>cd</code> around to your most-used project directories a few times.</p>
