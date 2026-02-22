@@ -1003,8 +1003,8 @@
 <ol>
 <li>
 <p><strong>Copy and paste the command below into your Terminal and press <code>Enter</code>:</strong>
-    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;lightrag-hku[offline,observability]&quot;</span>
-</code></pre></div></p>
+    <code>bash
+    uv tool install "lightrag-hku[offline,observability]"</code></p>
 <ul>
 <li>This command installs LightRAG with optional dependencies for offline models (<code>offline</code>) and server monitoring (<code>observability</code>).</li>
 <li>The installation process will take a minute or two as it downloads and installs all the required packages.</li>
@@ -1020,13 +1020,12 @@
 <ol>
 <li>
 <p><strong>Run this command in your Terminal:</strong>
-    <div class="highlight"><pre><span></span><code>which<span class="w"> </span>lightrag-server
-</code></pre></div></p>
+    <code>bash
+    which lightrag-server</code></p>
 </li>
 <li>
 <p><strong>The output should look something like this:</strong>
-    <div class="highlight"><pre><span></span><code>/Users/yourusername/.local/bin/lightrag-server
-</code></pre></div>
+    <code>/Users/yourusername/.local/bin/lightrag-server</code>
     (Where <code>yourusername</code> is your Mac username.)</p>
 </li>
 </ol>

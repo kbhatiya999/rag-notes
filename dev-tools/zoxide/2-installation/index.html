@@ -852,17 +852,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#step-3-verify-the-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Verify the Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -963,17 +952,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#step-3-verify-the-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Verify the Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1002,8 +980,8 @@
 <ol>
 <li><strong>Open your terminal.</strong></li>
 <li><strong>Run the install command:</strong>
-    <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>zoxide<span class="w"> </span>fzf
-</code></pre></div>
+    <code>sh
+    brew install zoxide fzf</code>
     This will download and install both programs.</li>
 </ol>
 <h2 id="step-2-hook-zoxide-into-your-shell">Step 2: Hook Zoxide into Your Shell</h2>
@@ -1011,31 +989,32 @@
 <ol>
 <li>
 <p><strong>Open your shell's configuration file.</strong> This is most likely <code>~/.zshrc</code> if you're on a modern version of macOS.
-    <div class="highlight"><pre><span></span><code>open<span class="w"> </span>-e<span class="w"> </span>~/.zshrc
-</code></pre></div></p>
+    <code>sh
+    open -e ~/.zshrc</code></p>
 </li>
 <li>
 <p><strong>Add the initialization script.</strong> Add the following block to the very end of the file. This line runs the <code>zoxide init</code> command every time you start a new shell session.</p>
 <blockquote>
 <p><strong>Warning:</strong> If TextEdit opens, be careful! Sometimes macOS automatically converts standard straight quotes (<code>"</code>) into curly "Smart Quotes" (<code>“</code> or <code>”</code>). Ensure the quotes in the command below remain exactly as shown.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="c1"># --- Zoxide Configuration (start) ---</span>
-<span class="c1"># Enables zoxide, a smarter cd command.</span>
-<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>zoxide<span class="w"> </span>init<span class="w"> </span>zsh<span class="k">)</span><span class="s2">&quot;</span>
-<span class="c1"># --- Zoxide Configuration (end) ---</span>
-</code></pre></div>
+<p>```sh</p>
+<h1 id="-zoxide-configuration-start-">--- Zoxide Configuration (start) ---</h1>
+<h1 id="enables-zoxide-a-smarter-cd-command">Enables zoxide, a smarter cd command.</h1>
+<p>eval "$(zoxide init zsh)"</p>
+<h1 id="-zoxide-configuration-end-">--- Zoxide Configuration (end) ---</h1>
+<p>```</p>
 </li>
 <li>
 <p><strong>Apply the changes.</strong> Save the file, and then either open a brand new terminal window or run the following command to apply the changes to your current session:
-    <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.zshrc
-</code></pre></div></p>
+    <code>sh
+    source ~/.zshrc</code></p>
 </li>
 </ol>
 <h2 id="step-3-verify-the-installation">Step 3: Verify the Installation</h2>
-<p>You can check that <code>zoxide</code> is working by typing:
-<div class="highlight"><pre><span></span><code>zoxide<span class="w"> </span>--version
-</code></pre></div>
-If it prints a version number, the installation was successful.</p>
+<p>You can check that <code>zoxide</code> is working by typing:</p>
+<pre><code class="language-sh">zoxide --version
+</code></pre>
+<p>If it prints a version number, the installation was successful.</p>
 <p><code>zoxide</code> will now start learning from your navigation habits. To build up its database, just <code>cd</code> around to your most-used project directories a few times.</p>
 <p><strong>Next:</strong> <a href="../3-basic-usage/">3. Basic Usage</a></p>
 

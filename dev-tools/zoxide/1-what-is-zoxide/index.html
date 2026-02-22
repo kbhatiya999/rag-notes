@@ -976,16 +976,16 @@
 <p>Zoxide is a "smarter <code>cd</code> command" for your shell. It remembers the directories you use most frequently, allowing you to jump to them in just a few keystrokes.</p>
 <h2 id="the-problem-with-cd">The Problem with <code>cd</code></h2>
 <p>The standard <code>cd</code> (change directory) command is fundamental, but it can be inefficient. To navigate to a deeply nested directory, you have to type out the full path or <code>cd</code> your way through each parent directory.</p>
-<p>For example, to get to our project directory, you might type:
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/Users/myuser/RAGprojects/rag-notes
-</code></pre></div></p>
+<p>For example, to get to our project directory, you might type:</p>
+<pre><code class="language-bash">cd /Users/myuser/RAGprojects/rag-notes
+</code></pre>
 <p>If you're in a different location, you have to remember and type this entire path every time.</p>
 <h2 id="how-zoxide-solves-it">How Zoxide Solves It</h2>
 <p>Zoxide runs in the background and keeps a ranked list of the directories you visit. Once it has "learned" your habits, you can jump to a directory by typing <code>z</code> followed by a part of the directory's name.</p>
-<p>Instead of the long <code>cd</code> command above, you could simply type:
-<div class="highlight"><pre><span></span><code>z<span class="w"> </span>rag
-</code></pre></div>
-Or <code>z notes</code>, or <code>z ragnotes</code>. Zoxide is smart enough to figure out which directory you mean and take you there instantly.</p>
+<p>Instead of the long <code>cd</code> command above, you could simply type:</p>
+<pre><code class="language-bash">z rag
+</code></pre>
+<p>Or <code>z notes</code>, or <code>z ragnotes</code>. Zoxide is smart enough to figure out which directory you mean and take you there instantly.</p>
 <p>It's a major productivity boost for anyone who spends a lot of time in the terminal.</p>
 <p><strong>Next:</strong> <a href="../2-installation/">2. Installation</a></p>
 

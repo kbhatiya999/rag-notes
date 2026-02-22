@@ -422,10 +422,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-workflow" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Workflow
+        How It Works
       
     </span>
   </a>
@@ -433,21 +433,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#writing-code-blocks" class="md-nav__link">
+  <a href="#creating-a-new-page" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Writing Code Blocks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sub-sections-folders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sub-sections (Folders)
+        Creating a New Page
       
     </span>
   </a>
@@ -940,10 +929,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-workflow" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Workflow
+        How It Works
       
     </span>
   </a>
@@ -951,21 +940,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#writing-code-blocks" class="md-nav__link">
+  <a href="#creating-a-new-page" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Writing Code Blocks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sub-sections-folders" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sub-sections (Folders)
+        Creating a New Page
       
     </span>
   </a>
@@ -993,38 +971,69 @@
 
 
 <h1 id="2-writing-content">2. Writing Content</h1>
-<p>Your website's pages are simple text files written in <strong>Markdown</strong> that live inside the <code>docs/</code> directory.</p>
-<p>To add a new page:
-1. Create a <code>.md</code> file in <code>docs/</code>
-2. Add the file to <code>mkdocs.yml</code> under <code>nav:</code></p>
-<h2 id="example-workflow">Example Workflow</h2>
-<p>Here is exactly how to create a new page called "My New Note" and add it to your site.</p>
-<p><strong>1. Create <code>docs/my-new-note.md</code>:</strong>
-<div class="highlight"><pre><span></span><code><span class="gh"># My New Note</span>
-
-This is a paragraph. You can use <span class="gs">**bold**</span>, <span class="ge">*italics*</span>, and <span class="sb">`code`</span>.
-
-<span class="k">-</span><span class="w"> </span>Create
-<span class="k">-</span><span class="w"> </span>bullet
-<span class="k">-</span><span class="w"> </span>lists
-</code></pre></div></p>
-<p><strong>2. Update <code>mkdocs.yml</code> at the root:</strong>
-<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">My First Note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-first-note.md</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">My New Note</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-new-note.md</span><span class="w">  </span><span class="c1"># &lt;-- Add this!</span>
-</code></pre></div></p>
-<p>If your local server is running (<code>uv run mkdocs serve</code>), your website will instantly update!</p>
-<h2 id="writing-code-blocks">Writing Code Blocks</h2>
-<p>To write code blocks, wrap them in triple backticks (<code>```</code>).</p>
-<p><strong>You can freely indent code blocks anywhere (like inside numbered lists)!</strong> We have enabled the <code>pymdownx.superfences</code> extension in your <code>mkdocs.yml</code> which handles all complex nesting automatically.</p>
-<h2 id="sub-sections-folders">Sub-sections (Folders)</h2>
-<p>To create a sub-section in your navigation, just create a sub-folder inside <code>docs/</code> and nest the items in your <code>mkdocs.yml</code>.</p>
-<p><strong>Example:</strong>
-<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Tutorials</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Git Basics</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tutorials/git-basics.md</span><span class="w">  </span><span class="c1"># File is in docs/tutorials/</span>
-</code></pre></div></p>
+<p>This guide explains how to add new pages (like this one) and organize your notes.</p>
+<h2 id="how-it-works">How It Works</h2>
+<ul>
+<li>Your website's pages are just simple text files written in <strong>Markdown</strong>.</li>
+<li>All your pages live inside the <code>docs/</code> directory.</li>
+<li>The navigation menu is defined in the <code>mkdocs.yml</code> file.</li>
+</ul>
+<h2 id="creating-a-new-page">Creating a New Page</h2>
+<ol>
+<li>
+<p><strong>Create a new file:</strong></p>
+<ul>
+<li>Go to the <code>docs/</code> directory in your project.</li>
+<li>Create a new file with a <code>.md</code> extension (e.g., <code>my-new-note.md</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Write your content:</strong></p>
+<ul>
+<li>Open the file in a text editor (like VS Code, Sublime Text, or even Notepad).</li>
+<li>Write your notes using Markdown syntax.</li>
+</ul>
+<p><strong>Example Markdown:</strong>
+```markdown</p>
+<h1 id="my-new-note">My New Note</h1>
+<p>This is a paragraph. You can use <strong>bold</strong>, <em>italics</em>, and <code>code</code>.</p>
+<ul>
+<li>Create</li>
+<li>bullet</li>
+<li>lists
+```</li>
+</ul>
+</li>
+</ol>
+<h2 id="adding-the-page-to-the-navigation">Adding the Page to the Navigation</h2>
+<p>To make your new page appear in the site's navigation menu, you need to edit the <code>mkdocs.yml</code> file.</p>
+<ol>
+<li><strong>Open <code>mkdocs.yml</code>:</strong> This file is in the root of your project.</li>
+<li><strong>Find the <code>nav:</code> section:</strong> This is where the navigation structure is defined.</li>
+<li><strong>Add your new page:</strong> Add a new entry to the list. The format is <code>Page Title: path/to/your/file.md</code>.</li>
+</ol>
+<p><strong>Example <code>mkdocs.yml</code>:</strong></p>
+<pre><code class="language-yaml">nav:
+  - Home: index.md
+  - My First Note: my-first-note.md
+  - My New Note: my-new-note.md  # &lt;-- Add this line
+</code></pre>
+<p><strong>Instantly see the change:</strong> If your local server is running (<code>uv run mkdocs serve</code>), your website will automatically update with the new page in the navigation.</p>
+<h2 id="creating-sub-sections">Creating Sub-sections</h2>
+<p>You can create nested navigation by adding a sub-list under a main item.</p>
+<p><strong>Example <code>mkdocs.yml</code> with sub-sections:</strong></p>
+<pre><code class="language-yaml">nav:
+  - Home: index.md
+  - Tutorials:
+    - Git Basics: tutorials/git-basics.md
+    - Python Tips: tutorials/python-tips.md
+</code></pre>
+<ul>
+<li>In this example, you would need to create a <code>tutorials/</code> folder inside your <code>docs/</code> directory.</li>
+<li>Then, place <code>git-basics.md</code> and <code>python-tips.md</code> inside <code>docs/tutorials/</code>.</li>
+</ul>
+<h2 id="next-step">Next Step</h2>
+<p>Once you've added your content, it's time to publish your site to the web.</p>
 <p><strong>Next:</strong> <a href="../3-publishing-site/">3. Publishing Your Site</a></p>
 
 

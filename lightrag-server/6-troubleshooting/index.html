@@ -1100,8 +1100,8 @@
 <ol>
 <li>
 <p><strong>Test the script directly:</strong> Open the <strong>Terminal</strong> app and run the script to see the actual error message:
-    <div class="highlight"><pre><span></span><code>~/LightRAG/lightrag-launcher.sh
-</code></pre></div></p>
+    <code>bash
+    ~/LightRAG/lightrag-launcher.sh</code></p>
 </li>
 <li>
 <p><strong>Read the error message.</strong> Common errors include:</p>
@@ -1109,8 +1109,8 @@
 <li><strong><code>command not found: lightrag-server</code></strong>: The installation failed or <code>~/.local/bin</code> is not in your <code>PATH</code>.</li>
 <li>
 <p><strong>Solution:</strong> Re-run the installation command:
-    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;lightrag-hku[offline,observability]&quot;</span>
-</code></pre></div></p>
+    <code>bash
+    uv tool install "lightrag-hku[offline,observability]"</code></p>
 </li>
 <li>
 <p><strong><code>No such file or directory: '/Users/yourname/LightRAG/.env'</code></strong>: The configuration file is missing or in the wrong place.</p>
