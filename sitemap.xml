@@ -2,18 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/different-site/</loc>
-         <lastmod>2026-02-10</lastmod>
+         <lastmod>2026-02-22</lastmod>
     </url>
     <url>
-         <loc>https://example.com/different-site/How%20To%20Setup%20Page%20Like%20This/getting-started/</loc>
-         <lastmod>2026-02-10</lastmod>
+         <loc>https://example.com/different-site/dev-tools/zoxide/1-what-is-zoxide/</loc>
+         <lastmod>2026-02-22</lastmod>
     </url>
     <url>
-         <loc>https://example.com/different-site/How%20To%20Setup%20Page%20Like%20This/github-pages/</loc>
-         <lastmod>2026-02-10</lastmod>
+         <loc>https://example.com/different-site/dev-tools/zoxide/2-installation/</loc>
+         <lastmod>2026-02-22</lastmod>
     </url>
     <url>
-         <loc>https://example.com/different-site/How%20To%20Setup%20Page%20Like%20This/github/</loc>
-         <lastmod>2026-02-10</lastmod>
+         <loc>https://example.com/different-site/dev-tools/zoxide/3-basic-usage/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/lightrag-server/1-introduction/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/lightrag-server/2-installation/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/lightrag-server/3-configuration/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/lightrag-server/4-creating-the-app/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/lightrag-server/5-usage-guide/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/lightrag-server/6-troubleshooting/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/notes-site/1-initial-setup/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/notes-site/2-writing-content/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/notes-site/3-publishing-site/</loc>
+         <lastmod>2026-02-22</lastmod>
     </url>
 </urlset>

@@ -8,25 +8,31 @@
       
       
       
+        <link rel="canonical" href="https://example.com/different-site/lightrag-server/3-configuration/">
       
+      
+        <link rel="prev" href="../2-installation/">
+      
+      
+        <link rel="next" href="../4-creating-the-app/">
       
       
         
       
       
-      <link rel="icon" href="/different-site/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>RAG Notes</title>
+        <title>3. Configuration - RAG Notes</title>
       
     
     
-      <link rel="stylesheet" href="/different-site/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/different-site/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("/different-site/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#3-server-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/different-site/." title="RAG Notes" class="md-header__button md-logo" aria-label="RAG Notes" data-md-component="logo">
+    <a href="../.." title="RAG Notes" class="md-header__button md-logo" aria-label="RAG Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              3. Configuration
             
           </span>
         </div>
@@ -217,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/different-site/." title="RAG Notes" class="md-nav__button md-logo" aria-label="RAG Notes" data-md-component="logo">
+    <a href="../.." title="RAG Notes" class="md-nav__button md-logo" aria-label="RAG Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -247,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -321,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/notes-site/1-initial-setup/" class="md-nav__link">
+      <a href="../../notes-site/1-initial-setup/" class="md-nav__link">
         
   
   
@@ -349,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/notes-site/2-writing-content/" class="md-nav__link">
+      <a href="../../notes-site/2-writing-content/" class="md-nav__link">
         
   
   
@@ -377,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/notes-site/3-publishing-site/" class="md-nav__link">
+      <a href="../../notes-site/3-publishing-site/" class="md-nav__link">
         
   
   
@@ -409,18 +420,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -441,7 +454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -459,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/1-introduction/" class="md-nav__link">
+      <a href="../1-introduction/" class="md-nav__link">
         
   
   
@@ -487,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/2-installation/" class="md-nav__link">
+      <a href="../2-installation/" class="md-nav__link">
         
   
   
@@ -512,10 +525,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/3-configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -531,6 +571,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-project-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create Project Folders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-the-launcher-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Create the Launcher Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -543,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/4-creating-the-app/" class="md-nav__link">
+      <a href="../4-creating-the-app/" class="md-nav__link">
         
   
   
@@ -571,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/5-usage-guide/" class="md-nav__link">
+      <a href="../5-usage-guide/" class="md-nav__link">
         
   
   
@@ -599,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/6-troubleshooting/" class="md-nav__link">
+      <a href="../6-troubleshooting/" class="md-nav__link">
         
   
   
@@ -728,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/dev-tools/zoxide/1-what-is-zoxide/" class="md-nav__link">
+      <a href="../../dev-tools/zoxide/1-what-is-zoxide/" class="md-nav__link">
         
   
   
@@ -756,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/dev-tools/zoxide/2-installation/" class="md-nav__link">
+      <a href="../../dev-tools/zoxide/2-installation/" class="md-nav__link">
         
   
   
@@ -784,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/dev-tools/zoxide/3-basic-usage/" class="md-nav__link">
+      <a href="../../dev-tools/zoxide/3-basic-usage/" class="md-nav__link">
         
   
   
@@ -837,6 +919,38 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-project-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create Project Folders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-the-launcher-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Create the Launcher Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -849,8 +963,179 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="3-server-configuration">3. Server Configuration</h1>
+<p>Now that LightRAG is installed, we need to create the necessary folders, a launcher script, and a configuration file to store your settings.</p>
+<h2 id="step-1-create-project-folders">Step 1: Create Project Folders</h2>
+<p>We will create a central folder in your home directory to hold all the server's files, including its data and your input documents.</p>
+<ol>
+<li><strong>Open Finder.</strong> (Click the icon in your dock).</li>
+<li><strong>Go to your Home folder:</strong> Press <code>⌘ + Shift + H</code>.</li>
+<li><strong>Create the main folder:</strong><ul>
+<li>Press <code>⌘ + Shift + N</code> to create a new folder.</li>
+<li>Name it <code>LightRAG</code>.</li>
+</ul>
+</li>
+<li><strong>Create the inputs folder:</strong><ul>
+<li>Go inside the new <code>LightRAG</code> folder.</li>
+<li>Create another new folder and name it <code>inputs</code>.</li>
+</ul>
+</li>
+</ol>
+<p>You should now have this structure:
+- <code>~/LightRAG/</code> - This will be the server's working directory.
+- <code>~/LightRAG/inputs/</code> - This is where you will place the documents (PDFs, text files) you want the server to process.</p>
+<h2 id="step-2-create-the-launcher-script">Step 2: Create the Launcher Script</h2>
+<p>This script is a small wrapper that tells the system where to find and how to run the <code>lightrag-server</code> command. Platypus will use this script to create the app.</p>
+<ol>
+<li><strong>Open the Terminal app.</strong></li>
+<li>
+<p><strong>Copy and paste the entire code block below into your terminal, then press <code>Enter</code>.</strong> This will create and save the script in one go.</p>
+<p>```bash
+cat &gt; ~/LightRAG/lightrag-launcher.sh &lt;&lt; 'EOF'</p>
+<h1 id="binzsh">!/bin/zsh</h1>
+<h1 id="_1"></h1>
+<h1 id="lightrag-server-launcher">LightRAG Server Launcher</h1>
+<h1 id="wrapper-script-for-use-with-platypusapp">Wrapper script for use with Platypus.app</h1>
+<h1 id="_2"></h1>
+<h1 id="ensure-the-uv-tool-bin-directory-is-in-the-path">Ensure the uv tool bin directory is in the PATH</h1>
+<p>export PATH="$HOME/.local/bin:$PATH"</p>
+<h1 id="define-the-working-directory-where-data-and-configs-are-stored">Define the working directory where data and configs are stored</h1>
+<p>WORKING_DIR="$HOME/LightRAG"</p>
+<h1 id="create-the-data-directory-if-it-doesnt-exist">Create the data directory if it doesn't exist</h1>
+<p>mkdir -p "$WORKING_DIR"</p>
+<h1 id="change-to-the-working-directory-so-the-env-file-is-found">Change to the working directory so the .env file is found</h1>
+<p>cd "$WORKING_DIR"</p>
+<p>echo "Starting LightRAG Server..."
+echo "  Config: $WORKING_DIR/.env"
+echo "  Data:   $WORKING_DIR"
+echo ""
+echo "Loading configuration from .env file..."
+echo "Press Ctrl+C or Cmd+Q to stop the server"
+echo "----------------------------------------"</p>
+<h1 id="execute-the-server-using-the-working-directory">Execute the server, using the working directory</h1>
+<h1 id="all-other-settings-are-loaded-automatically-from-the-env-file">All other settings are loaded automatically from the .env file</h1>
+<p>exec lightrag-server --working-dir "$WORKING_DIR"
+EOF
+```</p>
+</li>
+<li>
+<p><strong>Make the script executable:</strong>
+    After creating the script, you need to give it permission to run. Execute this command in your terminal:
+    <code>bash
+    chmod +x ~/LightRAG/lightrag-launcher.sh</code></p>
+</li>
+</ol>
+<h2 id="step-3-create-the-configuration-file-env">Step 3: Create the Configuration File (<code>.env</code>)</h2>
+<p>The <code>.env</code> file holds all the settings for your server, such as which AI model to use, where your data is stored, and your API keys.</p>
+<ol>
+<li><strong>Go to your <code>LightRAG</code> folder in Finder.</strong></li>
+<li>
+<p><strong>Create a new, empty text file named <code>.env</code>.</strong></p>
+<ul>
+<li>The dot at the beginning makes it a "hidden" file.</li>
+<li>If your editor doesn't let you save files starting with a dot, save it as <code>env.txt</code>, then go to Finder, click the file, and rename it to <code>.env</code>. You may need to press <code>⌘ + Shift + .</code> to see hidden files in Finder.</li>
+</ul>
+</li>
+<li>
+<p><strong>Open the <code>.env</code> file</strong> in a plain text editor (like TextEdit, VS Code, or Cursor).</p>
+</li>
+<li>
+<p><strong>Copy and paste the configuration templates below.</strong></p>
+<ul>
+<li><strong>Important:</strong> You must include the <strong>"General Settings"</strong> block.</li>
+<li>Then, choose <strong>ONE</strong> of the model provider options (e.g., "Option 1: Ollama") and add it to the file.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="general-settings-required-for-all-setups"><strong>General Settings (Required for all setups)</strong></h3>
+<p><em>Replace <code>yourusername</code> with your actual Mac username. You can find it by running <code>whoami</code> in the Terminal.</em></p>
+<pre><code class="language-ini"># --- General Server Settings ---
+HOST=127.0.0.1
+PORT=8020
+WEBUI_TITLE=My Personal RAG
+WEBUI_DESCRIPTION=A private RAG system powered by LightRAG
+
+# --- Directory Settings ---
+# Make sure to replace 'yourusername' with your actual username
+WORKING_DIR=/Users/yourusername/LightRAG
+INPUT_DIR=/Users/yourusername/LightRAG/inputs
+
+# --- Indexing Performance ---
+MAX_ASYNC=4
+MAX_PARALLEL_INSERT=2
+CHUNK_SIZE=1200
+CHUNK_OVERLAP_SIZE=100
+</code></pre>
+<hr />
+<h3 id="option-1-ollama-free-local"><strong>Option 1: Ollama (Free, Local)</strong></h3>
+<p>Use this for a completely local setup with Ollama.</p>
+<pre><code class="language-ini"># --- Model Settings: OLLAMA ---
+LLM_BINDING=ollama
+LLM_BINDING_HOST=http://localhost:11434
+LLM_MODEL=mistral-nemo:latest
+OLLAMA_LLM_NUM_CTX=32768
+
+EMBEDDING_BINDING=ollama
+EMBEDDING_BINDING_HOST=http://localhost:11434
+EMBEDDING_MODEL=bge-m3:latest
+EMBEDDING_DIM=1024
+</code></pre>
+<hr />
+<h3 id="option-2-openai-cloud"><strong>Option 2: OpenAI (Cloud)</strong></h3>
+<p>Use this if you have an OpenAI API key.</p>
+<pre><code class="language-ini"># --- Model Settings: OPENAI ---
+LLM_BINDING=openai
+LLM_BINDING_HOST=https://api.openai.com/v1
+LLM_MODEL=gpt-4o
+LLM_BINDING_API_KEY=sk-your-api-key-here
+
+EMBEDDING_BINDING=openai
+EMBEDDING_BINDING_HOST=https://api.openai.com/v1
+EMBEDDING_MODEL=text-embedding-3-large
+EMBEDDING_BINDING_API_KEY=sk-your-api-key-here
+</code></pre>
+<hr />
+<h3 id="option-3-google-gemini-cloud"><strong>Option 3: Google Gemini (Cloud)</strong></h3>
+<p>Use this if you have a Google AI API key.</p>
+<pre><code class="language-ini"># --- Model Settings: GEMINI ---
+LLM_BINDING=gemini
+LLM_MODEL=gemini-2.5-flash
+LLM_BINDING_HOST=https://generativelanguage.googleapis.com
+LLM_BINDING_API_KEY=your-gemini-api-key-here
+
+EMBEDDING_BINDING=gemini
+EMBEDDING_MODEL=gemini-embedding-001
+EMBEDDING_BINDING_HOST=https://generativelanguage.googleapis.com
+EMBEDDING_BINDING_API_KEY=your-gemini-api-key-here
+EMBEDDING_DIM=1536
+</code></pre>
+<hr />
+<ol>
+<li><strong>Save the <code>.env</code> file</strong> after you've added your chosen configuration.</li>
+</ol>
+<p>Your server is now configured! The next step is to test it and turn it into a clickable application.</p>
+<p><strong>Next:</strong> <a href="../4-creating-the-app/">4. Creating the App</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -887,10 +1172,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/different-site/", "features": [], "search": "/different-site/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/different-site/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

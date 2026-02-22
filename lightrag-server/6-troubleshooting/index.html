@@ -8,25 +8,31 @@
       
       
       
+        <link rel="canonical" href="https://example.com/different-site/lightrag-server/6-troubleshooting/">
       
+      
+        <link rel="prev" href="../5-usage-guide/">
+      
+      
+        <link rel="next" href="../../dev-tools/zoxide/1-what-is-zoxide/">
       
       
         
       
       
-      <link rel="icon" href="/different-site/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>RAG Notes</title>
+        <title>6. Troubleshooting - RAG Notes</title>
       
     
     
-      <link rel="stylesheet" href="/different-site/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/different-site/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("/different-site/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#6-troubleshooting-and-reference" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/different-site/." title="RAG Notes" class="md-header__button md-logo" aria-label="RAG Notes" data-md-component="logo">
+    <a href="../.." title="RAG Notes" class="md-header__button md-logo" aria-label="RAG Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              6. Troubleshooting
             
           </span>
         </div>
@@ -217,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/different-site/." title="RAG Notes" class="md-nav__button md-logo" aria-label="RAG Notes" data-md-component="logo">
+    <a href="../.." title="RAG Notes" class="md-nav__button md-logo" aria-label="RAG Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -247,7 +258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -321,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/notes-site/1-initial-setup/" class="md-nav__link">
+      <a href="../../notes-site/1-initial-setup/" class="md-nav__link">
         
   
   
@@ -349,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/notes-site/2-writing-content/" class="md-nav__link">
+      <a href="../../notes-site/2-writing-content/" class="md-nav__link">
         
   
   
@@ -377,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/notes-site/3-publishing-site/" class="md-nav__link">
+      <a href="../../notes-site/3-publishing-site/" class="md-nav__link">
         
   
   
@@ -409,18 +420,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -441,7 +454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -459,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/1-introduction/" class="md-nav__link">
+      <a href="../1-introduction/" class="md-nav__link">
         
   
   
@@ -487,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/2-installation/" class="md-nav__link">
+      <a href="../2-installation/" class="md-nav__link">
         
   
   
@@ -515,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/3-configuration/" class="md-nav__link">
+      <a href="../3-configuration/" class="md-nav__link">
         
   
   
@@ -543,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/4-creating-the-app/" class="md-nav__link">
+      <a href="../4-creating-the-app/" class="md-nav__link">
         
   
   
@@ -571,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/5-usage-guide/" class="md-nav__link">
+      <a href="../5-usage-guide/" class="md-nav__link">
         
   
   
@@ -596,10 +609,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/different-site/lightrag-server/6-troubleshooting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -615,6 +655,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app-wont-start-or-quits-immediately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        App Won't Start or Quits Immediately
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cant-see-the-env-file-in-finder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can't See the .env File in Finder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-starts-but-browser-shows-cant-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server Starts, but Browser Shows "Can't Connect"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-location-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Location Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-action-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Action Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-more-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Need More Help?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -728,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/dev-tools/zoxide/1-what-is-zoxide/" class="md-nav__link">
+      <a href="../../dev-tools/zoxide/1-what-is-zoxide/" class="md-nav__link">
         
   
   
@@ -756,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/dev-tools/zoxide/2-installation/" class="md-nav__link">
+      <a href="../../dev-tools/zoxide/2-installation/" class="md-nav__link">
         
   
   
@@ -784,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/different-site/dev-tools/zoxide/3-basic-usage/" class="md-nav__link">
+      <a href="../../dev-tools/zoxide/3-basic-usage/" class="md-nav__link">
         
   
   
@@ -837,6 +980,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app-wont-start-or-quits-immediately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        App Won't Start or Quits Immediately
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cant-see-the-env-file-in-finder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can't See the .env File in Finder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-starts-but-browser-shows-cant-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server Starts, but Browser Shows "Can't Connect"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-location-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Location Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-action-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Action Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-more-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Need More Help?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -849,8 +1085,143 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="6-troubleshooting-and-reference">6. Troubleshooting and Reference</h1>
+<p>This page contains solutions to common problems, a summary of file locations, and a quick reference for common actions.</p>
+<h2 id="common-issues">Common Issues</h2>
+<h3 id="app-wont-start-or-quits-immediately">App Won't Start or Quits Immediately</h3>
+<p>This usually means there's an error in the underlying script or configuration.</p>
+<ol>
+<li>
+<p><strong>Test the script directly:</strong> Open the <strong>Terminal</strong> app and run the script to see the actual error message:
+    <code>bash
+    ~/LightRAG/lightrag-launcher.sh</code></p>
+</li>
+<li>
+<p><strong>Read the error message.</strong> Common errors include:</p>
+<ul>
+<li><strong><code>command not found: lightrag-server</code></strong>: The installation failed or <code>~/.local/bin</code> is not in your <code>PATH</code>.</li>
+<li>
+<p><strong>Solution:</strong> Re-run the installation command:
+    <code>bash
+    uv tool install "lightrag-hku[offline,observability]"</code></p>
+</li>
+<li>
+<p><strong><code>No such file or directory: '/Users/yourname/LightRAG/.env'</code></strong>: The configuration file is missing or in the wrong place.</p>
+</li>
+<li>
+<p><strong>Solution:</strong> Make sure <code>~/LightRAG/.env</code> exists.</p>
+</li>
+<li>
+<p><strong><code>Address already in use</code> or <code>Port already in use</code></strong>: Another application is using the port number (e.g., 8020) that LightRAG wants to use.</p>
+</li>
+<li><strong>Solution:</strong> Open <code>~/LightRAG/.env</code> and change the <code>PORT</code> setting to a different number, like <code>8030</code> or <code>9000</code>. Save the file and restart the app.</li>
+</ul>
+</li>
+</ol>
+<h3 id="cant-see-the-env-file-in-finder">Can't See the <code>.env</code> File in Finder</h3>
+<p>Files that start with a dot (<code>.</code>) are hidden by default on macOS.</p>
+<ul>
+<li><strong>Solution:</strong> In Finder, navigate to your <code>~/LightRAG/</code> folder and press <code>⌘ + Shift + .</code> (Command + Shift + Period) to toggle the visibility of hidden files.</li>
+</ul>
+<h3 id="server-starts-but-browser-shows-cant-connect">Server Starts, but Browser Shows "Can't Connect"</h3>
+<ol>
+<li><strong>Check the Port:</strong> Look at the server app's window. The startup message says which port it's using (e.g., <code>Uvicorn running on http://127.0.0.1:8020</code>). Make sure you are using this exact address and port in your browser.</li>
+<li><strong>Check for Errors:</strong> Look for any error messages in the server window that might have appeared after startup.</li>
+</ol>
+<h2 id="file-location-reference">File Location Reference</h2>
+<p>Here's a summary of where all the important files for your server app are located:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Location</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The Mac App</strong></td>
+<td><code>/Applications/LightRAG Server.app</code></td>
+<td>The application you double-click to start.</td>
+</tr>
+<tr>
+<td><strong>Settings File</strong></td>
+<td><code>~/LightRAG/.env</code></td>
+<td>All configuration (models, ports, API keys).</td>
+</tr>
+<tr>
+<td><strong>Server Data</strong></td>
+<td><code>~/LightRAG/</code></td>
+<td>The main folder for vector stores and other data.</td>
+</tr>
+<tr>
+<td><strong>Documents to Index</strong></td>
+<td><code>~/LightRAG/inputs/</code></td>
+<td>Place your PDF and text files here.</td>
+</tr>
+<tr>
+<td><strong>Launcher Script</strong></td>
+<td><code>~/LightRAG/lightrag-launcher.sh</code></td>
+<td>The core script used by the Platypus app.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quick-action-reference">Quick Action Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Start Server</strong></td>
+<td>Double-click <code>LightRAG Server.app</code> in Applications.</td>
+</tr>
+<tr>
+<td><strong>Stop Server</strong></td>
+<td>Press <code>⌘ + Q</code> in the app window.</td>
+</tr>
+<tr>
+<td><strong>Access Web UI</strong></td>
+<td>Open <code>http://127.0.0.1:8020</code> in your browser.</td>
+</tr>
+<tr>
+<td><strong>Change Settings</strong></td>
+<td>Edit <code>~/LightRAG/.env</code> and restart the app.</td>
+</tr>
+<tr>
+<td><strong>Add Documents</strong></td>
+<td>Drag files into the <code>~/LightRAG/inputs/</code> folder.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="need-more-help">Need More Help?</h2>
+<ul>
+<li><strong>LightRAG Project:</strong> For more about the underlying tool, visit the <a href="https://github.com/HKUDS/LightRAG">LightRAG GitHub Repository</a>.</li>
+<li><strong>Platypus:</strong> For questions about the app creation tool, see the <a href="https://sveinbjorn.org/platypus">Platypus Website</a>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -887,10 +1258,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/different-site/", "features": [], "search": "/different-site/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/different-site/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
