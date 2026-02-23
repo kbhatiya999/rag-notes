@@ -16,6 +16,11 @@ All your notes are just written in plain text files inside the `docs/` folder, u
    This is a **bold** word.
    - Point 1
    - Point 2
+
+   ```python
+   # Code blocks automatically get a copy button!
+   print("Hello World")
+   ```
    ```
 
 3. **Add to the Menu**:

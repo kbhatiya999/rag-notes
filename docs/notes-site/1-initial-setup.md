@@ -36,7 +36,17 @@ You need two things installed on your Mac. Open the Terminal app (`⌘ + Space`,
 
    ```yaml
    site_name: My Notes
-   theme: material
+   theme: 
+     name: material
+     features:
+       - content.code.copy
+   
+   markdown_extensions:
+     - pymdownx.highlight:
+         anchor_linenums: true
+     - pymdownx.superfences
+     - pymdownx.snippets
+
    nav:
      - Home: index.md
    ```
