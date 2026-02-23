@@ -1,23 +1,16 @@
 # 4. Running the Server
 
-## 1. Set API Keys
-If you are using cloud providers, tell Terminal your API keys before starting the server. Open Terminal and run:
+Since all settings and keys are saved in your config and `.zshrc` files, you only need to run one short command to start your proxy.
 
-```bash
-export GEMINI_API_KEY="AI..."
-export CUSTOM_API_KEY="sk-..." # Only if your custom server requires it
-```
+## Start the Server
 
-**Note:** These only last until you close the window. (You can add those lines to your `~/.zshrc` file if you want them to be permanent).
+1. Open a new **Terminal**.
+2. Run this command:
+   ```bash
+   litellm --config ~/.litellm/config.yaml
+   ```
 
-## 2. Start the Server
-In the same Terminal window, start the server and point it to the config file:
-
-```bash
-litellm --config ~/.litellm/config.yaml
-```
-
-When you see `Uvicorn running on http://0.0.0.0:4000`, the server is ready. 
-To stop it, press `Ctrl + C`.
+When you see `Uvicorn running on http://0.0.0.0:4000`, your AI proxy is successfully hosting all your local and cloud models.
+To stop the server at any time, press `Ctrl + C` in the Terminal.
 
 **Next:** [5. Usage and Testing](5-usage-and-testing.md)

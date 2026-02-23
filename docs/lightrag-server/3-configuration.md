@@ -89,4 +89,4 @@ exec lightrag-server --working-dir "$WORKING_DIR"
    chmod +x ~/LightRAG/lightrag-launcher.sh
    ```
 
-**Next:** [4. Creating the App](4-creating-the-app.md)
+**Next:** [4. Running the Server](4-running-the-server.md)

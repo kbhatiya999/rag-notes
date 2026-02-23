@@ -1,11 +1,9 @@
 # 5. Usage Guide
 
-## Start and Stop the Server
-- **Start:** Open your Applications folder in Finder and double-click `LightRAG Server.app`.
-- **Stop:** Click the app's text window and press `⌘ + Q`.
+Keep your Terminal window open with the server running (`bash ~/LightRAG/lightrag-launcher.sh`) while completing these steps.
 
 ## Use the Web Interface
-When the app is running, go to:
+When the server is running, go to:
 - **Chat Interface:** `http://127.0.0.1:8020`
 
 ## Add Documents
@@ -18,6 +16,6 @@ When the app is running, go to:
 1. Go to the `LightRAG` folder in Finder. (Press `⇧ + ⌘ + .` if you don't see `.env`).
 2. Open `.env` in Zed.
 3. Make your changes (like switching the API key) and save.
-4. Restart the `LightRAG Server.app` to apply the changes.
+4. Restart your server (press `Ctrl + C` in Terminal, then run the script again) to apply the changes.
 
-**Next:** [6. Troubleshooting](6-troubleshooting.md)
+**Next:** [6. Optional UI Launcher](6-optional-ui-launcher.md)

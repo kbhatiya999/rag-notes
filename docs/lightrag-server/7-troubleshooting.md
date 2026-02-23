@@ -1,9 +1,9 @@
-# 6. Troubleshooting
+# 7. Troubleshooting
 
 ## Common Issues
 
-**App Quits Immediately**
-1. Open Terminal and run: `~/LightRAG/lightrag-launcher.sh` to see the error.
+**Server Quits Immediately**
+1. Open Terminal and run: `bash ~/LightRAG/lightrag-launcher.sh` to see the error.
 2. If it says `command not found`, reinstall the tool: 
    ```bash
    uv tool install "lightrag-hku[offline,observability]"
@@ -14,12 +14,12 @@
 Files starting with a dot are hidden by default. Open the `LightRAG` folder in Finder and press `⇧ + ⌘ + .` to show them.
 
 **Server running but browser won't connect**
-Check the app's text window to see exactly what port it started on, and ensure your browser matches (e.g., `http://127.0.0.1:8020`).
+Check the Terminal output to see exactly what port it started on, and ensure your browser matches (e.g., `http://127.0.0.1:8020`).
 
 ## File Locations
 
-- **The App:** `/Applications/LightRAG Server.app`
 - **Settings:** `~/LightRAG/.env`
 - **Data & DB:** `~/LightRAG/`
 - **Documents:** `~/LightRAG/inputs/`
 - **Script:** `~/LightRAG/lightrag-launcher.sh`
+- **The App (Optional):** `/Applications/LightRAG Server.app`

@@ -23,9 +23,10 @@ nav:
     - "1. Introduction": lightrag-server/1-introduction.md
     - "2. Installation": lightrag-server/2-installation.md
     - "3. Configuration": lightrag-server/3-configuration.md
-    - "4. Creating the App": lightrag-server/4-creating-the-app.md
+    - "4. Running the Server": lightrag-server/4-running-the-server.md
     - "5. Usage Guide": lightrag-server/5-usage.md
-    - "6. Troubleshooting": lightrag-server/6-troubleshooting.md
+    - "6. Optional UI Launcher": lightrag-server/6-optional-ui-launcher.md
+    - "7. Troubleshooting": lightrag-server/7-troubleshooting.md
 
 
 markdown_extensions:

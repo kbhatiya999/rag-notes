@@ -35,7 +35,16 @@ model_list:
       api_key: "os.environ/GEMINI_API_KEY"
 ```
 
-## How API Keys Work
-The config uses `os.environ/...` to securely load API keys from your environment. You tell your Mac the key before starting the server.
+## 3. Set Your API Key
+The config file searches your Mac's environment for the `GEMINI_API_KEY`. We need to save it to your Terminal profile so it's always available:
+
+1. Open Finder and go to your home folder (`⇧ + ⌘ + H`).
+2. Press `⇧ + ⌘ + .` to show hidden files.
+3. Open `.zshrc` in Zed.
+4. Add this line to the bottom, replacing `your-key-here` with your actual Google AI Studio API key:
+   ```bash
+   export GEMINI_API_KEY="your-key-here"
+   ```
+5. Save the file and close Zed.
 
 **Next:** [4. Running the Server](4-running-the-server.md)

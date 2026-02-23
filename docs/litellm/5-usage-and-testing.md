@@ -1,18 +1,25 @@
 # 5. Usage and Testing
 
-## Test with Interactive Proxy Menu
-The easiest way to test your server is by using LiteLLM's built in interactive terminal UI. 
+## Test the Proxy
+LiteLLM comes with a built-in terminal CLI to easily test your models without writing code. 
 
-Keep your server running in one Terminal tab, open a **new** Terminal tab (`⌘ + T`), and run:
+Keep your server running in one Terminal tab, open a **new** Terminal tab (`⌘ + T`), and choose one of the testing methods below:
 
+### Method 1: Interactive Menu (Recommended)
+Run the proxy tool to open a full interactive menu:
 ```bash
 litellm-proxy
 ```
-
-When the interactive menu opens:
-1. Type `chat` and press Enter to start the interactive chat module.
+1. Type `chat` and press Enter.
 2. It will ask for a **Model name**. Type your wildcard proxy route, for example `gemini/gemini-2.5-flash` or `ollama/llama3.2`, and press Enter.
 3. You can now chat directly with the model to verify it works! Press `Ctrl-C` to exit back to the menu, and type `quit` to close the tool.
+
+### Method 2: Direct Inline Chat
+If you know the model name, you can skip the menu and launch straight into a chat session from your terminal:
+```bash
+litellm-proxy chat gemini/gemini-2.5-flash
+```
+*(Replace `gemini/gemini-2.5-flash` with your chosen Ollama or Gemini model).*
 
 ## Connect LightRAG to LiteLLM
 To use LiteLLM as the engine for your LightRAG server, update your `LightRAG/.env` file in Zed:
