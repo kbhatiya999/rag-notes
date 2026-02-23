@@ -4,7 +4,7 @@
 To test your server, keep it running in one Terminal tab, open a **new** Terminal tab (`⌘ + T`), and run:
 
 ```bash
-curl http://localhost:8000/v1/chat/completions \
+curl http://localhost:4000/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "gpt-4o",
@@ -24,7 +24,7 @@ To use LiteLLM as the engine for your LightRAG server, update your `LightRAG/.en
 
 ```ini
 LLM_BINDING=openai
-LLM_BINDING_HOST=http://localhost:8000/v1
+LLM_BINDING_HOST=http://localhost:4000/v1
 LLM_MODEL=gpt-4o 
 LLM_BINDING_API_KEY=any-string-will-work
 ```

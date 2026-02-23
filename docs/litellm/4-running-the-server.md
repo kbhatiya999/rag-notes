@@ -17,7 +17,7 @@ In the same Terminal window, start the server and point it to the config file:
 litellm --config ~/.litellm/config.yaml
 ```
 
-When you see `Uvicorn running on http://0.0.0.0:8000`, the server is ready. 
+When you see `Uvicorn running on http://0.0.0.0:4000`, the server is ready. 
 To stop it, press `Ctrl + C`.
 
 **Next:** [5. Usage and Testing](5-usage-and-testing.md)

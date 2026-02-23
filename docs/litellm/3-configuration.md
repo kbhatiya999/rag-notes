@@ -31,7 +31,7 @@ model_list:
   # A local model using Ollama
   - model_name: ollama/mistral-nemo 
     litellm_params:
-      model: mistral-nemo 
+      model: ollama/mistral-nemo 
       api_base: "http://localhost:11434" 
 
   # A cloud model using Claude

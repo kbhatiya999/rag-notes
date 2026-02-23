@@ -3,7 +3,7 @@
 Install LiteLLM using `uv`. Open Terminal and run:
 
 ```bash
-uv tool install litellm
+uv tool install "litellm[proxy]"
 ```
 
 To confirm it installed correctly, run:
