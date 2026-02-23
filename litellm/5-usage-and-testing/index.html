@@ -1338,11 +1338,11 @@ You should see a JSON response from the model.
 <p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://localhost:4000/v1/embeddings<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">    &quot;model&quot;: &quot;text-embedding-004&quot;,</span>
+<span class="s1">    &quot;model&quot;: &quot;gemini-embedding-001&quot;,</span>
 <span class="s1">    &quot;input&quot;: [&quot;Hello world&quot;]</span>
 <span class="s1">  }&#39;</span>
 </code></pre></div>
-<em>(Note: To test your local Ollama embeddings instead, change <code>"model": "text-embedding-004"</code> to <code>"model": "nomic-embed-text"</code>).</em></p>
+<em>(Note: To test your local Ollama embeddings instead, change <code>"model": "gemini-embedding-001"</code> to <code>"model": "nomic-embed-text"</code>).</em></p>
 <h2 id="connect-lightrag-to-litellm">Connect LightRAG to LiteLLM</h2>
 <p>To use LiteLLM as the engine for your LightRAG server, update your <code>LightRAG/.env</code> file in Zed:</p>
 <div class="highlight"><pre><span></span><code><span class="na">LLM_BINDING</span><span class="o">=</span><span class="s">openai</span>
@@ -1351,7 +1351,7 @@ You should see a JSON response from the model.
 <span class="na">LLM_BINDING_API_KEY</span><span class="o">=</span><span class="s">any-string-will-work</span>
 <span class="na">EMBEDDING_BINDING</span><span class="o">=</span><span class="s">openai</span>
 <span class="na">EMBEDDING_BINDING_HOST</span><span class="o">=</span><span class="s">http://localhost:4000/v1</span>
-<span class="na">EMBEDDING_MODEL</span><span class="o">=</span><span class="s">text-embedding-004</span>
+<span class="na">EMBEDDING_MODEL</span><span class="o">=</span><span class="s">gemini-embedding-001</span>
 </code></pre></div>
 <p>This tells LightRAG to send all generation and embedding requests to LiteLLM.</p>
 
