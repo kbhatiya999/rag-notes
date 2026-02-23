@@ -39,6 +39,12 @@ model_list:
     litellm_params:
       model: claude-3-5-sonnet-20240620
       api_key: "os.environ/ANTHROPIC_API_KEY"
+
+  # A cloud model using Gemini (Wildcard route for ANY Gemini model)
+  - model_name: gemini/*
+    litellm_params:
+      model: gemini/*
+      api_key: "os.environ/GEMINI_API_KEY"
 ```
 
 ## How API Keys Work

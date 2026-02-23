@@ -17,7 +17,7 @@ curl http://localhost:4000/v1/chat/completions \
   }'
 ```
 You should see a JSON response from the model.
-*(Note: To test your local Ollama model instead, just change `"model": "gpt-4o"` to `"model": "ollama/mistral-nemo"` in the command).*
+*(Note: To test your local Ollama model instead, just change `"model": "gpt-4o"` to `"model": "ollama/mistral-nemo"` in the command. To test a Gemini model via the wildcard route, use `"model": "gemini/gemini-2.5-flash"`).*
 
 ## Connect LightRAG to LiteLLM
 To use LiteLLM as the engine for your LightRAG server, update your `LightRAG/.env` file in Zed:

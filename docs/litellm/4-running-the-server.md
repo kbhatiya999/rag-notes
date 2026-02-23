@@ -6,6 +6,7 @@ If you are using cloud providers, tell Terminal your API keys before starting th
 ```bash
 export OPENAI_API_KEY="sk-xxx"
 export ANTHROPIC_API_KEY="sk-yyy"
+export GEMINI_API_KEY="AI..."
 ```
 
 **Note:** These only last until you close the window. (You can add those lines to your `~/.zshrc` file if you want them to be permanent).
