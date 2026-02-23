@@ -5,6 +5,7 @@ If you are using cloud providers, tell Terminal your API keys before starting th
 
 ```bash
 export GEMINI_API_KEY="AI..."
+export CUSTOM_API_KEY="sk-..." # Only if your custom server requires it
 ```
 
 **Note:** These only last until you close the window. (You can add those lines to your `~/.zshrc` file if you want them to be permanent).
