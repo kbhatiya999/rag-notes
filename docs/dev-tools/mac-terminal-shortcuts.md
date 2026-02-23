@@ -12,7 +12,7 @@ This creates a true global hotkey (e.g., `⌃ + ⌥ + T`) that will instantly la
 4. Click the faded "App" variable in the action block and select **Terminal**.
 5. Give your shortcut a name at the top (like "Launch Terminal").
 6. Click the **Info (i)** button in the top right corner.
-7. Click **Add Keyboard Shortcut**, then press the key combination you want to use globally (e.g., `⌃ + ⌥ + T` or `F12`).
+7. Click **Add Keyboard Shortcut**, then press the key combination you want to use globally (e.g., `⌃ + ⌥ + T`).
 
 Your shortcut is now active from anywhere!
 
