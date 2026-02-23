@@ -17,9 +17,11 @@ We want Zed to automatically open when double-clicking Markdown (`.md`) notes or
 1. Open **Terminal**.
 2. Run these commands to configure macOS file associations:
    ```bash
-   duti -s dev.zed.Zed public.plain-text all
-   duti -s dev.zed.Zed public.unix-executable all
-   duti -s dev.zed.Zed public.data all
+   duti -s dev.zed.Zed .md all
+   duti -s dev.zed.Zed .yml all
+   duti -s dev.zed.Zed .yaml all
+   duti -s dev.zed.Zed .env all
+   duti -s dev.zed.Zed .sh all
    ```
 
-Now, any plain text, markdown, configuration, or extensionless data file you double-click in Finder will instantly open in Zed.
+Now, any markdown, configuration, or bash script file you double-click in Finder will instantly open in Zed.

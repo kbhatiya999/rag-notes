@@ -32,3 +32,5 @@ LLM_BINDING_API_KEY=any-string-will-work
 ```
 
 This tells LightRAG to send all requests to LiteLLM instead of directly to a specific provider.
+
+**Next:** [6. Optional UI Launcher](6-optional-ui-launcher.md)

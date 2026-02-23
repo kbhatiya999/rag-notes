@@ -19,6 +19,7 @@ nav:
     - "3. Configuration": litellm/3-configuration.md
     - "4. Running the Server": litellm/4-running-the-server.md
     - "5. Usage and Testing": litellm/5-usage-and-testing.md
+    - "6. Optional UI Launcher": litellm/6-optional-ui-launcher.md
   - LightRAG Server Guide:
     - "1. Introduction": lightrag-server/1-introduction.md
     - "2. Installation": lightrag-server/2-installation.md
