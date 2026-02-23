@@ -1352,6 +1352,12 @@
 <span class="w">    </span><span class="nt">litellm_params</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claude-3-5-sonnet-20240620</span>
 <span class="w">      </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;os.environ/ANTHROPIC_API_KEY&quot;</span>
+
+<span class="w">  </span><span class="c1"># A cloud model using Gemini (Wildcard route for ANY Gemini model)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gemini/*</span>
+<span class="w">    </span><span class="nt">litellm_params</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gemini/*</span>
+<span class="w">      </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;os.environ/GEMINI_API_KEY&quot;</span>
 </code></pre></div>
 <h2 id="how-api-keys-work">How API Keys Work</h2>
 <p>The config uses <code>os.environ/...</code> to securely load API keys from your environment. You tell your Mac the key before starting the server.</p>

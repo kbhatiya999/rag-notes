@@ -1310,7 +1310,7 @@
 <span class="s1">  }&#39;</span>
 </code></pre></div>
 You should see a JSON response from the model.
-<em>(Note: To test your local Ollama model instead, just change <code>"model": "gpt-4o"</code> to <code>"model": "ollama/mistral-nemo"</code> in the command).</em></p>
+<em>(Note: To test your local Ollama model instead, just change <code>"model": "gpt-4o"</code> to <code>"model": "ollama/mistral-nemo"</code> in the command. To test a Gemini model via the wildcard route, use <code>"model": "gemini/gemini-2.5-flash"</code>).</em></p>
 <h2 id="connect-lightrag-to-litellm">Connect LightRAG to LiteLLM</h2>
 <p>To use LiteLLM as the engine for your LightRAG server, update your <code>LightRAG/.env</code> file in Zed:</p>
 <div class="highlight"><pre><span></span><code><span class="na">LLM_BINDING</span><span class="o">=</span><span class="s">openai</span>
