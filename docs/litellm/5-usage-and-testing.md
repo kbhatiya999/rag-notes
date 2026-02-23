@@ -26,10 +26,11 @@ You can also test the local `nomic-embed-text` model:
 curl http://localhost:4000/v1/embeddings \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "nomic-embed-text",
+    "model": "text-embedding-004",
     "input": ["Hello world"]
   }'
 ```
+*(Note: To test your local Ollama embeddings instead, change `"model": "text-embedding-004"` to `"model": "nomic-embed-text"`).*
 
 ## Connect LightRAG to LiteLLM
 To use LiteLLM as the engine for your LightRAG server, update your `LightRAG/.env` file in Zed:
@@ -41,7 +42,7 @@ LLM_MODEL=gemini/gemini-2.5-flash
 LLM_BINDING_API_KEY=any-string-will-work
 EMBEDDING_BINDING=openai
 EMBEDDING_BINDING_HOST=http://localhost:4000/v1
-EMBEDDING_MODEL=nomic-embed-text
+EMBEDDING_MODEL=text-embedding-004
 ```
 
 This tells LightRAG to send all generation and embedding requests to LiteLLM.
