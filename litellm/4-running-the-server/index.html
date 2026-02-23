@@ -1297,13 +1297,13 @@
 <h1 id="4-running-the-server">4. Running the Server</h1>
 <h2 id="1-set-api-keys">1. Set API Keys</h2>
 <p>If you are using cloud providers, tell Terminal your API keys before starting the server. Open Terminal and run:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">GEMINI_API_KEY</span><span class="o">=</span><span class="s2">&quot;AI...&quot;</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">CUSTOM_API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-...&quot;</span><span class="w"> </span><span class="c1"># Only if your custom server requires it</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GEMINI_API_KEY</span><span class="o">=</span><span class="s2">&quot;AI...&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CUSTOM_API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-...&quot;</span><span class="w"> </span><span class="c1"># Only if your custom server requires it</span>
 </code></pre></div>
 <p><strong>Note:</strong> These only last until you close the window. (You can add those lines to your <code>~/.zshrc</code> file if you want them to be permanent).</p>
 <h2 id="2-start-the-server">2. Start the Server</h2>
 <p>In the same Terminal window, start the server and point it to the config file:</p>
-<div class="highlight"><pre><span></span><code>litellm<span class="w"> </span>--config<span class="w"> </span>~/.litellm/config.yaml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>litellm<span class="w"> </span>--config<span class="w"> </span>~/.litellm/config.yaml
 </code></pre></div>
 <p>When you see <code>Uvicorn running on http://0.0.0.0:4000</code>, the server is ready. 
 To stop it, press <code>Ctrl + C</code>.</p>
@@ -1357,7 +1357,7 @@ To stop it, press <code>Ctrl + C</code>.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
