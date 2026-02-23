@@ -34,7 +34,12 @@ nav:
 
 
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.superfences
+  - pymdownx.snippets
 
 theme:
   name: material
+  features:
+    - content.code.copy
