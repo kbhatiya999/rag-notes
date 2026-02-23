@@ -5,23 +5,36 @@ repo_name: rag-notes
 
 nav:
   - Home: index.md
-  - LightRAG Server Setup: lightrag-server-setup.md
-  - How To Setup Your Own Notes:
-    - Getting Started: "How To Setup Page Like This/getting-started.md"
-    - Upload to GitHub: "How To Setup Page Like This/github.md"
-    - Deploy to GitHub Pages: "How To Setup Page Like This/github-pages.md"
+  - Developer Tools:
+    - Zoxide:
+      - "1. What is Zoxide?": dev-tools/zoxide-fast-cd/1-what-is-zoxide.md
+      - "2. Installation": dev-tools/zoxide-fast-cd/2-installation.md
+      - "3. Basic Usage": dev-tools/zoxide-fast-cd/3-basic-usage.md
+    - Zed:
+      - "1. Installation": dev-tools/zed-text-editor/1-installation.md
+    - Mac Terminal Shortcut:
+      - "1. Setup ⌘ + G": dev-tools/terminal-shortcut/1-setup.md
+  - Notes Site Setup:
+    - "1. Initial Setup": notes-site/1-initial-setup.md
+    - "2. Writing Content": notes-site/2-writing-content.md
+    - "3. Publishing Site": notes-site/3-publishing-site.md
+  - LiteLLM Server Guide:
+    - "1. What is LiteLLM?": litellm/1-what-is-litellm.md
+    - "2. Installation": litellm/2-installation.md
+    - "3. Configuration": litellm/3-configuration.md
+    - "4. Running the Server": litellm/4-running-the-server.md
+    - "5. Usage and Testing": litellm/5-usage-and-testing.md
+  - LightRAG Server Guide:
+    - "1. Introduction": lightrag-server/1-introduction.md
+    - "2. Installation": lightrag-server/2-installation.md
+    - "3. Configuration": lightrag-server/3-configuration.md
+    - "4. Creating the App": lightrag-server/4-creating-the-app.md
+    - "5. Usage Guide": lightrag-server/5-usage.md
+    - "6. Troubleshooting": lightrag-server/6-troubleshooting.md
+
+
+markdown_extensions:
+  - pymdownx.superfences
 
 theme:
   name: material
-  palette:
-    # Palette toggle for light mode
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
