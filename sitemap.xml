@@ -2,54 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/different-site/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
-         <loc>https://example.com/different-site/dev-tools/zoxide/1-what-is-zoxide/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <loc>https://example.com/different-site/dev-tools/terminal-shortcut/1-setup/</loc>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
-         <loc>https://example.com/different-site/dev-tools/zoxide/2-installation/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <loc>https://example.com/different-site/dev-tools/zed-text-editor/1-installation/</loc>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
-         <loc>https://example.com/different-site/dev-tools/zoxide/3-basic-usage/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <loc>https://example.com/different-site/dev-tools/zoxide-fast-cd/1-what-is-zoxide/</loc>
+         <lastmod>2026-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/dev-tools/zoxide-fast-cd/2-installation/</loc>
+         <lastmod>2026-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/dev-tools/zoxide-fast-cd/3-basic-usage/</loc>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
          <loc>https://example.com/different-site/lightrag-server/1-introduction/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
          <loc>https://example.com/different-site/lightrag-server/2-installation/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
          <loc>https://example.com/different-site/lightrag-server/3-configuration/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
          <loc>https://example.com/different-site/lightrag-server/4-creating-the-app/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
-         <loc>https://example.com/different-site/lightrag-server/5-usage-guide/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <loc>https://example.com/different-site/lightrag-server/5-usage/</loc>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
          <loc>https://example.com/different-site/lightrag-server/6-troubleshooting/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/litellm/1-what-is-litellm/</loc>
+         <lastmod>2026-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/litellm/2-installation/</loc>
+         <lastmod>2026-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/litellm/3-configuration/</loc>
+         <lastmod>2026-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/litellm/4-running-the-server/</loc>
+         <lastmod>2026-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/different-site/litellm/5-usage-and-testing/</loc>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
          <loc>https://example.com/different-site/notes-site/1-initial-setup/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
          <loc>https://example.com/different-site/notes-site/2-writing-content/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
     </url>
     <url>
          <loc>https://example.com/different-site/notes-site/3-publishing-site/</loc>
-         <lastmod>2026-02-22</lastmod>
+         <lastmod>2026-02-23</lastmod>
     </url>
 </urlset>

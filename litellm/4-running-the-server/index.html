@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://example.com/different-site/lightrag-server/5-usage-guide/">
+        <link rel="canonical" href="https://example.com/different-site/litellm/4-running-the-server/">
       
       
-        <link rel="prev" href="../4-creating-the-app/">
+        <link rel="prev" href="../3-configuration/">
       
       
-        <link rel="next" href="../6-troubleshooting/">
+        <link rel="next" href="../5-usage-and-testing/">
       
       
         
@@ -25,14 +25,11 @@
     
     
       
-        <title>5. Usage Guide - RAG Notes</title>
+        <title>4. Running the Server - RAG Notes</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -60,14 +57,7 @@
   </head>
   
   
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#5-usage-guide" class="md-skip">
+        <a href="#4-running-the-server" class="md-skip">
           Skip to content
         </a>
       
@@ -112,38 +102,12 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5. Usage Guide
+              4. Running the Server
             
           </span>
         </div>
       </div>
     </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -303,7 +267,7 @@
   <span class="md-ellipsis">
     
   
-    Notes Site Setup
+    Developer Tools
   
 
     
@@ -316,6 +280,365 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zoxide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Zoxide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/zoxide-fast-cd/1-what-is-zoxide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. What is Zoxide?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/zoxide-fast-cd/2-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/zoxide-fast-cd/3-basic-usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Basic Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zed
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Zed
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/zed-text-editor/1-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mac Terminal Shortcut
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mac Terminal Shortcut
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/terminal-shortcut/1-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Setup ⌘ + G
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes Site Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -433,17 +756,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    LightRAG Server Guide
+    LiteLLM Server Guide
   
 
     
@@ -454,12 +777,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    LightRAG Server Guide
+    LiteLLM Server Guide
   
 
           </label>
@@ -472,14 +795,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-introduction/" class="md-nav__link">
+      <a href="../1-what-is-litellm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Introduction
+    1. What is LiteLLM?
   
 
     
@@ -553,34 +876,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../4-creating-the-app/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    4. Creating the App
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -600,7 +895,7 @@
   <span class="md-ellipsis">
     
   
-    5. Usage Guide
+    4. Running the Server
   
 
     
@@ -618,7 +913,7 @@
   <span class="md-ellipsis">
     
   
-    5. Usage Guide
+    4. Running the Server
   
 
     
@@ -644,49 +939,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#starting-and-stopping-the-server" class="md-nav__link">
+  <a href="#1-set-api-keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Starting and Stopping the Server
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Starting and Stopping the Server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-start-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To Start the Server:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-stop-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To Stop the Server:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-the-web-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Accessing the Web Interface
+        1. Set API Keys
       
     </span>
   </a>
@@ -694,21 +950,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-documents-for-processing" class="md-nav__link">
+  <a href="#2-start-the-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding Documents for Processing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changing-server-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changing Server Settings
+        2. Start the Server
       
     </span>
   </a>
@@ -731,14 +976,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../6-troubleshooting/" class="md-nav__link">
+      <a href="../5-usage-and-testing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Troubleshooting
+    5. Usage and Testing
   
 
     
@@ -774,17 +1019,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Developer Tools
+    LightRAG Server Guide
   
 
     
@@ -795,59 +1040,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Developer Tools
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Zoxide
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Zoxide
+    LightRAG Server Guide
   
 
           </label>
@@ -860,14 +1058,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide/1-what-is-zoxide/" class="md-nav__link">
+      <a href="../../lightrag-server/1-introduction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. What is Zoxide?
+    1. Introduction
   
 
     
@@ -888,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide/2-installation/" class="md-nav__link">
+      <a href="../../lightrag-server/2-installation/" class="md-nav__link">
         
   
   
@@ -916,14 +1114,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide/3-basic-usage/" class="md-nav__link">
+      <a href="../../lightrag-server/3-configuration/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Basic Usage
+    3. Configuration
   
 
     
@@ -937,9 +1135,85 @@
 
               
             
-          </ul>
-        </nav>
-      
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lightrag-server/4-creating-the-app/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Creating the App
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lightrag-server/5-usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Usage Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lightrag-server/6-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -979,49 +1253,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#starting-and-stopping-the-server" class="md-nav__link">
+  <a href="#1-set-api-keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Starting and Stopping the Server
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Starting and Stopping the Server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-start-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To Start the Server:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#to-stop-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        To Stop the Server:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-the-web-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Accessing the Web Interface
+        1. Set API Keys
       
     </span>
   </a>
@@ -1029,21 +1264,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-documents-for-processing" class="md-nav__link">
+  <a href="#2-start-the-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding Documents for Processing
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changing-server-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Changing Server Settings
+        2. Start the Server
       
     </span>
   </a>
@@ -1070,74 +1294,20 @@
   
 
 
-<h1 id="5-usage-guide">5. Usage Guide</h1>
-<p>Your <code>LightRAG Server.app</code> is ready. Here’s how to use and manage it.</p>
-<h2 id="starting-and-stopping-the-server">Starting and Stopping the Server</h2>
-<h3 id="to-start-the-server">To Start the Server:</h3>
-<ol>
-<li><strong>Open your <code>/Applications</code> folder</strong> in Finder (<code>⌘ + Shift + A</code>).</li>
-<li><strong>Double-click the <code>LightRAG Server</code> app.</strong></li>
-</ol>
-<p>A text window will appear, showing the server's startup log. Once you see the line <code>Uvicorn running on http://127.0.0.1:8020</code>, the server is ready.</p>
-<h3 id="to-stop-the-server">To Stop the Server:</h3>
-<ul>
-<li>Click on the <code>LightRAG Server</code> app's window to bring it to the front.</li>
-<li>Simply quit the application by pressing <code>⌘ + Q</code>.</li>
-<li>Alternatively, you can press <code>Ctrl + C</code> inside the app's window.</li>
-</ul>
-<h2 id="accessing-the-web-interface">Accessing the Web Interface</h2>
-<p>Once the server is running, you can access its features through your web browser.</p>
-<ul>
-<li>
-<p><strong>Main Web UI:</strong>
-    <code>http://127.0.0.1:8020</code>
-    This is where you can chat with your documents.</p>
-</li>
-<li>
-<p><strong>API Documentation:</strong>
-    <code>http://127.0.0.1:8020/docs</code>
-    This is an interactive API browser (Swagger UI) for advanced users who want to integrate with the server programmatically.</p>
-</li>
-</ul>
-<h2 id="adding-documents-for-processing">Adding Documents for Processing</h2>
-<p>The server needs documents to provide answers from. You can add PDF, TXT, or MD files.</p>
-<ol>
-<li><strong>Open your <code>LightRAG</code> folder</strong> in your home directory.</li>
-<li><strong>Open the <code>inputs</code> folder</strong> inside it.<ul>
-<li>The full path is <code>~/LightRAG/inputs/</code>.</li>
-</ul>
-</li>
-<li><strong>Drag and drop your files</strong> into the <code>inputs</code> folder.</li>
-</ol>
-<p>After adding files, go to the web interface (<code>http://127.0.0.1:8020</code>) and use the <strong>"Build"</strong> or <strong>"Index"</strong> functionality to process them. This step makes their content searchable.</p>
-<h2 id="changing-server-settings">Changing Server Settings</h2>
-<p>You don't need to recreate the app to change the settings. All configuration is managed in the <code>.env</code> file.</p>
-<ol>
-<li>
-<p><strong>Locate the <code>.env</code> file</strong> in your <code>~/LightRAG/</code> folder.</p>
-<ul>
-<li><strong>Can't see it?</strong> Files starting with a dot are hidden by default on macOS. In Finder, press <code>⌘ + Shift + .</code> (the period key) to toggle visibility of hidden files.</li>
-</ul>
-</li>
-<li>
-<p><strong>Open <code>.env</code></strong> in a text editor (e.g., TextEdit).</p>
-</li>
-<li>
-<p><strong>Make your changes.</strong> You can:</p>
-<ul>
-<li>Switch to a different Ollama model.</li>
-<li>Change the port number if <code>8020</code> is already in use.</li>
-<li>Switch from Ollama to OpenAI by pasting in the OpenAI configuration and adding your API key.</li>
-</ul>
-</li>
-<li>
-<p><strong>Save the <code>.env</code> file.</strong></p>
-</li>
-<li>
-<p><strong>Restart the server.</strong> For the changes to take effect, you must <strong>quit</strong> and <strong>restart</strong> the <code>LightRAG Server.app</code>.</p>
-</li>
-</ol>
-<p><strong>Next:</strong> <a href="../6-troubleshooting/">6. Troubleshooting</a></p>
+<h1 id="4-running-the-server">4. Running the Server</h1>
+<h2 id="1-set-api-keys">1. Set API Keys</h2>
+<p>If you are using cloud providers, tell Terminal your API keys before starting the server. Open Terminal and run:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">OPENAI_API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-xxx&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-yyy&quot;</span>
+</code></pre></div>
+<p><strong>Note:</strong> These only last until you close the window. (You can add those lines to your <code>~/.zshrc</code> file if you want them to be permanent).</p>
+<h2 id="2-start-the-server">2. Start the Server</h2>
+<p>In the same Terminal window, start the server and point it to the config file:</p>
+<div class="highlight"><pre><span></span><code>litellm<span class="w"> </span>--config<span class="w"> </span>~/.litellm/config.yaml
+</code></pre></div>
+<p>When you see <code>Uvicorn running on http://0.0.0.0:8000</code>, the server is ready. 
+To stop it, press <code>Ctrl + C</code>.</p>
+<p><strong>Next:</strong> <a href="../5-usage-and-testing/">5. Usage and Testing</a></p>
 
 
 

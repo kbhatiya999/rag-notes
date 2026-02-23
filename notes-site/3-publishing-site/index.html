@@ -14,7 +14,7 @@
         <link rel="prev" href="../2-writing-content/">
       
       
-        <link rel="next" href="../../lightrag-server/1-introduction/">
+        <link rel="next" href="../../litellm/1-what-is-litellm/">
       
       
         
@@ -30,9 +30,6 @@
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -60,14 +57,7 @@
   </head>
   
   
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3-publishing-your-site" class="md-skip">
+        <a href="#3-publishing-site" class="md-skip">
           Skip to content
         </a>
       
@@ -118,32 +108,6 @@
         </div>
       </div>
     </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -282,6 +246,365 @@
       
   
   
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zoxide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Zoxide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/zoxide-fast-cd/1-what-is-zoxide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. What is Zoxide?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/zoxide-fast-cd/2-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/zoxide-fast-cd/3-basic-usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Basic Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zed
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Zed
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/zed-text-editor/1-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mac Terminal Shortcut
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mac Terminal Shortcut
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev-tools/terminal-shortcut/1-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Setup ⌘ + G
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -295,10 +618,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -316,8 +639,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -450,10 +773,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Requirements
       
     </span>
   </a>
@@ -461,10 +784,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-save-your-project-to-github" class="md-nav__link">
+  <a href="#1-initial-upload" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Save Your Project to GitHub
+        1. Initial Upload
       
     </span>
   </a>
@@ -472,10 +795,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-deploy-the-site-with-github-pages" class="md-nav__link">
+  <a href="#2-publish-to-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Deploy the Site with GitHub Pages
+        2. Publish to GitHub Pages
       
     </span>
   </a>
@@ -483,21 +806,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-view-your-live-site" class="md-nav__link">
+  <a href="#3-how-to-update-later" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: View Your Live Site
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-update-your-site-in-the-future" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Update Your Site in the Future
+        3. How to Update Later
       
     </span>
   </a>
@@ -535,10 +847,204 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LiteLLM Server Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LiteLLM Server Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../litellm/1-what-is-litellm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. What is LiteLLM?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../litellm/2-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../litellm/3-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../litellm/4-running-the-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Running the Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../litellm/5-usage-and-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Usage and Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -556,8 +1062,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -686,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/5-usage-guide/" class="md-nav__link">
+      <a href="../../lightrag-server/5-usage/" class="md-nav__link">
         
   
   
@@ -742,199 +1248,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Developer Tools
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Developer Tools
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Zoxide
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Zoxide
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide/1-what-is-zoxide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1. What is Zoxide?
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide/2-installation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2. Installation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide/3-basic-usage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    3. Basic Usage
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -962,10 +1275,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Requirements
       
     </span>
   </a>
@@ -973,10 +1286,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-save-your-project-to-github" class="md-nav__link">
+  <a href="#1-initial-upload" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Save Your Project to GitHub
+        1. Initial Upload
       
     </span>
   </a>
@@ -984,10 +1297,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-deploy-the-site-with-github-pages" class="md-nav__link">
+  <a href="#2-publish-to-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Deploy the Site with GitHub Pages
+        2. Publish to GitHub Pages
       
     </span>
   </a>
@@ -995,21 +1308,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-view-your-live-site" class="md-nav__link">
+  <a href="#3-how-to-update-later" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: View Your Live Site
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-update-your-site-in-the-future" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Update Your Site in the Future
+        3. How to Update Later
       
     </span>
   </a>
@@ -1036,75 +1338,44 @@
   
 
 
-<h1 id="3-publishing-your-site">3. Publishing Your Site</h1>
-<p>This guide covers how to save your work to GitHub and deploy it as a live website using GitHub Pages.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h1 id="3-publishing-site">3. Publishing Site</h1>
+<p>You can back up your notes to GitHub and host them on GitHub Pages for free. </p>
+<h2 id="requirements">Requirements</h2>
 <ul>
-<li>You need a <a href="https://github.com/">GitHub</a> account.</li>
-<li>You need the <a href="https://cli.github.com/">GitHub CLI</a> (<code>gh</code>) installed.</li>
+<li>You need a GitHub account.</li>
+<li>You need Git installed. (If you aren't sure, don't worry—the Mac will automatically prompt you to install it if you try to run a git command without it).</li>
+<li>Install the GitHub CLI: Open Terminal and run <code>brew install gh</code></li>
 </ul>
-<h2 id="step-1-save-your-project-to-github">Step 1: Save Your Project to GitHub</h2>
-<p>These commands will initialize a Git repository, save your files, and upload them to a new GitHub repository.</p>
-<p>Run these from the root of your <code>rag-notes</code> project directory.</p>
+<h2 id="1-initial-upload">1. Initial Upload</h2>
+<p>If you are uploading this project for the first time, you need to use Terminal to send the files to GitHub.</p>
 <ol>
-<li>
-<p><strong>Initialize Git and add all your files:</strong>
-    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
+<li>Open your <code>rag-notes</code> folder in Finder.</li>
+<li>In the Path Bar at the bottom of the window, <strong>Right-click</strong> <code>rag-notes</code> and select <strong>Open in Terminal</strong>. <em>(If you don't see the Path Bar, click View &gt; Show Path Bar in the top menu)</em>.</li>
+<li>In the Terminal window that opens, run these commands one after the other:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
 git<span class="w"> </span>add<span class="w"> </span>.
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Commit your files:</strong>
-    This creates a snapshot of your project's current state.
-    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Create a new repository on GitHub and push your code:</strong>
-    This command uses the GitHub CLI to create a new public repository named <code>rag-notes</code>, sets it as the <code>origin</code> remote, and pushes your committed files to it.
-    <div class="highlight"><pre><span></span><code>gh<span class="w"> </span>repo<span class="w"> </span>create<span class="w"> </span>rag-notes<span class="w"> </span>--source<span class="o">=</span>.<span class="w"> </span>--remote<span class="o">=</span>origin<span class="w"> </span>--push<span class="w"> </span>--public
-</code></pre></div></p>
-<p>Follow the prompts to authenticate if you haven't already.</p>
-</li>
-</ol>
-<h2 id="step-2-deploy-the-site-with-github-pages">Step 2: Deploy the Site with GitHub Pages</h2>
-<p>Now that your code is on GitHub, you can deploy it with a single command.</p>
-<ol>
-<li>
-<p><strong>Run the <code>gh-deploy</code> command:</strong>
-    This command, provided by <code>mkdocs</code>, builds the static HTML for your site and pushes it to a special <code>gh-pages</code> branch on your repository.
-    <code>bash
-uh    uv run mkdocs gh-deploy</code></p>
-</li>
-<li>
-<p><strong>Wait for the deployment:</strong>
-    It can take a minute or two for GitHub Pages to build and deploy your site.</p>
-</li>
-</ol>
-<h2 id="step-3-view-your-live-site">Step 3: View Your Live Site</h2>
-<p>Your website will be available at:</p>
-<p><code>https://YOUR-USERNAME.github.io/rag-notes/</code></p>
-<p>(Replace <code>YOUR-USERNAME</code> with your actual GitHub username.)</p>
-<h2 id="how-to-update-your-site-in-the-future">How to Update Your Site in the Future</h2>
-<p>Now that everything is set up, updating your site is a simple three-step process.</p>
-<ol>
-<li>
-<p><strong>Make your changes:</strong> Edit your Markdown files in the <code>docs/</code> directory.</p>
-</li>
-<li>
-<p><strong>Save and push your changes to GitHub:</strong>
-    Run this command from your project root:
-    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update notes&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit&quot;</span>
+gh<span class="w"> </span>repo<span class="w"> </span>create<span class="w"> </span>rag-notes<span class="w"> </span>--source<span class="o">=</span>.<span class="w"> </span>--remote<span class="o">=</span>origin<span class="w"> </span>--push<span class="w"> </span>--public
 </code></pre></div>
-    <em>(You can change the commit message "Update notes" to something descriptive.)</em></p>
-</li>
-<li>
-<p><strong>Re-deploy to GitHub Pages:</strong>
-    <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
-</code></pre></div></p>
-</li>
+<em>(Note: If <code>gh</code> asks you to log in, just follow the prompts to open your browser and authenticate).</em></p>
+<h2 id="2-publish-to-github-pages">2. Publish to GitHub Pages</h2>
+<p>Once everything is uploaded, tell MkDocs to build the site and deploy it. In the same Terminal window, run:</p>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+<p>Your site will be live in a few minutes at <code>https://&lt;YOUR-GITHUB-USERNAME&gt;.github.io/rag-notes/</code>.</p>
+<h2 id="3-how-to-update-later">3. How to Update Later</h2>
+<p>Whenever you add new notes or make changes in Finder, you need to save and re-publish your site:</p>
+<ol>
+<li>Open your <code>rag-notes</code> folder in Finder.</li>
+<li>In the Path Bar, <strong>Right-click</strong> <code>rag-notes</code> and select <strong>Open in Terminal</strong>.</li>
+<li>Run these commands:</li>
 </ol>
-<p>That's it! Your changes will be live in a few minutes.</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;update notes&quot;</span>
+git<span class="w"> </span>push
+uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
 
 
 

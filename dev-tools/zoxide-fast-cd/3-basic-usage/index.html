@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://example.com/different-site/notes-site/1-initial-setup/">
+        <link rel="canonical" href="https://example.com/different-site/dev-tools/zoxide-fast-cd/3-basic-usage/">
       
       
-        <link rel="prev" href="../../dev-tools/terminal-shortcut/1-setup/">
+        <link rel="prev" href="../2-installation/">
       
       
-        <link rel="next" href="../2-writing-content/">
+        <link rel="next" href="../../zed-text-editor/1-installation/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>1. Initial Setup - RAG Notes</title>
+        <title>3. Basic Usage - RAG Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-initial-setup" class="md-skip">
+        <a href="#3-basic-usage" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="RAG Notes" class="md-header__button md-logo" aria-label="RAG Notes" data-md-component="logo">
+    <a href="../../.." title="RAG Notes" class="md-header__button md-logo" aria-label="RAG Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Initial Setup
+              3. Basic Usage
             
           </span>
         </div>
@@ -192,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="RAG Notes" class="md-nav__button md-logo" aria-label="RAG Notes" data-md-component="logo">
+    <a href="../../.." title="RAG Notes" class="md-nav__button md-logo" aria-label="RAG Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -246,18 +246,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -278,7 +280,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -293,18 +295,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -325,7 +329,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -343,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide-fast-cd/1-what-is-zoxide/" class="md-nav__link">
+      <a href="../1-what-is-zoxide/" class="md-nav__link">
         
   
   
@@ -371,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide-fast-cd/2-installation/" class="md-nav__link">
+      <a href="../2-installation/" class="md-nav__link">
         
   
   
@@ -396,10 +400,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../dev-tools/zoxide-fast-cd/3-basic-usage/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Basic Usage
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -415,6 +446,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jump-to-a-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jump to a Folder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interactive Search
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -482,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/zed-text-editor/1-installation/" class="md-nav__link">
+      <a href="../../zed-text-editor/1-installation/" class="md-nav__link">
         
   
   
@@ -565,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/terminal-shortcut/1-setup/" class="md-nav__link">
+      <a href="../../terminal-shortcut/1-setup/" class="md-nav__link">
         
   
   
@@ -605,20 +678,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -639,7 +710,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -654,37 +725,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1. Initial Setup
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../notes-site/1-initial-setup/" class="md-nav__link">
         
   
   
@@ -700,59 +744,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup-the-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Setup the Project
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-the-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Run the Site
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -765,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2-writing-content/" class="md-nav__link">
+      <a href="../../../notes-site/2-writing-content/" class="md-nav__link">
         
   
   
@@ -793,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3-publishing-site/" class="md-nav__link">
+      <a href="../../../notes-site/3-publishing-site/" class="md-nav__link">
         
   
   
@@ -875,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../litellm/1-what-is-litellm/" class="md-nav__link">
+      <a href="../../../litellm/1-what-is-litellm/" class="md-nav__link">
         
   
   
@@ -903,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../litellm/2-installation/" class="md-nav__link">
+      <a href="../../../litellm/2-installation/" class="md-nav__link">
         
   
   
@@ -931,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../litellm/3-configuration/" class="md-nav__link">
+      <a href="../../../litellm/3-configuration/" class="md-nav__link">
         
   
   
@@ -959,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../litellm/4-running-the-server/" class="md-nav__link">
+      <a href="../../../litellm/4-running-the-server/" class="md-nav__link">
         
   
   
@@ -987,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../litellm/5-usage-and-testing/" class="md-nav__link">
+      <a href="../../../litellm/5-usage-and-testing/" class="md-nav__link">
         
   
   
@@ -1069,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/1-introduction/" class="md-nav__link">
+      <a href="../../../lightrag-server/1-introduction/" class="md-nav__link">
         
   
   
@@ -1097,7 +1088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/2-installation/" class="md-nav__link">
+      <a href="../../../lightrag-server/2-installation/" class="md-nav__link">
         
   
   
@@ -1125,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/3-configuration/" class="md-nav__link">
+      <a href="../../../lightrag-server/3-configuration/" class="md-nav__link">
         
   
   
@@ -1153,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/4-creating-the-app/" class="md-nav__link">
+      <a href="../../../lightrag-server/4-creating-the-app/" class="md-nav__link">
         
   
   
@@ -1181,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/5-usage/" class="md-nav__link">
+      <a href="../../../lightrag-server/5-usage/" class="md-nav__link">
         
   
   
@@ -1209,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/6-troubleshooting/" class="md-nav__link">
+      <a href="../../../lightrag-server/6-troubleshooting/" class="md-nav__link">
         
   
   
@@ -1264,10 +1255,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#jump-to-a-folder" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Jump to a Folder
       
     </span>
   </a>
@@ -1275,21 +1266,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-the-project" class="md-nav__link">
+  <a href="#interactive-search" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setup the Project
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-the-site" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Run the Site
+        Interactive Search
       
     </span>
   </a>
@@ -1316,56 +1296,20 @@
   
 
 
-<h1 id="1-initial-setup">1. Initial Setup</h1>
-<p>These are the notes for setting up this documentation site from scratch on a Mac. </p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>You need two things installed on your Mac. Open the Terminal app (<code>⌘ + Space</code>, type Terminal) and run these two commands one after the other:</p>
-<ol>
-<li><strong>Homebrew</strong>: 
-   <div class="highlight"><pre><span></span><code>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
-</code></pre></div></li>
-<li><strong>uv</strong>: </li>
-</ol>
-<h2 id="setup-the-project">Setup the Project</h2>
-<ol>
-<li>
-<p><strong>Create the Folders (in Finder)</strong>: 
-   Open Finder and go to your home folder (<code>⇧ + ⌘ + H</code>). 
-   Create a new folder named <code>RAGprojects</code>. 
-   Open that folder, and create another new folder inside it named <code>rag-notes</code>.</p>
-</li>
-<li>
-<p><strong>Install MkDocs (in Terminal)</strong>:
-   In your new <code>rag-notes</code> folder in Finder, look at the very top menu bar and click <strong>View</strong> &gt; <strong>Show Path Bar</strong> (or press <code>⌥ + ⌘ + P</code>). 
-   You will see the folder path at the bottom of the Finder window. <strong>Right-click</strong> the <code>rag-notes</code> folder in that path and select <strong>Open in Terminal</strong>. </p>
-</li>
-</ol>
-<p>In the Terminal window that pops up, copy and paste this whole block:
-   <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>init<span class="w"> </span>--no-package
-uv<span class="w"> </span>add<span class="w"> </span>mkdocs<span class="w"> </span>mkdocs-material
-uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>new<span class="w"> </span>.
-</code></pre></div></p>
-<ol>
-<li><strong>Configure the Site</strong>:
-   Go back to the <code>rag-notes</code> folder in Finder. You will see a file named <code>mkdocs.yml</code> that was just created.
-   Double-click <code>mkdocs.yml</code> to open it in Zed. 
-   Delete everything in the file, and paste this simple configuration instead:</li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Notes</span>
-<span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
-<span class="nt">nav</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<h1 id="3-basic-usage">3. Basic Usage</h1>
+<p>Use <code>cd</code> normally a few times to visit your project folders so Zoxide can "learn" them. After that, you can use <code>z</code>.</p>
+<h2 id="jump-to-a-folder">Jump to a Folder</h2>
+<p>Instead of <code>cd</code>, just type <code>z</code> and part of the folder name:</p>
+<p><div class="highlight"><pre><span></span><code>z<span class="w"> </span>rag
 </code></pre></div>
-   Save the file and close Zed.</p>
-<h2 id="run-the-site">Run the Site</h2>
-<p>Whenever you want to view your notes locally on your Mac:
-1. Open the <code>rag-notes</code> folder in Finder.
-2. In the Path Bar at the bottom of the Finder window, <strong>Right-click</strong> <code>rag-notes</code> and select <strong>Open in Terminal</strong>.
-3. Run the included script:</p>
-<div class="highlight"><pre><span></span><code>bash<span class="w"> </span>run_dev.sh
-</code></pre></div>
-<p>Then open your browser and go to <code>http://127.0.0.1:8000</code>.</p>
-<p><strong>Next:</strong> <a href="../2-writing-content/">2. Writing Content</a></p>
+(This instantly jumps to your <code>/Users/myuser/RAGprojects/rag-notes</code> folder).</p>
+<h2 id="interactive-search">Interactive Search</h2>
+<p>If you forgot the exact name or want to see a list of matches:</p>
+<ol>
+<li>Type <code>z &lt;keyword&gt;</code> and press the <strong>Tab</strong> key <code>⇥</code> (e.g., <code>z proj&lt;Tab&gt;</code>).</li>
+<li>Use the arrow keys <code>↓</code> <code>↑</code> to select the right folder.</li>
+<li>Press <code>Enter</code>.</li>
+</ol>
 
 
 
@@ -1415,10 +1359,10 @@ uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </sp
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
