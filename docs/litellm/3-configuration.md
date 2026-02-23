@@ -35,9 +35,9 @@ model_list:
       api_base: "http://localhost:11434"
 
   # A cloud embedding model using Gemini
-  - model_name: text-embedding-004
+  - model_name: gemini-embedding-001
     litellm_params:
-      model: gemini/text-embedding-004
+      model: gemini/gemini-embedding-001
       api_key: "os.environ/GEMINI_API_KEY"
 
   # A cloud model using Gemini (Wildcard route for ANY Gemini model)
