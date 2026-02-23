@@ -1328,18 +1328,24 @@
 <li>Save the document inside <code>.litellm</code> and name it EXACTLY <code>config.yaml</code>.</li>
 </ol>
 <h2 id="2-config-template">2. Config Template</h2>
-<p>This template sets up a cloud model (Gemini), a local model (Ollama), and a custom OpenAI-Compatible server. Copy and paste this into your <code>config.yaml</code>:</p>
+<p>This template sets up a cloud model (Gemini), a local model (Ollama), a local embedding model (Nomic via Ollama), and a custom OpenAI-Compatible server. Copy and paste this into your <code>config.yaml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># ~/.litellm/config.yaml</span>
 
 <span class="nt">litellm_settings</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">drop_params</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
 
 <span class="nt">model_list</span><span class="p">:</span>
-<span class="w">  </span><span class="c1"># A local model using Ollama</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/mistral-nemo</span><span class="w"> </span>
+<span class="w">  </span><span class="c1"># A local model using Ollama (Wildcard route for ANY Ollama model)</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/*</span>
 <span class="w">    </span><span class="nt">litellm_params</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/mistral-nemo</span><span class="w"> </span>
+<span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/*</span>
 <span class="w">      </span><span class="nt">api_base</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:11434&quot;</span><span class="w"> </span>
+
+<span class="w">  </span><span class="c1"># A local embedding model using Ollama</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nomic-embed-text</span>
+<span class="w">    </span><span class="nt">litellm_params</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ollama/nomic-embed-text</span>
+<span class="w">      </span><span class="nt">api_base</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://localhost:11434&quot;</span>
 
 <span class="w">  </span><span class="c1"># A cloud model using Gemini (Wildcard route for ANY Gemini model)</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">model_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gemini/*</span>

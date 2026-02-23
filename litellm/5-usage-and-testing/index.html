@@ -978,6 +978,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#test-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Embeddings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#connect-lightrag-to-litellm" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1264,6 +1275,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#test-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Embeddings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#connect-lightrag-to-litellm" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1310,15 +1332,27 @@
 <span class="s1">  }&#39;</span>
 </code></pre></div>
 You should see a JSON response from the model.
-<em>(Note: To test your local Ollama model instead, just change <code>"model": "gemini/gemini-2.5-flash"</code> to <code>"model": "ollama/mistral-nemo"</code> in the command).</em></p>
+<em>(Note: To test a local Ollama model instead, change <code>"model": "gemini/gemini-2.5-flash"</code> to <code>"model": "ollama/mistral-nemo"</code> or any other downloaded Ollama model).</em></p>
+<h2 id="test-embeddings">Test Embeddings</h2>
+<p>You can also test the local <code>nomic-embed-text</code> model:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://localhost:4000/v1/embeddings<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;model&quot;: &quot;nomic-embed-text&quot;,</span>
+<span class="s1">    &quot;input&quot;: [&quot;Hello world&quot;]</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
 <h2 id="connect-lightrag-to-litellm">Connect LightRAG to LiteLLM</h2>
 <p>To use LiteLLM as the engine for your LightRAG server, update your <code>LightRAG/.env</code> file in Zed:</p>
 <div class="highlight"><pre><span></span><code><span class="na">LLM_BINDING</span><span class="o">=</span><span class="s">openai</span>
 <span class="na">LLM_BINDING_HOST</span><span class="o">=</span><span class="s">http://localhost:4000/v1</span>
 <span class="na">LLM_MODEL</span><span class="o">=</span><span class="s">gemini/gemini-2.5-flash</span><span class="w"> </span>
 <span class="na">LLM_BINDING_API_KEY</span><span class="o">=</span><span class="s">any-string-will-work</span>
+<span class="na">EMBEDDING_BINDING</span><span class="o">=</span><span class="s">openai</span>
+<span class="na">EMBEDDING_BINDING_HOST</span><span class="o">=</span><span class="s">http://localhost:4000/v1</span>
+<span class="na">EMBEDDING_MODEL</span><span class="o">=</span><span class="s">nomic-embed-text</span>
 </code></pre></div>
-<p>This tells LightRAG to send all requests to LiteLLM instead of directly to a specific provider.</p>
+<p>This tells LightRAG to send all generation and embedding requests to LiteLLM.</p>
 
 
 
