@@ -1300,7 +1300,7 @@
 <p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://localhost:4000/v1/chat/completions<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
-<span class="s1">    &quot;model&quot;: &quot;gpt-4o&quot;,</span>
+<span class="s1">    &quot;model&quot;: &quot;gemini/gemini-2.5-flash&quot;,</span>
 <span class="s1">    &quot;messages&quot;: [</span>
 <span class="s1">      {</span>
 <span class="s1">        &quot;role&quot;: &quot;user&quot;,</span>
@@ -1310,15 +1310,15 @@
 <span class="s1">  }&#39;</span>
 </code></pre></div>
 You should see a JSON response from the model.
-<em>(Note: To test your local Ollama model instead, just change <code>"model": "gpt-4o"</code> to <code>"model": "ollama/mistral-nemo"</code> in the command. To test a Gemini model via the wildcard route, use <code>"model": "gemini/gemini-2.5-flash"</code>).</em></p>
+<em>(Note: To test your local Ollama model instead, just change <code>"model": "gemini/gemini-2.5-flash"</code> to <code>"model": "ollama/mistral-nemo"</code> in the command).</em></p>
 <h2 id="connect-lightrag-to-litellm">Connect LightRAG to LiteLLM</h2>
 <p>To use LiteLLM as the engine for your LightRAG server, update your <code>LightRAG/.env</code> file in Zed:</p>
 <div class="highlight"><pre><span></span><code><span class="na">LLM_BINDING</span><span class="o">=</span><span class="s">openai</span>
 <span class="na">LLM_BINDING_HOST</span><span class="o">=</span><span class="s">http://localhost:4000/v1</span>
-<span class="na">LLM_MODEL</span><span class="o">=</span><span class="s">gpt-4o</span><span class="w"> </span>
+<span class="na">LLM_MODEL</span><span class="o">=</span><span class="s">gemini/gemini-2.5-flash</span><span class="w"> </span>
 <span class="na">LLM_BINDING_API_KEY</span><span class="o">=</span><span class="s">any-string-will-work</span>
 </code></pre></div>
-<p>This tells LightRAG to send all requests to LiteLLM instead of directly to OpenAI.</p>
+<p>This tells LightRAG to send all requests to LiteLLM instead of directly to a specific provider.</p>
 
 
 
