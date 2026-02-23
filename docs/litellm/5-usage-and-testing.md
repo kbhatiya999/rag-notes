@@ -1,36 +1,18 @@
 # 5. Usage and Testing
 
-## Test with `curl`
-To test your server, keep it running in one Terminal tab, open a **new** Terminal tab (`⌘ + T`), and run:
+## Test with Interactive Proxy Menu
+The easiest way to test your server is by using LiteLLM's built in interactive terminal UI. 
+
+Keep your server running in one Terminal tab, open a **new** Terminal tab (`⌘ + T`), and run:
 
 ```bash
-curl http://localhost:4000/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "gemini/gemini-2.5-flash",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Hey, how are you?"
-      }
-    ]
-  }'
+litellm-proxy
 ```
-You should see a JSON response from the model.
-*(Note: To test a local Ollama model instead, change `"model": "gemini/gemini-2.5-flash"` to `"model": "ollama/mistral-nemo"` or any other downloaded Ollama model).*
 
-## Test Embeddings
-You can also test the local `nomic-embed-text` model:
-
-```bash
-curl http://localhost:4000/v1/embeddings \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "gemini-embedding-001",
-    "input": ["Hello world"]
-  }'
-```
-*(Note: To test your local Ollama embeddings instead, change `"model": "gemini-embedding-001"` to `"model": "nomic-embed-text"`).*
+When the interactive menu opens:
+1. Type `chat` and press Enter to start the interactive chat module.
+2. It will ask for a **Model name**. Type your wildcard proxy route, for example `gemini/gemini-2.5-flash` or `ollama/llama3.2`, and press Enter.
+3. You can now chat directly with the model to verify it works! Press `Ctrl-C` to exit back to the menu, and type `quit` to close the tool.
 
 ## Connect LightRAG to LiteLLM
 To use LiteLLM as the engine for your LightRAG server, update your `LightRAG/.env` file in Zed:
@@ -40,9 +22,6 @@ LLM_BINDING=openai
 LLM_BINDING_HOST=http://localhost:4000/v1
 LLM_MODEL=gemini/gemini-2.5-flash 
 LLM_BINDING_API_KEY=any-string-will-work
-EMBEDDING_BINDING=openai
-EMBEDDING_BINDING_HOST=http://localhost:4000/v1
-EMBEDDING_MODEL=gemini-embedding-001
 ```
 
-This tells LightRAG to send all generation and embedding requests to LiteLLM.
+This tells LightRAG to send all requests to LiteLLM instead of directly to a specific provider.

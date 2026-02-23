@@ -13,7 +13,7 @@ LiteLLM looks for a `config.yaml` file to know which models to serve and what AP
 
 ## 2. Config Template
 
-This template sets up a cloud model (Gemini), a local model (Ollama), local/cloud embedding models (Nomic, Gemini), and a custom OpenAI-Compatible server. Copy and paste this into your `config.yaml`:
+This template sets up a cloud model (Gemini) and a local model (Ollama). Copy and paste this into your `config.yaml`:
 
 ```yaml
 # ~/.litellm/config.yaml
@@ -28,30 +28,11 @@ model_list:
       model: ollama/*
       api_base: "http://localhost:11434" 
 
-  # A local embedding model using Ollama
-  - model_name: nomic-embed-text
-    litellm_params:
-      model: ollama/nomic-embed-text
-      api_base: "http://localhost:11434"
-
-  # A cloud embedding model using Gemini
-  - model_name: gemini-embedding-001
-    litellm_params:
-      model: gemini/gemini-embedding-001
-      api_key: "os.environ/GEMINI_API_KEY"
-
   # A cloud model using Gemini (Wildcard route for ANY Gemini model)
   - model_name: gemini/*
     litellm_params:
       model: gemini/*
       api_key: "os.environ/GEMINI_API_KEY"
-
-  # An OpenAI-Compatible Server (e.g., vLLM, LM Studio, Together AI)
-  - model_name: custom-openai-server
-    litellm_params:
-      model: openai/<your-model-name>
-      api_base: "http://your-server-address/v1"
-      api_key: "os.environ/CUSTOM_API_KEY" # Optional, if your server requires it
 ```
 
 ## How API Keys Work
