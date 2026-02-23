@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://example.com/different-site/">
+        <link rel="canonical" href="https://example.com/different-site/lightrag-server/4-running-the-server/">
       
       
+        <link rel="prev" href="../3-configuration/">
       
-        <link rel="next" href="dev-tools/zoxide-fast-cd/">
+      
+        <link rel="next" href="../5-usage/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>RAG Notes</title>
+        <title>4. Running the Server - RAG Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#my-notes" class="md-skip">
+        <a href="#4-running-the-server" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="RAG Notes" class="md-header__button md-logo" aria-label="RAG Notes" data-md-component="logo">
+    <a href="../.." title="RAG Notes" class="md-header__button md-logo" aria-label="RAG Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              4. Running the Server
             
           </span>
         </div>
@@ -190,7 +192,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="RAG Notes" class="md-nav__button md-logo" aria-label="RAG Notes" data-md-component="logo">
+    <a href="../.." title="RAG Notes" class="md-nav__button md-logo" aria-label="RAG Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -217,37 +219,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -263,37 +238,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#guide-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guide Directory
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -352,7 +296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev-tools/zoxide-fast-cd/" class="md-nav__link">
+      <a href="../../dev-tools/zoxide-fast-cd/" class="md-nav__link">
         
   
   
@@ -380,7 +324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev-tools/zed-text-editor/" class="md-nav__link">
+      <a href="../../dev-tools/zed-text-editor/" class="md-nav__link">
         
   
   
@@ -408,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="dev-tools/mac-terminal-shortcuts/" class="md-nav__link">
+      <a href="../../dev-tools/mac-terminal-shortcuts/" class="md-nav__link">
         
   
   
@@ -490,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes-site/1-initial-setup/" class="md-nav__link">
+      <a href="../../notes-site/1-initial-setup/" class="md-nav__link">
         
   
   
@@ -518,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes-site/2-writing-content/" class="md-nav__link">
+      <a href="../../notes-site/2-writing-content/" class="md-nav__link">
         
   
   
@@ -546,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notes-site/3-publishing-site/" class="md-nav__link">
+      <a href="../../notes-site/3-publishing-site/" class="md-nav__link">
         
   
   
@@ -628,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="litellm/1-what-is-litellm/" class="md-nav__link">
+      <a href="../../litellm/1-what-is-litellm/" class="md-nav__link">
         
   
   
@@ -656,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="litellm/2-installation/" class="md-nav__link">
+      <a href="../../litellm/2-installation/" class="md-nav__link">
         
   
   
@@ -684,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="litellm/3-configuration/" class="md-nav__link">
+      <a href="../../litellm/3-configuration/" class="md-nav__link">
         
   
   
@@ -712,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="litellm/4-running-the-server/" class="md-nav__link">
+      <a href="../../litellm/4-running-the-server/" class="md-nav__link">
         
   
   
@@ -740,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="litellm/5-usage-and-testing/" class="md-nav__link">
+      <a href="../../litellm/5-usage-and-testing/" class="md-nav__link">
         
   
   
@@ -772,18 +716,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -804,7 +750,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -822,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lightrag-server/1-introduction/" class="md-nav__link">
+      <a href="../1-introduction/" class="md-nav__link">
         
   
   
@@ -850,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lightrag-server/2-installation/" class="md-nav__link">
+      <a href="../2-installation/" class="md-nav__link">
         
   
   
@@ -878,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lightrag-server/3-configuration/" class="md-nav__link">
+      <a href="../3-configuration/" class="md-nav__link">
         
   
   
@@ -903,10 +849,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="lightrag-server/4-running-the-server/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Running the Server
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -922,6 +895,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start the Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stop the Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -934,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lightrag-server/5-usage/" class="md-nav__link">
+      <a href="../5-usage/" class="md-nav__link">
         
   
   
@@ -962,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lightrag-server/6-optional-ui-launcher/" class="md-nav__link">
+      <a href="../6-optional-ui-launcher/" class="md-nav__link">
         
   
   
@@ -990,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lightrag-server/7-troubleshooting/" class="md-nav__link">
+      <a href="../7-troubleshooting/" class="md-nav__link">
         
   
   
@@ -1045,10 +1071,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#guide-directory" class="md-nav__link">
+  <a href="#start-the-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Guide Directory
+        Start the Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-the-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stop the Server
       
     </span>
   </a>
@@ -1075,15 +1123,28 @@
   
 
 
-<h1 id="my-notes">My Notes</h1>
-<p>This site contains personal notes for setting up development tools, documentation sites, and local AI servers.</p>
-<h2 id="guide-directory">Guide Directory</h2>
-<ul>
-<li><strong><a href="dev-tools/zoxide-fast-cd/">Developer Tools</a></strong>: Setting up Zoxide, Zed, and Mac Terminal shortcuts.</li>
-<li><strong><a href="notes-site/1-initial-setup/">Notes Site Setup</a></strong>: Building and publishing this documentation site.</li>
-<li><strong><a href="litellm/1-what-is-litellm/">LiteLLM Server</a></strong>: Running an OpenAI-compatible proxy for local and cloud AI models. </li>
-<li><strong><a href="lightrag-server/1-introduction/">LightRAG Server</a></strong>: Running a personal RAG search server as a native Mac app.</li>
-</ul>
+<h1 id="4-running-the-server">4. Running the Server</h1>
+<p>To start your Personal Search Server, you just need to run the launch script from your Terminal.</p>
+<h2 id="start-the-server">Start the Server</h2>
+<ol>
+<li>Open <strong>Terminal</strong>.</li>
+<li>Run this command:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bash<span class="w"> </span>~/LightRAG/lightrag-launcher.sh
+</code></pre></div></li>
+<li>Wait a few seconds until you see <code>Uvicorn running on http://127.0.0.1:8020</code>.</li>
+</ol>
+<p>The server is now running in the background of that Terminal window. Do not close the window while you want to use the search.</p>
+<h2 id="test-it">Test It</h2>
+<ol>
+<li>Open your browser.</li>
+<li>Go to <code>http://127.0.0.1:8020</code>.</li>
+<li>You should see the LightRAG chat interface load successfully.</li>
+</ol>
+<h2 id="stop-the-server">Stop the Server</h2>
+<p>When you are done using LightRAG:
+1. Go back to the Terminal window running the server.
+2. Press <code>Ctrl + C</code> on your keyboard to shut it down.</p>
+<p><strong>Next:</strong> <a href="../5-usage/">5. Usage Guide</a></p>
 
 
 
@@ -1133,10 +1194,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

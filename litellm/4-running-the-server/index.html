@@ -718,21 +718,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-set-api-keys" class="md-nav__link">
+  <a href="#start-the-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Set API Keys
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-start-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Start the Server
+        Start the Server
       
     </span>
   </a>
@@ -921,14 +910,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/4-creating-the-app/" class="md-nav__link">
+      <a href="../../lightrag-server/4-running-the-server/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Creating the App
+    4. Running the Server
   
 
     
@@ -977,14 +966,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/6-troubleshooting/" class="md-nav__link">
+      <a href="../../lightrag-server/6-optional-ui-launcher/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Troubleshooting
+    6. Optional UI Launcher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lightrag-server/7-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Troubleshooting
   
 
     
@@ -1032,21 +1049,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-set-api-keys" class="md-nav__link">
+  <a href="#start-the-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Set API Keys
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-start-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Start the Server
+        Start the Server
       
     </span>
   </a>
@@ -1074,18 +1080,16 @@
 
 
 <h1 id="4-running-the-server">4. Running the Server</h1>
-<h2 id="1-set-api-keys">1. Set API Keys</h2>
-<p>If you are using cloud providers, tell Terminal your API keys before starting the server. Open Terminal and run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GEMINI_API_KEY</span><span class="o">=</span><span class="s2">&quot;AI...&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CUSTOM_API_KEY</span><span class="o">=</span><span class="s2">&quot;sk-...&quot;</span><span class="w"> </span><span class="c1"># Only if your custom server requires it</span>
-</code></pre></div>
-<p><strong>Note:</strong> These only last until you close the window. (You can add those lines to your <code>~/.zshrc</code> file if you want them to be permanent).</p>
-<h2 id="2-start-the-server">2. Start the Server</h2>
-<p>In the same Terminal window, start the server and point it to the config file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>litellm<span class="w"> </span>--config<span class="w"> </span>~/.litellm/config.yaml
-</code></pre></div>
-<p>When you see <code>Uvicorn running on http://0.0.0.0:4000</code>, the server is ready. 
-To stop it, press <code>Ctrl + C</code>.</p>
+<p>Since all settings and keys are saved in your config and <code>.zshrc</code> files, you only need to run one short command to start your proxy.</p>
+<h2 id="start-the-server">Start the Server</h2>
+<ol>
+<li>Open a new <strong>Terminal</strong>.</li>
+<li>Run this command:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>litellm<span class="w"> </span>--config<span class="w"> </span>~/.litellm/config.yaml
+</code></pre></div></li>
+</ol>
+<p>When you see <code>Uvicorn running on http://0.0.0.0:4000</code>, your AI proxy is successfully hosting all your local and cloud models.
+To stop the server at any time, press <code>Ctrl + C</code> in the Terminal.</p>
 <p><strong>Next:</strong> <a href="../5-usage-and-testing/">5. Usage and Testing</a></p>
 
 

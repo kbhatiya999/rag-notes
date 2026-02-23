@@ -712,10 +712,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-api-keys-work" class="md-nav__link">
+  <a href="#3-set-your-api-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How API Keys Work
+        3. Set Your API Key
       
     </span>
   </a>
@@ -932,14 +932,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/4-creating-the-app/" class="md-nav__link">
+      <a href="../../lightrag-server/4-running-the-server/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Creating the App
+    4. Running the Server
   
 
     
@@ -988,14 +988,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lightrag-server/6-troubleshooting/" class="md-nav__link">
+      <a href="../../lightrag-server/6-optional-ui-launcher/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Troubleshooting
+    6. Optional UI Launcher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lightrag-server/7-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Troubleshooting
   
 
     
@@ -1065,10 +1093,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-api-keys-work" class="md-nav__link">
+  <a href="#3-set-your-api-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How API Keys Work
+        3. Set Your API Key
       
     </span>
   </a>
@@ -1126,8 +1154,17 @@
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">model</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gemini/*</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">api_key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;os.environ/GEMINI_API_KEY&quot;</span>
 </code></pre></div>
-<h2 id="how-api-keys-work">How API Keys Work</h2>
-<p>The config uses <code>os.environ/...</code> to securely load API keys from your environment. You tell your Mac the key before starting the server.</p>
+<h2 id="3-set-your-api-key">3. Set Your API Key</h2>
+<p>The config file searches your Mac's environment for the <code>GEMINI_API_KEY</code>. We need to save it to your Terminal profile so it's always available:</p>
+<ol>
+<li>Open Finder and go to your home folder (<code>⇧ + ⌘ + H</code>).</li>
+<li>Press <code>⇧ + ⌘ + .</code> to show hidden files.</li>
+<li>Open <code>.zshrc</code> in Zed.</li>
+<li>Add this line to the bottom, replacing <code>your-key-here</code> with your actual Google AI Studio API key:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GEMINI_API_KEY</span><span class="o">=</span><span class="s2">&quot;your-key-here&quot;</span>
+</code></pre></div></li>
+<li>Save the file and close Zed.</li>
+</ol>
 <p><strong>Next:</strong> <a href="../4-running-the-server/">4. Running the Server</a></p>
 
 

@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://example.com/different-site/lightrag-server/5-usage/">
       
       
-        <link rel="prev" href="../4-creating-the-app/">
+        <link rel="prev" href="../4-running-the-server/">
       
       
-        <link rel="next" href="../6-troubleshooting/">
+        <link rel="next" href="../6-optional-ui-launcher/">
       
       
         
@@ -852,14 +852,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../4-creating-the-app/" class="md-nav__link">
+      <a href="../4-running-the-server/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Creating the App
+    4. Running the Server
   
 
     
@@ -940,17 +940,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-and-stop-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Start and Stop the Server
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#use-the-web-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -999,14 +988,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../6-troubleshooting/" class="md-nav__link">
+      <a href="../6-optional-ui-launcher/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Troubleshooting
+    6. Optional UI Launcher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Troubleshooting
   
 
     
@@ -1052,17 +1069,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#start-and-stop-the-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Start and Stop the Server
-      
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#use-the-web-interface" class="md-nav__link">
@@ -1118,13 +1124,9 @@
 
 
 <h1 id="5-usage-guide">5. Usage Guide</h1>
-<h2 id="start-and-stop-the-server">Start and Stop the Server</h2>
-<ul>
-<li><strong>Start:</strong> Open your Applications folder in Finder and double-click <code>LightRAG Server.app</code>.</li>
-<li><strong>Stop:</strong> Click the app's text window and press <code>⌘ + Q</code>.</li>
-</ul>
+<p>Keep your Terminal window open with the server running (<code>bash ~/LightRAG/lightrag-launcher.sh</code>) while completing these steps.</p>
 <h2 id="use-the-web-interface">Use the Web Interface</h2>
-<p>When the app is running, go to:
+<p>When the server is running, go to:
 - <strong>Chat Interface:</strong> <code>http://127.0.0.1:8020</code></p>
 <h2 id="add-documents">Add Documents</h2>
 <ol>
@@ -1138,9 +1140,9 @@
 <li>Go to the <code>LightRAG</code> folder in Finder. (Press <code>⇧ + ⌘ + .</code> if you don't see <code>.env</code>).</li>
 <li>Open <code>.env</code> in Zed.</li>
 <li>Make your changes (like switching the API key) and save.</li>
-<li>Restart the <code>LightRAG Server.app</code> to apply the changes.</li>
+<li>Restart your server (press <code>Ctrl + C</code> in Terminal, then run the script again) to apply the changes.</li>
 </ol>
-<p><strong>Next:</strong> <a href="../6-troubleshooting/">6. Troubleshooting</a></p>
+<p><strong>Next:</strong> <a href="../6-optional-ui-launcher/">6. Optional UI Launcher</a></p>
 
 
 
