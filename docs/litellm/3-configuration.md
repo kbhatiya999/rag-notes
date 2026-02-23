@@ -13,7 +13,7 @@ LiteLLM looks for a `config.yaml` file to know which models to serve and what AP
 
 ## 2. Config Template
 
-This template sets up a cloud model (Gemini), a local model (Ollama), and a custom OpenAI-Compatible server. Copy and paste this into your `config.yaml`:
+This template sets up a cloud model (Gemini), a local model (Ollama), a local embedding model (Nomic via Ollama), and a custom OpenAI-Compatible server. Copy and paste this into your `config.yaml`:
 
 ```yaml
 # ~/.litellm/config.yaml
@@ -22,11 +22,17 @@ litellm_settings:
   drop_params: True
 
 model_list:
-  # A local model using Ollama
-  - model_name: ollama/mistral-nemo 
+  # A local model using Ollama (Wildcard route for ANY Ollama model)
+  - model_name: ollama/*
     litellm_params:
-      model: ollama/mistral-nemo 
+      model: ollama/*
       api_base: "http://localhost:11434" 
+
+  # A local embedding model using Ollama
+  - model_name: nomic-embed-text
+    litellm_params:
+      model: ollama/nomic-embed-text
+      api_base: "http://localhost:11434"
 
   # A cloud model using Gemini (Wildcard route for ANY Gemini model)
   - model_name: gemini/*
