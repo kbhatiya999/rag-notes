@@ -4,8 +4,6 @@
 If you are using cloud providers, tell Terminal your API keys before starting the server. Open Terminal and run:
 
 ```bash
-export OPENAI_API_KEY="sk-xxx"
-export ANTHROPIC_API_KEY="sk-yyy"
 export GEMINI_API_KEY="AI..."
 ```
 
