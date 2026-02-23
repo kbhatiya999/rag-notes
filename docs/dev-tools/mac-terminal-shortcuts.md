@@ -1,4 +1,4 @@
-# 1. Setup ⌘ + G Shortcut
+# Mac Terminal Shortcuts
 
 This guide configures a custom keyboard shortcut (`⌘ + G`) on macOS to instantly open the Terminal in whatever folder you have selected in Finder.
 

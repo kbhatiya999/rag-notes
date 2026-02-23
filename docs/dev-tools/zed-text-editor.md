@@ -1,4 +1,4 @@
-# 1. Installation
+# Zed Text Editor
 
 Zed is a fast, Rust-based code editor that supports Language Server Protocol (LSP) for real-time error checking.
 
@@ -28,5 +28,3 @@ We want Zed to automatically open when double-clicking Markdown (`.md`) notes or
    ```
 
 Now, any `.md`, `.yml`, `.yaml`, `.env`, `.txt`, or plain extensionless file you double-click in Finder will instantly open in Zed.
-
-**Next:** You can now proceed to [Setup Notes Site](../../notes-site/1-initial-setup.md).

@@ -6,14 +6,9 @@ repo_name: rag-notes
 nav:
   - Home: index.md
   - Developer Tools:
-    - Zoxide:
-      - "1. What is Zoxide?": dev-tools/zoxide-fast-cd/1-what-is-zoxide.md
-      - "2. Installation": dev-tools/zoxide-fast-cd/2-installation.md
-      - "3. Basic Usage": dev-tools/zoxide-fast-cd/3-basic-usage.md
-    - Zed:
-      - "1. Installation": dev-tools/zed-text-editor/1-installation.md
-    - Mac Terminal Shortcut:
-      - "1. Setup ⌘ + G": dev-tools/terminal-shortcut/1-setup.md
+    - Zoxide Fast CD: dev-tools/zoxide-fast-cd.md
+    - Zed Text Editor: dev-tools/zed-text-editor.md
+    - Mac Terminal Shortcuts: dev-tools/mac-terminal-shortcuts.md
   - Notes Site Setup:
     - "1. Initial Setup": notes-site/1-initial-setup.md
     - "2. Writing Content": notes-site/2-writing-content.md
