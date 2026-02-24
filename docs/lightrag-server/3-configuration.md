@@ -66,6 +66,13 @@ CHUNK_OVERLAP_SIZE=100
 # EMBEDDING_BINDING_HOST=https://generativelanguage.googleapis.com
 # EMBEDDING_BINDING_API_KEY=your-gemini-api-key-here
 # EMBEDDING_DIM=1536
+
+# --- Option 4: LITELLM PROXY ---
+# LLM_BINDING=openai
+# LLM_BINDING_HOST=http://localhost:4000/v1
+# LLM_MODEL=gemini/gemini-2.5-flash
+# LLM_BINDING_API_KEY=any-string-will-work
+# (Note: You still need to uncomment an EMBEDDING block from above)
 ```
 
 ## 3. Create the Launcher Script
