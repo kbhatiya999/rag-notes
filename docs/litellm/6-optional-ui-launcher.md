@@ -8,8 +8,10 @@ First, we need a simple script for Platypus to run.
 
 1. Open Finder (`⌃ + ⌥ + F`), press `⇧ + ⌘ + H` to go home, then open your `.litellm` folder.
 2. Open Zed, create a new blank document, and paste this code:
+   *(Note: macOS GUI apps don't load your Terminal environment by default. We must explicitly export the Homebrew paths so it can find your installed tools.)*
    ```bash
    #!/bin/bash
+   export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
    source ~/.zshrc
    ~/.local/bin/litellm --config ~/.litellm/config.yaml
    ```
@@ -27,13 +29,12 @@ First, we need a simple script for Platypus to run.
    - **App Name:** `LiteLLM Proxy`
    - **Script Path:** Click "Select...", press `⇧ + ⌘ + G` (Go to Folder), type `~/.litellm`, and select your `litellm-launcher.sh` file.
    - **Interface:** Change to **Text Window**.
-   - **At the very bottom**, make sure you **UNCHECK** these two options:
-     - **Remain running after execution:** *Keep unchecked.* If enabled, the app window stays open forever even if your server script crashes, forcing you to manually kill a "zombie" process.
-     - **Run in background:** *Keep unchecked.* If enabled, the app hides itself from your macOS Dock and hides its log window, making it impossible to see errors or gracefully quit the server using `⌘ + Q`.
+   - **Identifier:** `com.litellm.proxy.app`
+   - **At the very bottom**, make sure **Remain running after execution** and **Run in background** are both **UNCHECKED** (this ensures the app displays its log window and correctly shuts down the server when you quit it).
 3. Click **Create App** at the bottom.
 4. Save it into your **Applications** folder.
 
 ## How to Use It
 
 - **Start:** Double-click `LiteLLM Proxy.app` in your Applications folder. A text window will appear showing the server logs.
-- **Stop:** Click the app's text window to bring it into focus, and press `⌘ + Q` on your keyboard. This gracefully shuts down the proxy. *(This is why we had to uncheck 'Run in background'—without the window, you have no easy way to press `⌘ + Q` to kill the server).*
+- **Stop:** Click the app's text window to bring it into focus, and press `⌘ + Q` on your keyboard to gracefully shut down the proxy.
