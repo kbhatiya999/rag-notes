@@ -28,7 +28,7 @@ curl -s -X POST "http://localhost:4000/v1/chat/completions" \
 ```
 
 ### 3. Test Embeddings
-Test the embeddings API by sending a raw `curl` command against the proxy endpoint. Because embedding models return massive arrays (e.g., 3072 raw numbers), this command uses a `jq` filter to strategically slice the output down to just the first 3 numbers, keeping your terminal clean while still proving the connection works.
+Test the embeddings API by sending a raw `curl` command against the proxy endpoint. Because embedding models return massive arrays (e.g., 3072 raw numbers), this command uses a custom `jq` filter to keep your terminal clean:
 ```bash
 curl -s -X POST "http://localhost:4000/v1/embeddings" \
   -H "Content-Type: application/json" \
@@ -37,6 +37,12 @@ curl -s -X POST "http://localhost:4000/v1/embeddings" \
     "input": "This request needs no LiteLLM key"
   }' | jq '.data[0].embedding |= [.[0], .[1], .[2], "...", "(\(. | length) items)"]'
 ```
+
+**How the `jq` filter works:**
+* `|=`: The update operator replaces the value of `.data[0].embedding` with the array defined on the right.
+* `.[0], .[1], .[2]`: Extracts only the first three float values.
+* `"..."`: Appends a literal ellipsis string.
+* `\(. | length)`: Pipes the original, full embedding array (`.`) to the `length` function, calculates the total count (e.g., 3072), and dynamically injects the number into the final string.
 
 ### 4. Test Image Generation
 Because the Gemini `images/generations` API returns a base64-encoded JSON response rather than a direct image URL, you must decode the payload to see the image.
