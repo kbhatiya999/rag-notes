@@ -75,27 +75,5 @@ CHUNK_OVERLAP_SIZE=100
 # (Note: You still need to uncomment an EMBEDDING block from above)
 ```
 
-## 3. Create the Launcher Script
-Platypus needs a simple script to launch the server.
-
-1. Open Zed and create a new blank document (`⌘ + N`).
-2. Paste this exact code:
-
-*(Note: macOS GUI apps don't load your Terminal environment by default. We must explicitly export the Homebrew paths so it can find your installed tools.)*
-
-```bash
-#!/bin/zsh
-export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
-WORKING_DIR="$HOME/LightRAG"
-mkdir -p "$WORKING_DIR"
-cd "$WORKING_DIR"
-exec lightrag-server --working-dir "$WORKING_DIR"
-```
-
-3. Save it into your `LightRAG` folder and name it `lightrag-launcher.sh`.
-4. **Make it Executable:** While still in the `LightRAG` folder in Finder, press `⌥ + ⌘ + P` to show the Path Bar at the bottom of the window. **Right-click** `LightRAG` in that Path Bar and select **Open in Terminal**. Then run:
-   ```bash
-   chmod +x ~/LightRAG/lightrag-launcher.sh
-   ```
 
 **Next:** [4. Running the Server](4-running-the-server.md)
