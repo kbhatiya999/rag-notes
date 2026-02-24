@@ -1194,9 +1194,11 @@
 <ol>
 <li>Open Finder (<code>⌃ + ⌥ + F</code>), press <code>⇧ + ⌘ + H</code> to go home, then open your <code>.litellm</code> folder.</li>
 <li>Open Zed, create a new blank document, and paste this code:
+   <em>(Note: macOS GUI apps don't load your Terminal environment by default. We must explicitly export the Homebrew paths so it can find your installed tools.)</em>
    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>~/.local/bin/litellm<span class="w"> </span>--config<span class="w"> </span>~/.litellm/config.yaml
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/homebrew/bin:/usr/local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">source</span><span class="w"> </span>~/.zshrc
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>~/.local/bin/litellm<span class="w"> </span>--config<span class="w"> </span>~/.litellm/config.yaml
 </code></pre></div></li>
 <li>
 <p>Save it into your <code>.litellm</code> folder as <code>litellm-launcher.sh</code>.</p>
@@ -1214,18 +1216,15 @@
 <li><strong>App Name:</strong> <code>LiteLLM Proxy</code></li>
 <li><strong>Script Path:</strong> Click "Select...", press <code>⇧ + ⌘ + G</code> (Go to Folder), type <code>~/.litellm</code>, and select your <code>litellm-launcher.sh</code> file.</li>
 <li><strong>Interface:</strong> Change to <strong>Text Window</strong>.</li>
-<li><strong>At the very bottom</strong>, make sure you <strong>UNCHECK</strong> these two options:<ul>
-<li><strong>Remain running after execution:</strong> <em>Keep unchecked.</em> If enabled, the app window stays open forever even if your server script crashes, forcing you to manually kill a "zombie" process.</li>
-<li><strong>Run in background:</strong> <em>Keep unchecked.</em> If enabled, the app hides itself from your macOS Dock and hides its log window, making it impossible to see errors or gracefully quit the server using <code>⌘ + Q</code>.</li>
-</ul>
-</li>
+<li><strong>Identifier:</strong> <code>com.litellm.proxy.app</code></li>
+<li><strong>At the very bottom</strong>, make sure <strong>Remain running after execution</strong> and <strong>Run in background</strong> are both <strong>UNCHECKED</strong> (this ensures the app displays its log window and correctly shuts down the server when you quit it).</li>
 <li>Click <strong>Create App</strong> at the bottom.</li>
 <li>Save it into your <strong>Applications</strong> folder.</li>
 </ol>
 <h2 id="how-to-use-it">How to Use It</h2>
 <ul>
 <li><strong>Start:</strong> Double-click <code>LiteLLM Proxy.app</code> in your Applications folder. A text window will appear showing the server logs.</li>
-<li><strong>Stop:</strong> Click the app's text window to bring it into focus, and press <code>⌘ + Q</code> on your keyboard. This gracefully shuts down the proxy. <em>(This is why we had to uncheck 'Run in background'—without the window, you have no easy way to press <code>⌘ + Q</code> to kill the server).</em></li>
+<li><strong>Stop:</strong> Click the app's text window to bring it into focus, and press <code>⌘ + Q</code> on your keyboard to gracefully shut down the proxy.</li>
 </ul>
 
 
