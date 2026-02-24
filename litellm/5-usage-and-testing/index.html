@@ -769,10 +769,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#method-2-direct-inline-chat" class="md-nav__link">
+  <a href="#method-2-direct-inline-command" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 2: Direct Inline Chat
+        Method 2: Direct Inline Command
       
     </span>
   </a>
@@ -781,17 +781,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-lightrag-to-litellm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connect LightRAG to LiteLLM
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1139,10 +1128,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#method-2-direct-inline-chat" class="md-nav__link">
+  <a href="#method-2-direct-inline-command" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Method 2: Direct Inline Chat
+        Method 2: Direct Inline Command
       
     </span>
   </a>
@@ -1151,17 +1140,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-lightrag-to-litellm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Connect LightRAG to LiteLLM
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1193,22 +1171,19 @@
 <p>Run the proxy tool to open a full interactive menu:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>litellm-proxy
 </code></pre></div>
-1. Type <code>chat</code> and press Enter.
-2. It will ask for a <strong>Model name</strong>. Type your wildcard proxy route, for example <code>gemini/gemini-2.5-flash</code> or <code>ollama/llama3.2</code>, and press Enter.
-3. You can now chat directly with the model to verify it works! Press <code>Ctrl-C</code> to exit back to the menu, and type <code>quit</code> to close the tool.</p>
-<h3 id="method-2-direct-inline-chat">Method 2: Direct Inline Chat</h3>
-<p>If you know the model name, you can skip the menu and launch straight into a chat session from your terminal:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>litellm-proxy<span class="w"> </span>chat<span class="w"> </span>gemini/gemini-2.5-flash
+1. Type <code>models list</code> and press Enter to see all available models configured in your proxy.
+2. Type <code>chat</code> and press Enter.
+3. It will ask for a <strong>Model name</strong>. Type your wildcard proxy route, for example <code>gemini/gemini-2.5-flash</code> or <code>ollama/llama3.2</code>, and press Enter.
+4. You can now chat directly with the model to verify it works! Press <code>Ctrl-C</code> to exit back to the menu, and type <code>quit</code> to close the tool.</p>
+<h3 id="method-2-direct-inline-command">Method 2: Direct Inline Command</h3>
+<p>If you want to view models and test them rapidly without the menu, you can run these commands straight from your terminal:</p>
+<p><strong>View Available Models:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>litellm-proxy<span class="w"> </span>models<span class="w"> </span>list
+</code></pre></div></p>
+<p><strong>Launch Testing Chat:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>litellm-proxy<span class="w"> </span>chat<span class="w"> </span>gemini/gemini-2.5-flash
 </code></pre></div>
-<em>(Replace <code>gemini/gemini-2.5-flash</code> with your chosen Ollama or Gemini model).</em></p>
-<h2 id="connect-lightrag-to-litellm">Connect LightRAG to LiteLLM</h2>
-<p>To use LiteLLM as the engine for your LightRAG server, update your <code>LightRAG/.env</code> file in Zed:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">LLM_BINDING</span><span class="o">=</span><span class="s">openai</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">LLM_BINDING_HOST</span><span class="o">=</span><span class="s">http://localhost:4000/v1</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">LLM_MODEL</span><span class="o">=</span><span class="s">gemini/gemini-2.5-flash</span><span class="w"> </span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">LLM_BINDING_API_KEY</span><span class="o">=</span><span class="s">any-string-will-work</span>
-</code></pre></div>
-<p>This tells LightRAG to send all requests to LiteLLM instead of directly to a specific provider.</p>
+<em>(Replace <code>gemini/gemini-2.5-flash</code> with a model from your list).</em></p>
 <p><strong>Next:</strong> <a href="../6-optional-ui-launcher/">6. Optional UI Launcher</a></p>
 
 
