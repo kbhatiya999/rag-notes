@@ -27,7 +27,9 @@ Zoxide needs to launch every time you open a Terminal. We add it to your `~/.zsh
 
 ## Basic Usage
 
-Use `cd` normally a few times to visit your project folders so Zoxide can "learn" them. After that, you can use `z`.
+*(Note: The `zoxide init` script we just added to your `.zshrc` automatically creates a short command called **`z`** for you to use).*
+
+Use `cd` normally a few times to visit your project folders so Zoxide can "learn" them. After that, you can replace `cd` with `z`.
 
 ### Jump to a Folder
 Instead of `cd`, just type `z` and part of the folder name:
