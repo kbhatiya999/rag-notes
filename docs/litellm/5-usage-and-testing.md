@@ -60,7 +60,7 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
    echo "$response" | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
    
    # 2. Print the JSON response to your terminal, hiding the massive base64 string
-   echo "$response" | jq '.data[0].b64_json = "<base64_image_data_hidden>"'
+   echo "$response" | jq '.data[0].b64_json = ["...", "(base64 image data hidden)"]'
    
    # 3. Open the downloaded image
    open ~/Downloads/litellm/images/mountain-logo.png
