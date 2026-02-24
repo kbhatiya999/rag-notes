@@ -13,8 +13,9 @@ This site contains personal notes for setting up development tools, documentatio
 
 Because these guides rely heavily on the macOS Finder rather than complex Terminal commands, here are the most important keyboard shortcuts to remember:
 
-- **Launch Terminal Anywhere:** Press `⌥ + ⇧ + T` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#1-global-terminal-shortcut)).
-- **Open Terminal at Folder:** Select a folder and press `⌘ + G` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#2-open-terminal-at-folder)).
+- **Launch Terminal Anywhere:** Press `⌃ + ⌥ + T` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#1-global-terminal-shortcut)).
+- **Launch Finder Anywhere:** Press `⌃ + ⌥ + F` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#2-global-finder-shortcut)).
+- **Open Terminal at Folder:** Select a folder and press `⌘ + G` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#3-open-terminal-at-folder)).
 - **Go to Parent Folder:** Press `⌘ + ↑` to go up one level.
 - **Show Hidden Files:** Press `⇧ + ⌘ + .` to toggle visibility of files like `.env`.
 - **Delete File:** Press `⌘ + Delete` to move a file to the Trash.

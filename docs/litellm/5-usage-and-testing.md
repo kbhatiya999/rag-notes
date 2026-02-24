@@ -127,6 +127,11 @@ curl -s -X POST "http://localhost:4000/v1/embeddings" \
 * `\(. | length)`: Pipes the original, full embedding array (`.`) to the `length` function, calculates the total count (e.g., 3072), and dynamically injects the number into the final string.
 
 ### 4. Test Image Generation
+
+**Example Generated Asset:**
+
+![Generated Mountain Logo](assets/mountain-logo.png)
+
 Because the Gemini `images/generations` API returns a base64-encoded JSON response rather than a direct image URL, you must decode the payload to see the image.
 
 1. **Create the output folders** first (if they don't exist):
@@ -134,7 +139,7 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
    mkdir -p ~/Downloads/litellm/images ~/Downloads/litellm/videos
    ```
 
-2. **Generate Multiple Images:** Run this command to generate 2 images and save the raw API JSON response into a variable. 
+2. **Generate an Image:** Run this command to generate 1 image and save the raw API JSON response into a variable. 
    ```bash
    response=$(curl -s -X POST "http://localhost:4000/v1/images/generations" \
      -H "Content-Type: application/json" \
@@ -142,7 +147,7 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
        "model": "gemini/imagen-4.0-fast-generate-001",
        "prompt": "A minimalist logo of a mountain",
        "size": "1024x1024",
-       "n": 2
+       "n": 1
      }')
    ```
    
@@ -174,14 +179,6 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
          ],
          "revised_prompt": null,
          "url": null
-       },
-       {
-         "b64_json": [
-           "...",
-           "(base64 image data hidden)"
-         ],
-         "revised_prompt": null,
-         "url": null
        }
      ],
      "usage": {
@@ -192,13 +189,14 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
    }
    ```
 
-   **Generated Asset:**
-
-   ![Generated Mountain Logo](assets/mountain-logo.png)
-
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
 
 ### 5. Test Video Generation
+
+**Example Generated Asset:**
+
+<video controls src="../assets/cat-yarn.mp4" width="100%"></video>
+
 Video generation is an asynchronous process, so it requires a multi-step script instead of a single pipeline.
 
 1. **Start Generation:** Send the prompt to the Veo model and save the returned `id` string into a terminal variable.
@@ -239,8 +237,6 @@ Video generation is an asynchronous process, so it requires a multi-step script 
    open ~/Downloads/litellm/videos/cat-yarn.mp4
    ```
 
-   **Generated Asset:**
-
-   <video controls src="../assets/cat-yarn.mp4" width="100%"></video>
+   ```
 
 **Next:** [6. Optional UI Launcher](6-optional-ui-launcher.md)

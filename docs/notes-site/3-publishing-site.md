@@ -37,9 +37,8 @@ Your site will be live in a few minutes at `https://<YOUR-GITHUB-USERNAME>.githu
 
 Whenever you add new notes or make changes in Finder, you need to save and re-publish your site:
 
-1. Open your `rag-notes` folder in Finder.
-2. In the Path Bar, **Right-click** `rag-notes` and select **Open in Terminal**.
-3. Run these commands:
+1. Open **Finder**, right-click the `rag-notes` folder in the bottom Path Bar, and select **Open in Terminal**.
+2. Run these commands:
 
 ```bash
 git add .

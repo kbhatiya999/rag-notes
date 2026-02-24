@@ -18,7 +18,21 @@ Your shortcut is now active from anywhere!
 
 ---
 
-## 2. Open Terminal at Folder
+## 2. Global Finder Shortcut
+
+If you want a global hotkey to bring up Finder from absolutely anywhere (just like we did for Terminal in Step 1):
+
+1. Open the macOS **Shortcuts** app.
+2. Click the **+** button at the top to create a new shortcut.
+3. In the search bar on the right, search for **"Open App"** and double-click it.
+4. Click the faded "App" variable in the action block and select **Finder**.
+5. Give your shortcut a name at the top (like "Launch Finder").
+6. Click the **Info (i)** button in the top right corner.
+7. Click **Add Keyboard Shortcut**, then press the key combination you want to use globally (e.g., `⌃ + ⌥ + F`).
+
+---
+
+## 3. Open Terminal at Folder
 
 This configures a shortcut (`⌘ + G`) to instantly open a Terminal window directly inside whichever folder you currently have selected in Finder.
 
@@ -36,3 +50,14 @@ This configures a shortcut (`⌘ + G`) to instantly open a Terminal window direc
 3. Click **Done**.
 
 Now, when you select any folder in Finder, you can press `⌘ + G` to instantly open a Terminal window at that exact location.
+
+---
+
+## 4. Open Finder from Terminal
+
+If you are already working in the Terminal and want to visually see your files, you don't need a keyboard shortcut. You can instantly open your current Terminal directory in a new Finder window by simply typing:
+
+```bash
+open .
+```
+*(Note: The `.` represents your current directory).*

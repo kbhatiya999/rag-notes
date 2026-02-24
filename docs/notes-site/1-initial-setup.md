@@ -11,6 +11,10 @@ You need two things installed on your Mac. Open the Terminal app (`⌘ + Space`,
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
 2. **uv**: 
+   ```bash
+   brew install uv
+   ```
+
 ## Setup the Project
 
 1. **Create the Folders (in Finder)**: 
@@ -36,31 +40,50 @@ You need two things installed on your Mac. Open the Terminal app (`⌘ + Space`,
 
    ```yaml
    site_name: My Notes
+   
    theme: 
      name: material
      features:
        - content.code.copy
+     palette:
+       # Palette toggle for light mode
+       - scheme: default
+         toggle:
+           icon: material/brightness-7
+           name: Switch to dark mode
+   
+       # Palette toggle for dark mode
+       - scheme: slate
+         toggle:
+           icon: material/brightness-4
+           name: Switch to light mode
    
    markdown_extensions:
      - pymdownx.highlight:
          anchor_linenums: true
      - pymdownx.superfences
      - pymdownx.snippets
-
+   
    nav:
      - Home: index.md
    ```
    Save the file and close Zed.
+
+   **What this configuration does:**
+   * **`theme`**: Tells MkDocs to use the "Material" theme, which looks clean and modern. The `features` block adds a convenient "copy to clipboard" button to all code snippets.
+   * **`palette`**: Enables the light/dark mode switch in the top header. It defaults to light (`default`) and allows users to toggle to dark (`slate`).
+   * **`markdown_extensions`**: Adds advanced formatting support, enabling syntax highlighting, line numbers, and the ability to nest code blocks inside other formatting.
+   * **`nav`**: This is your website's sidebar navigation menu. Every time you create a new Markdown file, you will add it here so users can click it.
 
 ## Run the Site
 
 Whenever you want to view your notes locally on your Mac:
 1. Open the `rag-notes` folder in Finder.
 2. In the Path Bar at the bottom of the Finder window, **Right-click** `rag-notes` and select **Open in Terminal**.
-3. Run the included script:
+3. Run the development server:
 
 ```bash
-bash run_dev.sh
+uv run mkdocs serve
 ```
 
 Then open your browser and go to `http://127.0.0.1:8000`.
