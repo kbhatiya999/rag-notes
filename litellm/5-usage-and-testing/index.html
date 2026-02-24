@@ -1219,14 +1219,14 @@
 <p><strong>Test Image Generation &amp; Save to Downloads:</strong>
 Because the Gemini <code>images/generations</code> API returns a base64-encoded JSON response rather than a direct image URL, you can pipe the output through <code>jq</code> to decode and save the image directly into your <code>Downloads</code> folder.</p>
 <ol>
-<li><strong>Create the output folders</strong> first (if they don't exist):</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/Downloads/litellm/images<span class="w"> </span>~/Downloads/litellm/videos
-</code></pre></div>
-<ol>
-<li><strong>Generate and Save an Image:</strong></li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/images/generations&quot;</span><span class="w"> </span><span class="se">\</span>
+<li>
+<p><strong>Create the output folders</strong> first (if they don't exist):
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/Downloads/litellm/images<span class="w"> </span>~/Downloads/litellm/videos
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Generate and Save an Image:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/images/generations&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="s1">    &quot;model&quot;: &quot;gemini/imagen-4.0-fast-generate-001&quot;,</span>
@@ -1237,31 +1237,35 @@ Because the Gemini <code>images/generations</code> API returns a base64-encoded 
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>open<span class="w"> </span>~/Downloads/litellm/images/mountain-logo.png
 </code></pre></div>
 <em>(Note: If you receive a "command not found: jq" error, you can install it via <code>brew install jq</code>).</em></p>
+</li>
+</ol>
 <p><strong>Test Video Generation (Asynchronous):</strong>
 Video generation takes time, so it requires a multi-step process instead of a single pipeline.</p>
 <ol>
-<li><strong>Start Generation:</strong> Send the prompt to the Veo model. This returns an <code>id</code> (e.g., <code>gemini::operations/generate_12345...</code>) and a <code>status</code> of <code>processing</code>.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/videos&quot;</span><span class="w"> </span><span class="se">\</span>
+<li>
+<p><strong>Start Generation:</strong> Send the prompt to the Veo model. This returns an <code>id</code> (e.g., <code>gemini::operations/generate_12345...</code>) and a <code>status</code> of <code>processing</code>.
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/videos&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="s1">    &quot;model&quot;: &quot;gemini/veo-3.1-fast-generate-preview&quot;,</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="s1">    &quot;prompt&quot;: &quot;A cat playing with a ball of yarn in a sunny garden&quot;</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="s1">  }&#39;</span>
-</code></pre></div>
-<ol>
-<li><strong>Check Status:</strong> Replace <code>{video_id}</code> with the actual <code>id</code> string returned from Step 1. Wait until the status changes to <code>completed</code>.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/videos/{video_id}&quot;</span>
-</code></pre></div>
-<ol>
-<li><strong>Download Video:</strong> Once completed, append <code>/content</code> to the URL to download the physical MP4 chunk to your computer.</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/videos/{video_id}/content&quot;</span><span class="w"> </span><span class="se">\</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check Status:</strong> Replace <code>{video_id}</code> with the actual <code>id</code> string returned from Step 1. Wait until the status changes to <code>completed</code>.
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/videos/{video_id}&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Download Video:</strong> Once completed, append <code>/content</code> to the URL to download the physical MP4 chunk to your computer.
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/videos/{video_id}/content&quot;</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span>--output<span class="w"> </span>~/Downloads/litellm/videos/cat-yarn.mp4
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>open<span class="w"> </span>~/Downloads/litellm/videos/cat-yarn.mp4
-</code></pre></div>
+</code></pre></div></p>
+</li>
+</ol>
 <p><strong>Next:</strong> <a href="../6-optional-ui-launcher/">6. Optional UI Launcher</a></p>
 
 
