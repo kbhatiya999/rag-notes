@@ -11,6 +11,22 @@ First, run this command to see all the loaded model routes you can test via the 
 curl -s http://localhost:4000/v1/models | jq
 ```
 
+**Example Output:**
+```json
+{
+  "object": "list",
+  "data": [
+    {
+      "id": "ollama/*",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    "... (truncated for brevity)"
+  ]
+}
+```
+
 ### 2. Test Chat (Text Generation)
 Send a standard OpenAI-compatible chat completion request to verify text generation:
 ```bash
@@ -27,6 +43,31 @@ curl -s -X POST "http://localhost:4000/v1/chat/completions" \
   }' | jq
 ```
 
+**Example Output:**
+```json
+{
+  "id": "s2edaYjLMKbJ4-EPp-KL6AQ",
+  "created": 1771923379,
+  "model": "gemini/gemini-2.5-flash",
+  "object": "chat.completion",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Hello! That's a good question...\n\nAs an AI, I don't \"work\" in the human sense (like having shifts or needing breaks). However, I am always active and ready to process information and assist you.\n\nSo, yes, you could say I'm always \"working\" or rather, always available!\n\nHow can I help you today?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "usage": {
+    "completion_tokens": 778,
+    "prompt_tokens": 7,
+    "total_tokens": 785
+  }
+}
+```
+
 ### 3. Test Embeddings
 Test the embeddings API by sending a raw `curl` command against the proxy endpoint. Because embedding models return massive arrays (e.g., 3072 raw numbers), this command uses a custom `jq` filter to keep your terminal clean:
 ```bash
@@ -36,6 +77,32 @@ curl -s -X POST "http://localhost:4000/v1/embeddings" \
     "model": "gemini/gemini-embedding-001",
     "input": "This request needs no LiteLLM key"
   }' | jq '.data[0].embedding |= [.[0], .[1], .[2], "...", "(\(. | length) items)"]'
+```
+
+**Example Output:**
+```json
+{
+  "model": "gemini/gemini-embedding-001",
+  "data": [
+    {
+      "embedding": [
+        -0.015254181,
+        0.018891979,
+        0.0023873092,
+        "...",
+        "(3072 items)"
+      ],
+      "index": 0,
+      "object": "embedding"
+    }
+  ],
+  "object": "list",
+  "usage": {
+    "completion_tokens": 0,
+    "prompt_tokens": 8,
+    "total_tokens": 8
+  }
+}
 ```
 
 **How the `jq` filter works:**
@@ -79,6 +146,37 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
    ```bash
    echo "$response" | jq '.data[].b64_json = ["...", "(base64 image data hidden)"]'
    ```
+
+   **Example Output:**
+   ```json
+   {
+     "created": 1771923595,
+     "data": [
+       {
+         "b64_json": [
+           "...",
+           "(base64 image data hidden)"
+         ],
+         "revised_prompt": null,
+         "url": null
+       },
+       {
+         "b64_json": [
+           "...",
+           "(base64 image data hidden)"
+         ],
+         "revised_prompt": null,
+         "url": null
+       }
+     ],
+     "usage": {
+       "total_tokens": 0,
+       "input_tokens": 0,
+       "output_tokens": 0
+     }
+   }
+   ```
+
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
 
 ### 5. Test Video Generation
@@ -99,6 +197,18 @@ Video generation is an asynchronous process, so it requires a multi-step script 
 2. **Check Status:** Run this command to poll your proxy. Wait until the `status` string changes from `processing` to `completed`.
    ```bash
    curl -s -X GET "http://localhost:4000/v1/videos/$video_id" | jq
+   ```
+
+   **Example Output:**
+   ```json
+   {
+     "id": "video_bGl0ZWxs...",
+     "object": "video",
+     "status": "processing",
+     "created_at": null,
+     "completed_at": null,
+     "error": null
+   }
    ```
 
 3. **Download Video:** Once completed, wait a few moments for the video to fully finalize on the servers, then run the `/content` endpoint to download the generated MP4 file to your Mac.
