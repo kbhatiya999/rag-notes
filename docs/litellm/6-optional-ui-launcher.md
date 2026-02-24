@@ -36,4 +36,4 @@ First, we need a simple script for Platypus to run.
 ## How to Use It
 
 - **Start:** Double-click `LiteLLM Proxy.app` in your Applications folder. A text window will appear showing the server logs.
-- **Stop:** Click the app's text window to bring it into focus, and press `⌘ + Q` on your keyboard to gracefully shut down the proxy.
+- **Stop:** Click the app's text window to bring it into focus, and press `⌘ + Q` on your keyboard. This gracefully shuts down the proxy. *(This is why we had to uncheck 'Run in background'—without the window, you have no easy way to press `⌘ + Q` to kill the server).*

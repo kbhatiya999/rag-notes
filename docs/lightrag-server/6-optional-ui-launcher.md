@@ -18,6 +18,6 @@ If you prefer not to use the Terminal every time you want to search your notes, 
 ## How to Use It
 
 - **Start:** Open your Applications folder in Finder (`⌃ + ⌥ + F`) and double-click `LightRAG Server.app`. A small text window will appear showing the server output.
-- **Stop:** Click the app's text window to bring it into focus, and press `⌘ + Q` on your keyboard to gracefully shut down the server.
+- **Stop:** Click the app's text window to bring it into focus, and press `⌘ + Q` on your keyboard. This gracefully shuts down the server. *(This is why we had to uncheck 'Run in background'—without the window, you have no easy way to press `⌘ + Q` to kill the server).*
 
 **Next:** [7. Troubleshooting](7-troubleshooting.md)
