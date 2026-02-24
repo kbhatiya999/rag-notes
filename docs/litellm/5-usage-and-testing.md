@@ -67,24 +67,26 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
 **Test Video Generation (Asynchronous):**
 Video generation takes time, so it requires a multi-step process instead of a single pipeline.
 
-1. **Start Generation:** Send the prompt to the Veo model. This returns an `id` (e.g., `gemini::operations/generate_12345...`) and a `status` of `processing`.
+1. **Start Generation:** Send the prompt to the Veo model and save the returned `id` string into a terminal variable.
    ```bash
-   curl -X POST "http://localhost:4000/v1/videos" \
+   video_id=$(curl -s -X POST "http://localhost:4000/v1/videos" \
      -H "Content-Type: application/json" \
      -d '{
        "model": "gemini/veo-3.1-fast-generate-preview",
        "prompt": "A cat playing with a ball of yarn in a sunny garden"
-     }'
+     }' | jq -r '.id')
+     
+   echo "Processing Video ID: $video_id"
    ```
 
-2. **Check Status:** Replace `{video_id}` with the actual `id` string returned from Step 1. Wait until the status changes to `completed`.
+2. **Check Status:** Run this command to poll your proxy. Wait until the `status` string changes from `processing` to `completed`.
    ```bash
-   curl -X GET "http://localhost:4000/v1/videos/{video_id}"
+   curl -s -X GET "http://localhost:4000/v1/videos/$video_id" | jq
    ```
 
-3. **Download Video:** Once completed, append `/content` to the URL to download the physical MP4 chunk to your computer.
+3. **Download Video:** Once completed, run the `/content` endpoint to download the generated MP4 file to your Mac.
    ```bash
-   curl -X GET "http://localhost:4000/v1/videos/{video_id}/content" \
+   curl -X GET "http://localhost:4000/v1/videos/$video_id/content" \
      --output ~/Downloads/litellm/videos/cat-yarn.mp4
      
    open ~/Downloads/litellm/videos/cat-yarn.mp4
