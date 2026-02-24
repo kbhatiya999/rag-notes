@@ -24,9 +24,10 @@ PORT=8020
 WEBUI_TITLE=My Personal RAG
 WEBUI_DESCRIPTION=A private RAG system powered by LightRAG
 
-# --- Directory Settings ---
-WORKING_DIR=/Users/YOUR_MAC_USERNAME/LightRAG
-INPUT_DIR=/Users/YOUR_MAC_USERNAME/LightRAG/inputs
+# --- Directory Settings (Optional) ---
+# LightRAG defaults to these paths if left commented out:
+# WORKING_DIR=/Users/YOUR_MAC_USERNAME/LightRAG
+# INPUT_DIR=/Users/YOUR_MAC_USERNAME/LightRAG/inputs
 
 # --- Indexing Performance ---
 MAX_ASYNC=4
