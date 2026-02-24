@@ -14,7 +14,7 @@ curl -s http://localhost:4000/v1/models | jq
 ### 2. Test Chat (Text Generation)
 Send a standard OpenAI-compatible chat completion request to verify text generation:
 ```bash
-curl -X POST "http://localhost:4000/v1/chat/completions" \
+curl -s -X POST "http://localhost:4000/v1/chat/completions" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "gemini/gemini-2.5-flash",
@@ -24,11 +24,11 @@ curl -X POST "http://localhost:4000/v1/chat/completions" \
         "content": "Hello! Are you working?"
       }
     ]
-  }'
+  }' | jq
 ```
 
 ### 3. Test Embeddings
-Test the embeddings API by sending a raw `curl` command against the proxy endpoint `http://localhost:4000/v1`.
+Test the embeddings API by sending a raw `curl` command against the proxy endpoint. Because embedding models return massive arrays (e.g., 3072 raw numbers), this command uses a `jq` filter to strategically slice the output down to just the first 3 numbers, keeping your terminal clean while still proving the connection works.
 ```bash
 curl -s -X POST "http://localhost:4000/v1/embeddings" \
   -H "Content-Type: application/json" \
