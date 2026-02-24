@@ -44,7 +44,14 @@ LLM_BINDING=openai
 LLM_BINDING_HOST=http://localhost:4000/v1
 LLM_MODEL=gemini/gemini-2.0-flash
 LLM_BINDING_API_KEY=any-string-will-work
-# (Note: You still need to uncomment an EMBEDDING block from below)
+
+# --- LiteLLM Proxy (Recommended for Embedding) ---
+# EMBEDDING_BINDING=openai
+# EMBEDDING_MODEL=gemini/text-embedding-004
+# EMBEDDING_DIM=768
+# EMBEDDING_BINDING_HOST=http://localhost:4000/v1
+# EMBEDDING_BINDING_API_KEY=any-string-will-work
+# (Note: Use this if you want LiteLLM to handle entries for both LLM and Embeddings)
 
 # --- Option 2: OLLAMA ---
 # LLM_BINDING=ollama
@@ -61,9 +68,14 @@ LLM_BINDING_API_KEY=any-string-will-work
 # LLM_BINDING_HOST=https://api.openai.com/v1
 # LLM_MODEL=gpt-4o
 # LLM_BINDING_API_KEY=sk-your-api-key-here
+
+# --- OpenAI (Embedding) ---
 # EMBEDDING_BINDING=openai
-# EMBEDDING_BINDING_HOST=https://api.openai.com/v1
 # EMBEDDING_MODEL=text-embedding-3-large
+# EMBEDDING_DIM=3072
+# EMBEDDING_SEND_DIM=false
+# EMBEDDING_TOKEN_LIMIT=8192
+# EMBEDDING_BINDING_HOST=https://api.openai.com/v1
 # EMBEDDING_BINDING_API_KEY=sk-your-api-key-here
 
 # --- Option 4: GEMINI ---

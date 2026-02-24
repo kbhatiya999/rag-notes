@@ -13,8 +13,13 @@
 **Can't see `.env` in Finder**
 Files starting with a dot are hidden by default. Open the `LightRAG` folder in Finder (`⌃ + ⌥ + F`) and press `⇧ + ⌘ + .` to show them.
 
-**Server running but browser won't connect**
 Check the Terminal output to see exactly what port it started on, and ensure your browser matches (e.g., `http://127.0.0.1:8020`).
+
+**Ollama "Not Found" (404) Error during Indexing**
+This happens when LightRAG tries to use an embedding model that Ollama doesn't have.
+1. Make sure you have **uncommented** an embedding block in your `.env` file.
+2. If using Ollama for embeddings, open Terminal and run `ollama pull bge-m3` (or whichever model you specified).
+3. Check that your `EMBEDDING_MODEL` in `.env` matches the model name in Ollama exactly.
 
 ## File Locations
 
