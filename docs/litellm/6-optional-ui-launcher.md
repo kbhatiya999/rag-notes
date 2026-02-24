@@ -15,7 +15,7 @@ First, we need a simple script for Platypus to run.
    ```
 3. Save it into your `.litellm` folder as `litellm-launcher.sh`.
 
-We need to make it executable. Open Terminal and run:
+We need to make this file executable. While still in the `.litellm` folder in Finder, press `⌥ + ⌘ + P` to show the Path Bar at the bottom of the window. **Right-click** `.litellm` in that Path Bar and select **Open in Terminal**. Then run:
    ```bash
    chmod +x ~/.litellm/litellm-launcher.sh
    ```

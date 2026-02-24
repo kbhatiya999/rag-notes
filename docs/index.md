@@ -18,5 +18,6 @@ Because these guides rely heavily on the macOS Finder rather than complex Termin
 - **Open Terminal at Folder:** Select a folder and press `⌘ + G` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#3-open-terminal-at-folder)).
 - **Go to Parent Folder:** Press `⌘ + ↑` to go up one level.
 - **Go to Folder:** Press `⇧ + ⌘ + G` in Finder to jump to a specific path.
+- **Show Path Bar:** Press `⌥ + ⌘ + P` in Finder to see the folder path, which is required to Right-Click -> **Open in Terminal**.
 - **Show Hidden Files:** Press `⇧ + ⌘ + .` to toggle visibility of files like `.env`.
 - **Delete File:** Press `⌘ + Delete` to move a file to the Trash.
