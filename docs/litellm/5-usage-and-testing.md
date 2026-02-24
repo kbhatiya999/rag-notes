@@ -43,7 +43,7 @@ curl -X POST "http://localhost:4000/v1/embeddings" \
 ```
 
 **Test Image Generation & Save to Downloads:**
-Because the `images/generations` API returns a JSON response with a URL, you can pipe the output to download the image directly into your `Downloads` folder using `jq`.
+Because the Gemini `images/generations` API returns a base64-encoded JSON response rather than a direct image URL, you can pipe the output through `jq` to decode and save the image directly into your `Downloads` folder.
 
 1. **Create the output folders** first (if they don't exist):
    ```bash
@@ -58,7 +58,7 @@ Because the `images/generations` API returns a JSON response with a URL, you can
        "model": "gemini/imagen-4.0-fast-generate-001",
        "prompt": "A minimalist logo of a mountain",
        "size": "1024x1024"
-     }' | jq -r '.data[0].url' | xargs curl -s -o ~/Downloads/litellm/images/mountain-logo.png
+     }' | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
      
    open ~/Downloads/litellm/images/mountain-logo.png
    ```
@@ -72,7 +72,7 @@ Because the `images/generations` API returns a JSON response with a URL, you can
        "prompt": "A digital painting of a neon cyberpunk cat",
        "n": 1,
        "size": "1024x1024"
-     }' | jq -r '.data[0].url' | xargs curl -s -o ~/Downloads/litellm/images/cyberpunk-cat.png
+     }' | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/cyberpunk-cat.png
      
    open ~/Downloads/litellm/images/cyberpunk-cat.png
    ```
