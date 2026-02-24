@@ -72,7 +72,7 @@ Video generation takes time, so it requires a multi-step process instead of a si
    curl -X POST "http://localhost:4000/v1/videos" \
      -H "Content-Type: application/json" \
      -d '{
-       "model": "gemini/veo-3.1-fast-generate-001",
+       "model": "gemini/veo-3.1-fast-generate-preview",
        "prompt": "A cat playing with a ball of yarn in a sunny garden"
      }'
    ```
