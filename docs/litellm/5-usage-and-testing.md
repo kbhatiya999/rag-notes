@@ -39,14 +39,14 @@ curl -s -X POST "http://localhost:4000/v1/embeddings" \
 ```
 
 ### 4. Test Image Generation
-Because the Gemini `images/generations` API returns a base64-encoded JSON response rather than a direct image URL, you can pipe the output through `jq` to decode and save the image directly into your `Downloads` folder.
+Because the Gemini `images/generations` API returns a base64-encoded JSON response rather than a direct image URL, you must decode the payload to see the image.
 
 1. **Create the output folders** first (if they don't exist):
    ```bash
    mkdir -p ~/Downloads/litellm/images ~/Downloads/litellm/videos
    ```
 
-2. **Generate and Save Image(s):**
+2. **Generate Multiple Images:** Run this command to generate 2 images and save the raw API JSON response into a variable. 
    ```bash
    response=$(curl -s -X POST "http://localhost:4000/v1/images/generations" \
      -H "Content-Type: application/json" \
@@ -54,9 +54,12 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
        "model": "gemini/imagen-4.0-fast-generate-001",
        "prompt": "A minimalist logo of a mountain",
        "size": "1024x1024",
-       "n": 1
+       "n": 2
      }')
-     
+   ```
+   
+3. **Decode and Open Images:** Run this loop. It searches the JSON array, decodes every embedded base64 string into a unique PNG file, and opens each one side-by-side.
+   ```bash
    count=1
    echo "$response" | jq -r '.data[].b64_json' | while read -r b64; do
      output_path=~/Downloads/litellm/images/mountain-logo-$count.png
@@ -64,7 +67,10 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
      open "$output_path"
      ((count++))
    done
+   ```
    
+4. **View Clean JSON Metrics:** Finally, print the structure of the JSON response to your terminal. This filter hides the massive base64 strings so you can easily review your token usage and execution metadata.
+   ```bash
    echo "$response" | jq '.data[].b64_json = ["...", "(base64 image data hidden)"]'
    ```
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
