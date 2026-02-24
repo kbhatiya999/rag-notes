@@ -1282,7 +1282,7 @@
 <h2 id="installation">Installation</h2>
 <h3 id="1-install-with-homebrew">1. Install with Homebrew</h3>
 <p>Open Terminal and run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>install<span class="w"> </span>zoxide
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>install<span class="w"> </span>zoxide<span class="w"> </span>fzf
 </code></pre></div>
 <h3 id="2-hook-into-zsh">2. Hook into ZSH</h3>
 <p>Zoxide needs to launch every time you open a Terminal. We add it to your <code>~/.zshrc</code> file.</p>
@@ -1306,11 +1306,11 @@
 </code></pre></div>
 (This instantly jumps to your <code>/Users/myuser/RAGprojects/rag-notes</code> folder).</p>
 <h3 id="interactive-search">Interactive Search</h3>
-<p>If you forgot the exact name or want to see a list of matches:</p>
+<p>If you forgot the exact name or want to see a list of matches, we can use the <strong>Interactive Jump</strong> command (which uses the <code>fzf</code> tool we installed in Step 1).</p>
 <ol>
-<li>Type <code>z &lt;keyword&gt;</code> and press the <strong>Tab</strong> key <code>⇥</code> (e.g., <code>z proj&lt;Tab&gt;</code>).</li>
-<li>Use the arrow keys <code>↓</code> <code>↑</code> to select the right folder.</li>
-<li>Press <code>Enter</code>.</li>
+<li>Type <strong><code>zi</code></strong> and press <strong>Enter</strong>.</li>
+<li>Use the arrow keys <code>↓</code> <code>↑</code> (or just type a few letters) to select the right folder.</li>
+<li>Press <code>Enter</code> to jump.</li>
 </ol>
 
 
