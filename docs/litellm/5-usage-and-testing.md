@@ -8,7 +8,7 @@ Keep your server running in one Terminal tab, open a **new** Terminal tab (`⌘ 
 ### 1. View Available Models
 First, run this command to see all the loaded model routes you can test via the proxy:
 ```bash
-curl -s http://localhost:4000/v1/models | jq '.data |= if length > 9 then .[0:9] + [{"id": "... (\(length - 9) more models hidden)", "object": "model"}] else . end'
+curl -s http://localhost:4000/v1/models | jq '.data |= if length > 3 then .[0:3] + [{"id": "... (\(length - 3) more models hidden)", "object": "model"}] else . end'
 ```
 
 **Example Output:**
@@ -35,40 +35,8 @@ curl -s http://localhost:4000/v1/models | jq '.data |= if length > 9 then .[0:9]
       "owned_by": "openai"
     },
     {
-      "id": "gemini/gemini-2.0-flash-exp",
-      "object": "model",
-      "created": 1677610602,
-      "owned_by": "openai"
-    },
-    {
-      "id": "gemini/gemini-2.0-flash-thinking-exp-01-21",
-      "object": "model",
-      "created": 1677610602,
-      "owned_by": "openai"
-    },
-    {
-      "id": "gemini/gemini-2.0-flash-001",
-      "object": "model",
-      "created": 1677610602,
-      "owned_by": "openai"
-    },
-    {
-      "id": "gemini/gemini-2.0-flash-lite-preview-02-05",
-      "object": "model",
-      "created": 1677610602,
-      "owned_by": "openai"
-    },
-    {
-      "id": "gemini/veo-2.0-generate-001",
-      "object": "model",
-      "created": 1677610602,
-      "owned_by": "openai"
-    },
-    {
-      "id": "gemini/imagen-3.0-generate-001",
-      "object": "model",
-      "created": 1677610602,
-      "owned_by": "openai"
+      "id": "... (42 more models hidden)",
+      "object": "model"
     }
   ]
 }
