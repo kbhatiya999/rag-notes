@@ -8,7 +8,7 @@
    ```bash
    uv tool install "lightrag-hku[offline,observability]"
    ```
-3. If it says `Address already in use`, open `~/LightRAG/.env` in Zed and change `PORT=8020` to `PORT=8030`.
+3. If it says `Address already in use`, open `~/LightRAG/.env` in [Zed](../dev-tools/zed-text-editor.md) and change `PORT=8020` to `PORT=8030`.
 
 **Can't see `.env` in Finder**
 Files starting with a dot are hidden by default. Open the `LightRAG` folder in Finder (`⌃ + ⌥ + F`) and press `⇧ + ⌘ + .` to show them.

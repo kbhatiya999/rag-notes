@@ -7,7 +7,7 @@ If you prefer not to use the Terminal every time you need your AI proxy, we can 
 First, we need a simple script for Platypus to run. 
 
 1. Open Finder (`⌃ + ⌥ + F`), press `⇧ + ⌘ + H` to go home, then open your `.litellm` folder.
-2. Open Zed, create a new blank document, and paste this code:
+2. Open [Zed](../dev-tools/zed-text-editor.md), create a new blank document, and paste this code:
    *(Note: macOS GUI apps don't load your Terminal environment by default. We must explicitly export the Homebrew paths so it can find your installed tools.)*
    ```bash
    #!/bin/bash

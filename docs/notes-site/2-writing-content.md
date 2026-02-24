@@ -6,7 +6,7 @@ All your notes are just written in plain text files inside the `docs/` folder, u
 
 1. **Create a file (in Finder)**:
    Open the `RAGprojects/rag-notes/docs` folder in Finder (`⌃ + ⌥ + F`). 
-   Open Zed, create a new blank document (`⌘ + N`), and save it into that `docs` folder. 
+   Open [Zed](../dev-tools/zed-text-editor.md), create a new blank document (`⌘ + N`), and save it into that `docs` folder. 
    Name it something like `my-new-note.md` (make sure it ends in `.md`, not `.txt`).
 
 2. **Write in Markdown**:
@@ -25,7 +25,7 @@ All your notes are just written in plain text files inside the `docs/` folder, u
 
 3. **Add to the Menu**:
    For the page to show up on the website's sidebar, you have to attach it to the navigation menu. 
-   Open your `mkdocs.yml` file in Zed. 
+   Open your `mkdocs.yml` file in [Zed](../dev-tools/zed-text-editor.md). 
    Under `nav:`, add the exact name of your new file:
    ```yaml
    nav:

@@ -6,7 +6,7 @@
 3. Open `LightRAG` and create a folder inside it named `inputs`.
 
 ## 2. Create the Configuration File
-1. Open Zed and create a new blank document (`⌘ + N`).
+1. Open [Zed](../dev-tools/zed-text-editor.md) and create a new blank document (`⌘ + N`).
 2. Paste the configuration block below into it (choose your provider section).
 3. Save the file directly into the `LightRAG` folder. 
    **Note**: You must name the file EXACTLY `.env` (it will warn you that starting with a dot makes it hidden — click "Use .").

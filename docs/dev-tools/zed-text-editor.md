@@ -5,9 +5,10 @@ Zed is a fast, Rust-based code editor that supports Language Server Protocol (LS
 ## Install Zed
 
 1. Open **Terminal** (`⌘ + Space`, type "Terminal", press Enter).
-2. Run this command:
+2. Run these commands to install Zed and the file association tool (`duti`):
    ```bash
    brew install --cask zed
+   brew install duti
    ```
 
 ## Make Zed the Default Editor

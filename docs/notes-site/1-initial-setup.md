@@ -35,7 +35,7 @@ You need two things installed on your Mac. Open the Terminal app (`⌘ + Space`,
 
 3. **Configure the Site**:
    Go back to the `rag-notes` folder in Finder. You will see a file named `mkdocs.yml` that was just created.
-   Double-click `mkdocs.yml` to open it in Zed. 
+   Double-click `mkdocs.yml` to open it in [Zed](../dev-tools/zed-text-editor.md). 
    Delete everything in the file, and paste this simple configuration instead:
 
    ```yaml

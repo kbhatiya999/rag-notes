@@ -14,7 +14,7 @@ When the server is running, go to:
 
 ## Change Settings
 1. Go to the `LightRAG` folder in Finder (`⌃ + ⌥ + F`). (Press `⇧ + ⌘ + .` if you don't see `.env`).
-2. Open `.env` in Zed.
+2. Open `.env` in [Zed](../dev-tools/zed-text-editor.md).
 3. Make your changes (like switching the API key) and save.
 4. Restart your server (press `Ctrl + C` in Terminal, then run the script again) to apply the changes.
 
