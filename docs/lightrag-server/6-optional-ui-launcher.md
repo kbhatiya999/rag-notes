@@ -9,8 +9,9 @@ If you prefer not to use the Terminal every time you want to search your notes, 
    - **App Name:** `LightRAG Server`
    - **Script Path:** Click "Select...", press `⇧ + ⌘ + G` (Go to Folder), type `~/LightRAG`, and select `lightrag-launcher.sh`.
    - **Interface:** Change to **Text Window**.
-   - **Identifier:** `com.lightrag.server.app`
-   - **At the very bottom**, make sure **Remain running after execution** and **Run in background** are both **UNCHECKED** (this ensures the app displays its log window and correctly shuts down the server when you quit it).
+   - **At the very bottom**, make sure you **UNCHECK** these two options:
+     - **Remain running after execution:** *Keep unchecked.* If enabled, the app window stays open forever even if your server script crashes, forcing you to manually kill a "zombie" process.
+     - **Run in background:** *Keep unchecked.* If enabled, the app hides itself from your macOS Dock and hides its log window, making it impossible to see errors or gracefully quit the server using `⌘ + Q`.
 3. Click **Create App** at the bottom.
 4. Save it into your **Applications** folder.
 
