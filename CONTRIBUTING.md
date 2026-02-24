@@ -32,7 +32,7 @@ When adding a new guide, first determine if it belongs to an existing section. I
 - **Headings:** Use `#` for the main page title and `##` for major sections.
 - **Emphasis:** Use **bold** (`**text**`) for UI elements, file names, and important concepts. Use backticks (`` ` ``) for commands, variable names, and file paths.
 - **No Admonitions:** Do NOT use MkDocs admonitions (e.g., `!!! tip`, `!!! note`). They were explicitly removed for simplicity. Use standard bold text like **Note:** or **Tip:** instead.
-- **No Multi-Nesting:** Keep Markdown structure simple and flat. Do NOT indent code blocks, quotes, or sub-lists inside numbered list items. Place code blocks flush-left on a new line below the step text.
+- **Code Block Nesting:** When a code block belongs to a numbered list or bullet point, it MUST be indented with exactly **3 spaces** to align with the list item's text. Do not place them flush-left if they are part of a step.
 - **Code Blocks:** Use fenced code blocks with language identifiers.
 - **Finder/Zed Pathing:**
   - *Do NOT write:* "Use `mkdir` and `nano` to create your `.env` file."
