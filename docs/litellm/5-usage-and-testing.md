@@ -50,7 +50,7 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
    mkdir -p ~/Downloads/litellm/images ~/Downloads/litellm/videos
    ```
 
-2. **Generate and Save Image 1 (Minimalist Logo):**
+2. **Generate and Save an Image:**
    ```bash
    curl -s -X POST "http://localhost:4000/v1/images/generations" \
      -H "Content-Type: application/json" \
@@ -62,20 +62,32 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
      
    open ~/Downloads/litellm/images/mountain-logo.png
    ```
+*(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
 
-3. **Generate and Save Image 2 (Cyberpunk Cat):**
+**Test Video Generation (Asynchronous):**
+Video generation takes time, so it requires a multi-step process instead of a single pipeline.
+
+1. **Start Generation:** Send the prompt to the Veo model. This returns an `id` (e.g., `gemini::operations/generate_12345...`) and a `status` of `processing`.
    ```bash
-   curl -s -X POST "http://localhost:4000/v1/images/generations" \
+   curl -X POST "http://localhost:4000/v1/videos" \
      -H "Content-Type: application/json" \
      -d '{
-       "model": "gemini/imagen-4.0-fast-generate-001",
-       "prompt": "A digital painting of a neon cyberpunk cat",
-       "n": 1,
-       "size": "1024x1024"
-     }' | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/cyberpunk-cat.png
-     
-   open ~/Downloads/litellm/images/cyberpunk-cat.png
+       "model": "gemini/veo-3.1-fast-generate-001",
+       "prompt": "A cat playing with a ball of yarn in a sunny garden"
+     }'
    ```
-*(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
+
+2. **Check Status:** Replace `{video_id}` with the actual `id` string returned from Step 1. Wait until the status changes to `completed`.
+   ```bash
+   curl -X GET "http://localhost:4000/v1/videos/{video_id}"
+   ```
+
+3. **Download Video:** Once completed, append `/content` to the URL to download the physical MP4 chunk to your computer.
+   ```bash
+   curl -X GET "http://localhost:4000/v1/videos/{video_id}/content" \
+     --output ~/Downloads/litellm/videos/cat-yarn.mp4
+     
+   open ~/Downloads/litellm/videos/cat-yarn.mp4
+   ```
 
 **Next:** [6. Optional UI Launcher](6-optional-ui-launcher.md)
