@@ -46,24 +46,28 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
    mkdir -p ~/Downloads/litellm/images ~/Downloads/litellm/videos
    ```
 
-2. **Generate and Save an Image:**
+2. **Generate and Save Image(s):**
    ```bash
    response=$(curl -s -X POST "http://localhost:4000/v1/images/generations" \
      -H "Content-Type: application/json" \
      -d '{
        "model": "gemini/imagen-4.0-fast-generate-001",
        "prompt": "A minimalist logo of a mountain",
-       "size": "1024x1024"
+       "size": "1024x1024",
+       "n": 1
      }')
      
-   # 1. Decode the base64 string and save it as a PNG file
-   echo "$response" | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
+   # 1. Loop through all images returned, decode them, and open them in Finder
+   count=1
+   echo "$response" | jq -r '.data[].b64_json' | while read -r b64; do
+     output_path=~/Downloads/litellm/images/mountain-logo-$count.png
+     echo "$b64" | base64 -D > "$output_path"
+     open "$output_path"
+     ((count++))
+   done
    
-   # 2. Print the JSON response to your terminal, hiding the massive base64 string
+   # 2. Print the JSON response to your terminal, hiding the massive base64 strings
    echo "$response" | jq '.data[].b64_json = ["...", "(base64 image data hidden)"]'
-   
-   # 3. Open the downloaded image
-   open ~/Downloads/litellm/images/mountain-logo.png
    ```
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
 
