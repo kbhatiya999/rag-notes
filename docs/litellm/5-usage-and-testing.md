@@ -30,12 +30,12 @@ curl -X POST "http://localhost:4000/v1/chat/completions" \
 ### 3. Test Embeddings
 Test the embeddings API by sending a raw `curl` command against the proxy endpoint `http://localhost:4000/v1`.
 ```bash
-curl -X POST "http://localhost:4000/v1/embeddings" \
+curl -s -X POST "http://localhost:4000/v1/embeddings" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "gemini/gemini-embedding-001",
     "input": "This request needs no LiteLLM key"
-  }'
+  }' | jq '.data[0].embedding |= [.[0], .[1], .[2], "...", "(\(. | length) items)"]'
 ```
 
 ### 4. Test Image Generation
