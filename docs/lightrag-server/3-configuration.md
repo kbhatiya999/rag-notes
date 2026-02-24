@@ -32,6 +32,9 @@ WEBUI_DESCRIPTION=A private RAG system powered by LightRAG
 # WORKING_DIR=/Users/YOUR_MAC_USERNAME/LightRAG
 # INPUT_DIR=/Users/YOUR_MAC_USERNAME/LightRAG/inputs
 
+> [!NOTE]
+> **Where is `rag_storage`?** The official LightRAG default is to create a folder called `rag_storage`. However, our launcher script explicitly sets the `WORKING_DIR` to your `~/LightRAG` folder directly. This puts all database files in the root of that folder for easier access.
+
 # --- Indexing Performance ---
 MAX_ASYNC=4
 MAX_PARALLEL_INSERT=2
