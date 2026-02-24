@@ -1217,7 +1217,7 @@
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s1">  }&#39;</span>
 </code></pre></div></p>
 <p><strong>Test Image Generation &amp; Save to Downloads:</strong>
-Because the <code>images/generations</code> API returns a JSON response with a URL, you can pipe the output to download the image directly into your <code>Downloads</code> folder using <code>jq</code>.</p>
+Because the Gemini <code>images/generations</code> API returns a base64-encoded JSON response rather than a direct image URL, you can pipe the output through <code>jq</code> to decode and save the image directly into your <code>Downloads</code> folder.</p>
 <ol>
 <li>
 <p><strong>Create the output folders</strong> first (if they don't exist):
@@ -1232,7 +1232,7 @@ Because the <code>images/generations</code> API returns a JSON response with a U
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="s1">    &quot;model&quot;: &quot;gemini/imagen-4.0-fast-generate-001&quot;,</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="s1">    &quot;prompt&quot;: &quot;A minimalist logo of a mountain&quot;,</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="s1">    &quot;size&quot;: &quot;1024x1024&quot;</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="s1">  }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.data[0].url&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>-o<span class="w"> </span>~/Downloads/litellm/images/mountain-logo.png
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="s1">  }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.data[0].b64_json&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-D<span class="w"> </span>&gt;<span class="w"> </span>~/Downloads/litellm/images/mountain-logo.png
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>open<span class="w"> </span>~/Downloads/litellm/images/mountain-logo.png
 </code></pre></div></p>
@@ -1246,7 +1246,7 @@ Because the <code>images/generations</code> API returns a JSON response with a U
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="s1">    &quot;prompt&quot;: &quot;A digital painting of a neon cyberpunk cat&quot;,</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="s1">    &quot;n&quot;: 1,</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="s1">    &quot;size&quot;: &quot;1024x1024&quot;</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="s1">  }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.data[0].url&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>-o<span class="w"> </span>~/Downloads/litellm/images/cyberpunk-cat.png
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="s1">  }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.data[0].b64_json&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-D<span class="w"> </span>&gt;<span class="w"> </span>~/Downloads/litellm/images/cyberpunk-cat.png
 <a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>open<span class="w"> </span>~/Downloads/litellm/images/cyberpunk-cat.png
 </code></pre></div>
