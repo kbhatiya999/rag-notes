@@ -3,7 +3,9 @@
 ## 1. Create Folders
 1. Open Finder (`⌃ + ⌥ + F`) and go to your home folder (`⇧ + ⌘ + H`).
 2. Create a folder named `LightRAG`.
-3. Open `LightRAG` and create a folder inside it named `inputs`.
+3. Open `LightRAG` and create two folders inside it:
+   - **`inputs`**: Where you drop your text files.
+   - **`rag_storage`**: Where the database will be saved (Standard default).
 
 ## 2. Create the Configuration File
 1. Open [Zed](../dev-tools/zed-text-editor.md) and create a new blank document (`⌘ + N`).
@@ -29,11 +31,11 @@ WEBUI_DESCRIPTION=A private RAG system powered by LightRAG
 
 # --- Directory Settings (Optional) ---
 # LightRAG defaults to these paths if left commented out:
-# WORKING_DIR=/Users/YOUR_MAC_USERNAME/LightRAG
+# WORKING_DIR=/Users/YOUR_MAC_USERNAME/LightRAG/rag_storage
 # INPUT_DIR=/Users/YOUR_MAC_USERNAME/LightRAG/inputs
 
-> [!NOTE]
-> **Where is `rag_storage`?** The official LightRAG default is to create a folder called `rag_storage`. However, our launcher script explicitly sets the `WORKING_DIR` to your `~/LightRAG` folder directly. This puts all database files in the root of that folder for easier access.
+> [!TIP]
+> **Directory Setup:** We follow the official LightRAG standard by placing all database files inside the `rag_storage` folder. This keeps the root of `~/LightRAG` tidy, containing only your `.env` settings and the `inputs` folder.
 
 # --- Indexing Performance ---
 MAX_ASYNC=4

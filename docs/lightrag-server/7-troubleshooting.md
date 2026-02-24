@@ -27,21 +27,19 @@ This happens when LightRAG tries to use an embedding model that Ollama doesn't h
 If you need to start fresh or fixed a model mismatch, follow these steps to wipe the database:
 
 **Method 1: Finder (Visual)**
-1. Open your `LightRAG` folder.
-2. Select all files ending in `.json`, `.graphml`, `.bin`, and `.db`.
-3. Move them to **Trash**. (Do NOT delete your `.env` file or the `inputs` folder).
+1. Open your **`LightRAG/rag_storage`** folder.
+2. Select all files and move them to **Trash**.
 
 **Method 2: Terminal (Fast)**
-Open Terminal and paste this command to nuk only the database files:
+Open Terminal and run this to wipe only the database:
 ```bash
-rm ~/LightRAG/*.json ~/LightRAG/*.graphml ~/LightRAG/*.bin ~/LightRAG/*.db 2>/dev/null
+rm ~/LightRAG/rag_storage/* 2>/dev/null
 ```
 
 ## File Locations
 
 - **Settings:** `~/LightRAG/.env`
-- **Data & DB:** `~/LightRAG/` 
-  - *Note: Official docs mention a `rag_storage` folder. We point the server directly to `~/LightRAG` to keep your database files in one easy-to-find place.*
+- **Data & DB:** `~/LightRAG/rag_storage/` (Standard LightRAG storage folder)
 - **Documents:** `~/LightRAG/inputs/`
 - **Script:** `~/LightRAG/lightrag-launcher.sh`
 - **The App (Optional):** `/Applications/LightRAG Server.app`
