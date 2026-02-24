@@ -1173,8 +1173,12 @@
 3. If it says <code>Address already in use</code>, open <code>~/LightRAG/.env</code> in <a href="../../dev-tools/zed-text-editor/">Zed</a> and change <code>PORT=8020</code> to <code>PORT=8030</code>.</p>
 <p><strong>Can't see <code>.env</code> in Finder</strong>
 Files starting with a dot are hidden by default. Open the <code>LightRAG</code> folder in Finder (<code>⌃ + ⌥ + F</code>) and press <code>⇧ + ⌘ + .</code> to show them.</p>
-<p><strong>Server running but browser won't connect</strong>
-Check the Terminal output to see exactly what port it started on, and ensure your browser matches (e.g., <code>http://127.0.0.1:8020</code>).</p>
+<p>Check the Terminal output to see exactly what port it started on, and ensure your browser matches (e.g., <code>http://127.0.0.1:8020</code>).</p>
+<p><strong>Ollama "Not Found" (404) Error during Indexing</strong>
+This happens when LightRAG tries to use an embedding model that Ollama doesn't have.
+1. Make sure you have <strong>uncommented</strong> an embedding block in your <code>.env</code> file.
+2. If using Ollama for embeddings, open Terminal and run <code>ollama pull bge-m3</code> (or whichever model you specified).
+3. Check that your <code>EMBEDDING_MODEL</code> in <code>.env</code> matches the model name in Ollama exactly.</p>
 <h2 id="file-locations">File Locations</h2>
 <ul>
 <li><strong>Settings:</strong> <code>~/LightRAG/.env</code></li>
