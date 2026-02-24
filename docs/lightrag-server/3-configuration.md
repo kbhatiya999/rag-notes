@@ -13,6 +13,8 @@
 
 If the `.env` file disappears after saving, press `⇧ + ⌘ + .` inside Finder to show hidden files.
 
+For advanced customization beyond the basics below, refer to the official [LightRAG env.example](https://github.com/HKUDS/LightRAG/blob/main/env.example).
+
 ### The Config Template
 
 ```ini
@@ -33,10 +35,17 @@ CHUNK_SIZE=1200
 CHUNK_OVERLAP_SIZE=100
 
 # ==========================================
-# CHOOSE ONE PROVIDER BELOW AND UNCOMMENT IT
+# CHOOSE ONE PROVIDER BELOW
 # ==========================================
 
-# --- Option 1: OLLAMA ---
+# --- Option 1: LITELLM PROXY (Recommended) ---
+LLM_BINDING=openai
+LLM_BINDING_HOST=http://localhost:4000/v1
+LLM_MODEL=gemini/gemini-2.0-flash
+LLM_BINDING_API_KEY=any-string-will-work
+# (Note: You still need to uncomment an EMBEDDING block from below)
+
+# --- Option 2: OLLAMA ---
 # LLM_BINDING=ollama
 # LLM_BINDING_HOST=http://localhost:11434
 # LLM_MODEL=mistral-nemo:latest
@@ -46,7 +55,7 @@ CHUNK_OVERLAP_SIZE=100
 # EMBEDDING_MODEL=bge-m3:latest
 # EMBEDDING_DIM=1024
 
-# --- Option 2: OPENAI ---
+# --- Option 3: OPENAI ---
 # LLM_BINDING=openai
 # LLM_BINDING_HOST=https://api.openai.com/v1
 # LLM_MODEL=gpt-4o
@@ -56,9 +65,9 @@ CHUNK_OVERLAP_SIZE=100
 # EMBEDDING_MODEL=text-embedding-3-large
 # EMBEDDING_BINDING_API_KEY=sk-your-api-key-here
 
-# --- Option 3: GEMINI ---
+# --- Option 4: GEMINI ---
 # LLM_BINDING=gemini
-# LLM_MODEL=gemini-2.5-flash
+# LLM_MODEL=gemini-2.0-flash
 # LLM_BINDING_HOST=https://generativelanguage.googleapis.com
 # LLM_BINDING_API_KEY=your-gemini-api-key-here
 # EMBEDDING_BINDING=gemini
@@ -66,13 +75,6 @@ CHUNK_OVERLAP_SIZE=100
 # EMBEDDING_BINDING_HOST=https://generativelanguage.googleapis.com
 # EMBEDDING_BINDING_API_KEY=your-gemini-api-key-here
 # EMBEDDING_DIM=1536
-
-# --- Option 4: LITELLM PROXY ---
-# LLM_BINDING=openai
-# LLM_BINDING_HOST=http://localhost:4000/v1
-# LLM_MODEL=gemini/gemini-2.5-flash
-# LLM_BINDING_API_KEY=any-string-will-work
-# (Note: You still need to uncomment an EMBEDDING block from above)
 ```
 
 
