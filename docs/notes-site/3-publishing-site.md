@@ -11,7 +11,7 @@ You can back up your notes to GitHub and host them on GitHub Pages for free.
 
 If you are uploading this project for the first time, you need to use Terminal to send the files to GitHub.
 
-1. Open your `rag-notes` folder in Finder.
+1. Open your `rag-notes` folder in Finder (`⌃ + ⌥ + F`).
 2. In the Path Bar at the bottom of the window, **Right-click** `rag-notes` and select **Open in Terminal**. *(If you don't see the Path Bar, click View > Show Path Bar in the top menu)*.
 3. In the Terminal window that opens, run these commands one after the other:
 
@@ -37,7 +37,7 @@ Your site will be live in a few minutes at `https://<YOUR-GITHUB-USERNAME>.githu
 
 Whenever you add new notes or make changes in Finder, you need to save and re-publish your site:
 
-1. Open **Finder**, right-click the `rag-notes` folder in the bottom Path Bar, and select **Open in Terminal**.
+1. Open **Finder** (`⌃ + ⌥ + F`), right-click the `rag-notes` folder in the bottom Path Bar, and select **Open in Terminal**.
 2. Run these commands:
 
 ```bash

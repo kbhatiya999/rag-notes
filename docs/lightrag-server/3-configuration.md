@@ -1,7 +1,7 @@
 # 3. Server Configuration
 
 ## 1. Create Folders
-1. Open Finder and go to your home folder (`⇧ + ⌘ + H`).
+1. Open Finder (`⌃ + ⌥ + F`) and go to your home folder (`⇧ + ⌘ + H`).
 2. Create a folder named `LightRAG`.
 3. Open `LightRAG` and create a folder inside it named `inputs`.
 

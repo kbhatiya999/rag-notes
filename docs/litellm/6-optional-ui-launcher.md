@@ -6,7 +6,7 @@ If you prefer not to use the Terminal every time you need your AI proxy, we can 
 
 First, we need a simple script for Platypus to run. 
 
-1. Open Finder, press `⇧ + ⌘ + H` to go home, then open your `.litellm` folder.
+1. Open Finder (`⌃ + ⌥ + F`), press `⇧ + ⌘ + H` to go home, then open your `.litellm` folder.
 2. Open Zed, create a new blank document, and paste this code:
    ```bash
    #!/bin/bash
@@ -25,7 +25,7 @@ We need to make it executable. Open Terminal and run:
 1. Open **Platypus** from your Applications folder.
 2. Fill out the settings exactly like this:
    - **App Name:** `LiteLLM Proxy`
-   - **Script Path:** Click "Select...", press `⇧ + ⌘ + G`, type `~/.litellm`, and select your `litellm-launcher.sh` file.
+   - **Script Path:** Click "Select...", press `⇧ + ⌘ + G` (Go to Folder), type `~/.litellm`, and select your `litellm-launcher.sh` file.
    - **Interface:** Change to **Text Window**.
    - **Identifier:** `com.litellm.proxy.app`
    - **At the very bottom**, make sure `Run script in background` and `Remain running after script exits` are both **UNCHECKED**.

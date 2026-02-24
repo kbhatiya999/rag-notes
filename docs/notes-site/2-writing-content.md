@@ -5,7 +5,7 @@ All your notes are just written in plain text files inside the `docs/` folder, u
 ## Add a New Page
 
 1. **Create a file (in Finder)**:
-   Open the `RAGprojects/rag-notes/docs` folder in Finder. 
+   Open the `RAGprojects/rag-notes/docs` folder in Finder (`⌃ + ⌥ + F`). 
    Open Zed, create a new blank document (`⌘ + N`), and save it into that `docs` folder. 
    Name it something like `my-new-note.md` (make sure it ends in `.md`, not `.txt`).
 
@@ -38,7 +38,7 @@ Save the files. If the `run_dev.sh` server is currently running, your browser wi
 ## Organize in Folders
 
 If you want to group notes together into sections:
-1. Open the `docs/` folder in Finder.
+1. Open the `docs/` folder in Finder (`⌃ + ⌥ + F`).
 2. Create a new folder inside it (e.g., name it `tutorials`).
 3. Save your `.md` files into that new folder.
 4. Open `mkdocs.yml` in Zed. List the folder name as a section, and indent the files underneath it:

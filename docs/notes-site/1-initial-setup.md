@@ -18,7 +18,7 @@ You need two things installed on your Mac. Open the Terminal app (`⌘ + Space`,
 ## Setup the Project
 
 1. **Create the Folders (in Finder)**: 
-   Open Finder and go to your home folder (`⇧ + ⌘ + H`). 
+   Open Finder (`⌃ + ⌥ + F`) and go to your home folder (`⇧ + ⌘ + H`). 
    Create a new folder named `RAGprojects`. 
    Open that folder, and create another new folder inside it named `rag-notes`.
 
@@ -78,7 +78,7 @@ You need two things installed on your Mac. Open the Terminal app (`⌘ + Space`,
 ## Run the Site
 
 Whenever you want to view your notes locally on your Mac:
-1. Open the `rag-notes` folder in Finder.
+1. Open the `rag-notes` folder in Finder (`⌃ + ⌥ + F`).
 2. In the Path Bar at the bottom of the Finder window, **Right-click** `rag-notes` and select **Open in Terminal**.
 3. Run the development server:
 

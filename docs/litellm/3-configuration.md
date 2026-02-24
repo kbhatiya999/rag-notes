@@ -4,7 +4,7 @@ LiteLLM looks for a `config.yaml` file to know which models to serve and what AP
 
 ## 1. Create the Config File
 
-1. Open Finder and go to your home folder (`⇧ + ⌘ + H`).
+1. Open Finder (`⌃ + ⌥ + F`) and go to your home folder (`⇧ + ⌘ + H`).
 2. **Important:** Press `⇧ + ⌘ + .` to show hidden files. Finder will not let you create a folder starting with a dot unless hidden files are visible.
 3. Create a new folder (`⇧ + ⌘ + N`) and name it `.litellm` (it will warn you about starting with a dot, confirm it).
 4. Inside the `.litellm` folder, open Zed and create a new blank document.
@@ -38,7 +38,7 @@ model_list:
 ## 3. Set Your API Key
 The config file searches your Mac's environment for the `GEMINI_API_KEY`. We need to save it to your Terminal profile so it's always available:
 
-1. Open Finder and go to your home folder (`⇧ + ⌘ + H`).
+1. Open Finder (`⌃ + ⌥ + F`) and go to your home folder (`⇧ + ⌘ + H`).
 2. Press `⇧ + ⌘ + .` to show hidden files.
 3. Open `.zshrc` in Zed.
 4. Add this line to the bottom, replacing `your-key-here` with your actual Google AI Studio API key:
