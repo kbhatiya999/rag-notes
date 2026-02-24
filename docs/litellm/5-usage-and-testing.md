@@ -57,7 +57,6 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
        "n": 1
      }')
      
-   # 1. Loop through all images returned, decode them, and open them in Finder
    count=1
    echo "$response" | jq -r '.data[].b64_json' | while read -r b64; do
      output_path=~/Downloads/litellm/images/mountain-logo-$count.png
@@ -66,7 +65,6 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
      ((count++))
    done
    
-   # 2. Print the JSON response to your terminal, hiding the massive base64 strings
    echo "$response" | jq '.data[].b64_json = ["...", "(base64 image data hidden)"]'
    ```
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
