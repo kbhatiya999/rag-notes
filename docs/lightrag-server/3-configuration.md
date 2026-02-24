@@ -40,18 +40,17 @@ CHUNK_OVERLAP_SIZE=100
 # ==========================================
 
 # --- Option 1: LITELLM PROXY (Recommended) ---
+# Use this for both LLM and Embeddings via your local LiteLLM Gateway
 LLM_BINDING=openai
 LLM_BINDING_HOST=http://localhost:4000/v1
 LLM_MODEL=gemini/gemini-2.0-flash
 LLM_BINDING_API_KEY=any-string-will-work
 
-# --- LiteLLM Proxy (Recommended for Embedding) ---
-# EMBEDDING_BINDING=openai
-# EMBEDDING_MODEL=gemini/text-embedding-004
-# EMBEDDING_DIM=768
-# EMBEDDING_BINDING_HOST=http://localhost:4000/v1
-# EMBEDDING_BINDING_API_KEY=any-string-will-work
-# (Note: Use this if you want LiteLLM to handle entries for both LLM and Embeddings)
+EMBEDDING_BINDING=openai
+EMBEDDING_BINDING_HOST=http://localhost:4000/v1
+EMBEDDING_MODEL=gemini/text-embedding-004
+EMBEDDING_DIM=768
+EMBEDDING_BINDING_API_KEY=any-string-will-work
 
 # --- Option 2: OLLAMA ---
 # LLM_BINDING=ollama
