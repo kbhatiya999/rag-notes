@@ -779,6 +779,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#method-3-advanced-api-requests-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 3: Advanced API Requests (cURL)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1138,6 +1149,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#method-3-advanced-api-requests-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 3: Advanced API Requests (cURL)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1184,6 +1206,53 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>litellm-proxy<span class="w"> </span>chat<span class="w"> </span>gemini/gemini-2.5-flash
 </code></pre></div>
 <em>(Replace <code>gemini/gemini-2.5-flash</code> with a model from your list).</em></p>
+<h3 id="method-3-advanced-api-requests-curl">Method 3: Advanced API Requests (cURL)</h3>
+<p>If you want to test specific APIs like embeddings or image/video generation, you can use raw <code>curl</code> commands against the proxy endpoint <code>http://localhost:4000/v1</code>.</p>
+<p><strong>Test Embeddings:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/embeddings&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s1">    &quot;model&quot;: &quot;gemini/gemini-embedding-001&quot;,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s1">    &quot;input&quot;: &quot;This request needs no LiteLLM key&quot;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s1">  }&#39;</span>
+</code></pre></div></p>
+<p><strong>Test Image Generation &amp; Save to Downloads:</strong>
+Because the <code>images/generations</code> API returns a JSON response with a URL, you can pipe the output to download the image directly into your <code>Downloads</code> folder using <code>jq</code>.</p>
+<ol>
+<li>
+<p><strong>Create the output folders</strong> first (if they don't exist):
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/Downloads/litellm/images<span class="w"> </span>~/Downloads/litellm/videos
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Generate and Save Image 1 (Minimalist Logo):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/images/generations&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="s1">    &quot;model&quot;: &quot;gemini/imagen-4.0-fast-generate-001&quot;,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="s1">    &quot;prompt&quot;: &quot;A minimalist logo of a mountain&quot;,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="s1">    &quot;size&quot;: &quot;1024x1024&quot;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="s1">  }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.data[0].url&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>-o<span class="w"> </span>~/Downloads/litellm/images/mountain-logo.png
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>open<span class="w"> </span>~/Downloads/litellm/images/mountain-logo.png
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Generate and Save Image 2 (Cyberpunk Cat):</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl<span class="w"> </span>-s<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:4000/v1/images/generations&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="s1">    &quot;model&quot;: &quot;gemini/imagen-4.0-fast-generate-001&quot;,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="s1">    &quot;prompt&quot;: &quot;A digital painting of a neon cyberpunk cat&quot;,</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="s1">    &quot;n&quot;: 1,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="s1">    &quot;size&quot;: &quot;1024x1024&quot;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="s1">  }&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.data[0].url&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>curl<span class="w"> </span>-s<span class="w"> </span>-o<span class="w"> </span>~/Downloads/litellm/images/cyberpunk-cat.png
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>open<span class="w"> </span>~/Downloads/litellm/images/cyberpunk-cat.png
+</code></pre></div>
+<em>(Note: If you receive a "command not found: jq" error, you can install it via <code>brew install jq</code>).</em></p>
+</li>
+</ol>
 <p><strong>Next:</strong> <a href="../6-optional-ui-launcher/">6. Optional UI Launcher</a></p>
 
 
