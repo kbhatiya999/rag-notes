@@ -13,6 +13,7 @@ This creates a true global hotkey (e.g., `⌃ + ⌥ + T`) that will instantly la
 5. Give your shortcut a name at the top (like "Launch Terminal").
 6. Click the **Info (i)** button in the top right corner.
 7. Click **Add Keyboard Shortcut**, then press the key combination you want to use globally (e.g., `⌃ + ⌥ + T`).
+8. Close the window. macOS Shortcuts automatically saves your work.
 
 Your shortcut is now active from anywhere!
 
@@ -29,6 +30,7 @@ If you want a global hotkey to bring up Finder from absolutely anywhere (just li
 5. Give your shortcut a name at the top (like "Launch Finder").
 6. Click the **Info (i)** button in the top right corner.
 7. Click **Add Keyboard Shortcut**, then press the key combination you want to use globally (e.g., `⌃ + ⌥ + F`).
+8. Close the window. macOS Shortcuts automatically saves your work.
 
 ---
 
