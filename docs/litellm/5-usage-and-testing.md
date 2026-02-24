@@ -89,9 +89,10 @@ Video generation is an asynchronous process, so it requires a multi-step script 
    curl -s -X GET "http://localhost:4000/v1/videos/$video_id" | jq
    ```
 
-3. **Download Video:** Once completed, run the `/content` endpoint to download the generated MP4 file to your Mac.
+3. **Download Video:** Once completed, wait a few moments for the video to fully finalize on the servers, then run the `/content` endpoint to download the generated MP4 file to your Mac.
    ```bash
-   curl -X GET "http://localhost:4000/v1/videos/$video_id/content" \
+   sleep 20
+   curl -s -X GET "http://localhost:4000/v1/videos/$video_id/content" \
      --output ~/Downloads/litellm/videos/cat-yarn.mp4
      
    open ~/Downloads/litellm/videos/cat-yarn.mp4
