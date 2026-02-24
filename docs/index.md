@@ -9,11 +9,12 @@ This site contains personal notes for setting up development tools, documentatio
 - **[LiteLLM Server](litellm/1-what-is-litellm.md)**: Running an OpenAI-compatible proxy for local and cloud AI models. 
 - **[LightRAG Server](lightrag-server/1-introduction.md)**: Running a personal RAG search server as a native Mac app.
 
-## Finder Shortcuts
+## Finder & Global Shortcuts
 
 Because these guides rely heavily on the macOS Finder rather than complex Terminal commands, here are the most important keyboard shortcuts to remember:
 
-- **Open in Terminal:** Select a folder and press `⌘ + G` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#2-open-terminal-at-folder)).
+- **Launch Terminal Anywhere:** Press `⌥ + ⇧ + T` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#1-global-terminal-shortcut)).
+- **Open Terminal at Folder:** Select a folder and press `⌘ + G` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#2-open-terminal-at-folder)).
 - **Go to Parent Folder:** Press `⌘ + ↑` to go up one level.
 - **Show Hidden Files:** Press `⇧ + ⌘ + .` to toggle visibility of files like `.env`.
 - **Delete File:** Press `⌘ + Delete` to move a file to the Trash.
