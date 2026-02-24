@@ -48,14 +48,21 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
 
 2. **Generate and Save an Image:**
    ```bash
-   curl -s -X POST "http://localhost:4000/v1/images/generations" \
+   response=$(curl -s -X POST "http://localhost:4000/v1/images/generations" \
      -H "Content-Type: application/json" \
      -d '{
        "model": "gemini/imagen-4.0-fast-generate-001",
        "prompt": "A minimalist logo of a mountain",
        "size": "1024x1024"
-     }' | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
+     }')
      
+   # 1. Decode the base64 string and save it as a PNG file
+   echo "$response" | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
+   
+   # 2. Print the JSON response to your terminal, hiding the massive base64 string
+   echo "$response" | jq '.data[0].b64_json = "<base64_image_data_hidden>"'
+   
+   # 3. Open the downloaded image
    open ~/Downloads/litellm/images/mountain-logo.png
    ```
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
