@@ -8,7 +8,7 @@ Keep your server running in one Terminal tab, open a **new** Terminal tab (`⌘ 
 ### 1. View Available Models
 First, run this command to see all the loaded model routes you can test via the proxy:
 ```bash
-curl -s http://localhost:4000/v1/models | jq
+curl -s http://localhost:4000/v1/models | jq '.data |= if length > 9 then .[0:9] + [{"id": "... (\(length - 9) more models hidden)", "object": "model"}] else . end'
 ```
 
 **Example Output:**
