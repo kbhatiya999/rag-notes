@@ -8,7 +8,7 @@ Zoxide is a faster replacement for `cd` in the Terminal. It remembers the folder
 Open Terminal and run:
 
 ```bash
-brew install zoxide
+brew install zoxide fzf
 ```
 
 ### 2. Hook into ZSH
@@ -40,8 +40,8 @@ z rag
 (This instantly jumps to your `/Users/myuser/RAGprojects/rag-notes` folder).
 
 ### Interactive Search
-If you forgot the exact name or want to see a list of matches:
+If you forgot the exact name or want to see a list of matches, we can use the **Interactive Jump** command (which uses the `fzf` tool we installed in Step 1).
 
-1. Type `z <keyword>` and press the **Tab** key `⇥` (e.g., `z proj<Tab>`).
-2. Use the arrow keys `↓` `↑` to select the right folder.
-3. Press `Enter`.
+1. Type **`zi`** and press **Enter**.
+2. Use the arrow keys `↓` `↑` (or just type a few letters) to select the right folder.
+3. Press `Enter` to jump.
