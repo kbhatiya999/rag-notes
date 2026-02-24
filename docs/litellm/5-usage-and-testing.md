@@ -46,48 +46,53 @@ curl -X POST "http://localhost:4000/v1/embeddings" \
 Because the Gemini `images/generations` API returns a base64-encoded JSON response rather than a direct image URL, you can pipe the output through `jq` to decode and save the image directly into your `Downloads` folder.
 
 1. **Create the output folders** first (if they don't exist):
-   ```bash
-   mkdir -p ~/Downloads/litellm/images ~/Downloads/litellm/videos
-   ```
+
+```bash
+mkdir -p ~/Downloads/litellm/images ~/Downloads/litellm/videos
+```
 
 2. **Generate and Save an Image:**
-   ```bash
-   curl -s -X POST "http://localhost:4000/v1/images/generations" \
-     -H "Content-Type: application/json" \
-     -d '{
-       "model": "gemini/imagen-4.0-fast-generate-001",
-       "prompt": "A minimalist logo of a mountain",
-       "size": "1024x1024"
-     }' | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
-     
-   open ~/Downloads/litellm/images/mountain-logo.png
-   ```
+
+```bash
+curl -s -X POST "http://localhost:4000/v1/images/generations" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gemini/imagen-4.0-fast-generate-001",
+    "prompt": "A minimalist logo of a mountain",
+    "size": "1024x1024"
+  }' | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
+  
+open ~/Downloads/litellm/images/mountain-logo.png
+```
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
 
 **Test Video Generation (Asynchronous):**
 Video generation takes time, so it requires a multi-step process instead of a single pipeline.
 
 1. **Start Generation:** Send the prompt to the Veo model. This returns an `id` (e.g., `gemini::operations/generate_12345...`) and a `status` of `processing`.
-   ```bash
-   curl -X POST "http://localhost:4000/v1/videos" \
-     -H "Content-Type: application/json" \
-     -d '{
-       "model": "gemini/veo-3.1-fast-generate-preview",
-       "prompt": "A cat playing with a ball of yarn in a sunny garden"
-     }'
-   ```
+
+```bash
+curl -X POST "http://localhost:4000/v1/videos" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gemini/veo-3.1-fast-generate-preview",
+    "prompt": "A cat playing with a ball of yarn in a sunny garden"
+  }'
+```
 
 2. **Check Status:** Replace `{video_id}` with the actual `id` string returned from Step 1. Wait until the status changes to `completed`.
-   ```bash
-   curl -X GET "http://localhost:4000/v1/videos/{video_id}"
-   ```
+
+```bash
+curl -X GET "http://localhost:4000/v1/videos/{video_id}"
+```
 
 3. **Download Video:** Once completed, append `/content` to the URL to download the physical MP4 chunk to your computer.
-   ```bash
-   curl -X GET "http://localhost:4000/v1/videos/{video_id}/content" \
-     --output ~/Downloads/litellm/videos/cat-yarn.mp4
-     
-   open ~/Downloads/litellm/videos/cat-yarn.mp4
-   ```
+
+```bash
+curl -X GET "http://localhost:4000/v1/videos/{video_id}/content" \
+  --output ~/Downloads/litellm/videos/cat-yarn.mp4
+  
+open ~/Downloads/litellm/videos/cat-yarn.mp4
+```
 
 **Next:** [6. Optional UI Launcher](6-optional-ui-launcher.md)
