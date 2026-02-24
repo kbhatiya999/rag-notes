@@ -1214,6 +1214,10 @@
    <strong>Note</strong>: You must name the file EXACTLY <code>.env</code> (it will warn you that starting with a dot makes it hidden — click "Use .").</li>
 </ol>
 <p>If the <code>.env</code> file disappears after saving, press <code>⇧ + ⌘ + .</code> inside Finder to show hidden files.</p>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Switching Models?</strong> If you are changing your embedding model (e.g., from Ollama to Gemini), you must delete any existing database files in your <code>LightRAG</code> folder (like <code>*.json</code> or <code>*.graphml</code>) before starting the server. LightRAG cannot mix different model dimensions.</p>
+</blockquote>
 <p>For advanced customization beyond the basics below, refer to the official <a href="https://github.com/HKUDS/LightRAG/blob/main/env.example">LightRAG env.example</a>.</p>
 <h3 id="the-config-template">The Config Template</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># --- General Server Settings ---</span>
