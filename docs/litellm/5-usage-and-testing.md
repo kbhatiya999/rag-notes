@@ -56,41 +56,40 @@ curl -X POST "http://localhost:4000/v1/embeddings" \
   }'
 ```
 
-### 4. Test Image Generation
+### 4. Create Output Folders
+Before testing Image or Video Generation, create the output folders in your Downloads directory where the generated files will be saved:
+```bash
+mkdir -p ~/Downloads/litellm/images ~/Downloads/litellm/videos
+```
+
+### 5. Test Image Generation
 Because the Gemini `images/generations` API returns a base64-encoded JSON response rather than a direct image URL, you can pipe the output through `jq` to decode and save the image directly into your `Downloads` folder.
 
-1. **Create the output folders** first (if they don't exist):
-   ```bash
-   mkdir -p ~/Downloads/litellm/images ~/Downloads/litellm/videos
-   ```
-
-2. **Generate and Save an Image:**
-   ```bash
-   curl -s -X POST "http://localhost:4000/v1/images/generations" \
-     -H "Content-Type: application/json" \
-     -d '{
-       "model": "gemini/imagen-4.0-fast-generate-001",
-       "prompt": "A minimalist logo of a mountain",
-       "size": "1024x1024"
-     }' | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
-     
-   open ~/Downloads/litellm/images/mountain-logo.png
-   ```
+**Generate and Save an Image:**
+```bash
+curl -s -X POST "http://localhost:4000/v1/images/generations" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gemini/imagen-4.0-fast-generate-001",
+    "prompt": "A minimalist logo of a mountain",
+    "size": "1024x1024"
+  }' | jq -r '.data[0].b64_json' | base64 -D > ~/Downloads/litellm/images/mountain-logo.png
+  
+open ~/Downloads/litellm/images/mountain-logo.png
+```
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
 
-### 5. Test Video Generation
+### 6. Test Video Generation
 Video generation is an asynchronous process, so it requires a multi-step script instead of a single pipeline.
 
-1. **Start Generation:** Send the prompt to the Veo model and save the returned `id` string into a terminal variable.
+1. **Start Generation:** Send the prompt to the Veo model. We use `tee /dev/stderr` to print the full API response to your terminal, while piping the `id` string into a terminal variable for the next steps.
    ```bash
    video_id=$(curl -s -X POST "http://localhost:4000/v1/videos" \
      -H "Content-Type: application/json" \
      -d '{
        "model": "gemini/veo-3.1-fast-generate-preview",
        "prompt": "A cat playing with a ball of yarn in a sunny garden"
-     }' | jq -r '.id')
-     
-   echo "Processing Video ID: $video_id"
+     }' | tee /dev/stderr | jq -r '.id')
    ```
 
 2. **Check Status:** Run this command to poll your proxy. Wait until the `status` string changes from `processing` to `completed`.
