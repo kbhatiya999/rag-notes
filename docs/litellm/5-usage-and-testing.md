@@ -177,6 +177,10 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
    }
    ```
 
+   **Generated Asset:**
+
+   ![Generated Mountain Logo](assets/mountain-logo.png)
+
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
 
 ### 5. Test Video Generation
@@ -219,5 +223,9 @@ Video generation is an asynchronous process, so it requires a multi-step script 
      
    open ~/Downloads/litellm/videos/cat-yarn.mp4
    ```
+
+   **Generated Asset:**
+
+   <video controls src="assets/cat-yarn.mp4" width="100%"></video>
 
 **Next:** [6. Optional UI Launcher](6-optional-ui-launcher.md)
