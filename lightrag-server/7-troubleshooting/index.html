@@ -1066,6 +1066,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-clear-the-index-full-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Clear the Index (Full Reset)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1130,6 +1147,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-clear-the-index-full-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Clear the Index (Full Reset)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1179,12 +1213,19 @@ This happens when LightRAG tries to use an embedding model that Ollama doesn't h
 1. Make sure you have <strong>uncommented</strong> an embedding block in your <code>.env</code> file.
 2. If using Ollama for embeddings, open Terminal and run <code>ollama pull bge-m3</code> (or whichever model you specified).
 3. Check that your <code>EMBEDDING_MODEL</code> in <code>.env</code> matches the model name in Ollama exactly.</p>
-<p><strong>Embedding dimension mismatch (AssertionError)</strong>
-This happens when you change your embedding model (e.g., switching from Ollama to Gemini). LightRAG cannot mix different dimensions in the same database.
-1. Open your <code>LightRAG</code> folder in Finder.
-2. <strong>Delete</strong> all files mapping to the database (e.g., <code>*.json</code>, <code>*.graphml</code>, <code>*.bin</code>, <code>*.db</code>). 
-3. <strong>Warning:</strong> This will delete your current index. Your original text files in <code>inputs/</code> are safe.
-4. Restart the server; it will now recreate the database using the new dimensions.</p>
+<ol>
+<li>Restart the server; it will now recreate the database using the new dimensions.</li>
+</ol>
+<h3 id="how-to-clear-the-index-full-reset">How to Clear the Index (Full Reset)</h3>
+<p>If you need to start fresh or fixed a model mismatch, follow these steps to wipe the database:</p>
+<p><strong>Method 1: Finder (Visual)</strong>
+1. Open your <code>LightRAG</code> folder.
+2. Select all files ending in <code>.json</code>, <code>.graphml</code>, <code>.bin</code>, and <code>.db</code>.
+3. Move them to <strong>Trash</strong>. (Do NOT delete your <code>.env</code> file or the <code>inputs</code> folder).</p>
+<p><strong>Method 2: Terminal (Fast)</strong>
+Open Terminal and paste this command to nuk only the database files:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rm<span class="w"> </span>~/LightRAG/*.json<span class="w"> </span>~/LightRAG/*.graphml<span class="w"> </span>~/LightRAG/*.bin<span class="w"> </span>~/LightRAG/*.db<span class="w"> </span><span class="m">2</span>&gt;/dev/null
+</code></pre></div></p>
 <h2 id="file-locations">File Locations</h2>
 <ul>
 <li><strong>Settings:</strong> <code>~/LightRAG/.env</code></li>
