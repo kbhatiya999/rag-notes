@@ -3,11 +3,19 @@
 ## Test the Proxy
 LiteLLM comes with a built-in terminal CLI to easily test your models without writing code. 
 
-Keep your server running in one Terminal tab, open a **new** Terminal tab (`⌘ + T`), and choose one of the testing methods below:
+Keep your server running in one Terminal tab, open a **new** Terminal tab (`⌘ + T`), and follow the tests below:
 
-### Method 1: Basic API Request (cURL)
-Test text generation by sending a standard OpenAI-compatible chat completion request:
+### 1. View Available Models
+First, run this command to see all the loaded model routes you can test:
+```bash
+litellm-proxy models list
+```
 
+### 2. Test Chat (Text Generation)
+You can test basic text generation using any of the three methods below:
+
+**Method A: Standard cURL Request (Recommended)**
+Send a standard OpenAI-compatible chat completion request:
 ```bash
 curl -X POST "http://localhost:4000/v1/chat/completions" \
   -H "Content-Type: application/json" \
@@ -22,34 +30,23 @@ curl -X POST "http://localhost:4000/v1/chat/completions" \
   }'
 ```
 
-### Method 2: Interactive Menu
-Run the proxy tool to open a full interactive menu:
+**Method B: Interactive Menu**
+Run the proxy tool to open a full interactive chat interface:
 ```bash
 litellm-proxy
 ```
-1. Type `models list` and press Enter to see all available models configured in your proxy.
-2. Type `chat` and press Enter.
-3. It will ask for a **Model name**. Type your wildcard proxy route, for example `gemini/gemini-2.5-flash` or `ollama/llama3.2`, and press Enter.
-4. You can now chat directly with the model to verify it works! Press `Ctrl-C` to exit back to the menu, and type `quit` to close the tool.
+1. Type `chat` and press Enter.
+2. It will ask for a **Model name**. Type your wildcard proxy route, for example `gemini/gemini-2.5-flash` or `ollama/llama3.2`, and press Enter.
+3. You can now chat directly with the model to verify it works! Press `Ctrl-C` to exit back to the menu, and type `quit` to close the tool.
 
-### Method 3: Direct Inline Command
-If you want to view models and test them rapidly without the menu, you can run these commands straight from your terminal:
-
-**View Available Models:**
-```bash
-litellm-proxy models list
-```
-
-**Launch Testing Chat:**
+**Method C: Direct Inline Command**
+If you want to quickly launch into the testing chat without the menu, run:
 ```bash
 litellm-proxy chat gemini/gemini-2.5-flash
 ```
-*(Replace `gemini/gemini-2.5-flash` with a model from your list).*
 
-### Method 4: Advanced API Requests (cURL)
-If you want to test specific APIs like embeddings or image/video generation, you can use raw `curl` commands against the proxy endpoint `http://localhost:4000/v1`.
-
-**Test Embeddings:**
+### 3. Test Embeddings
+Test the embeddings API by sending a raw `curl` command against the proxy endpoint `http://localhost:4000/v1`.
 ```bash
 curl -X POST "http://localhost:4000/v1/embeddings" \
   -H "Content-Type: application/json" \
@@ -59,7 +56,7 @@ curl -X POST "http://localhost:4000/v1/embeddings" \
   }'
 ```
 
-**Test Image Generation & Save to Downloads:**
+### 4. Test Image Generation
 Because the Gemini `images/generations` API returns a base64-encoded JSON response rather than a direct image URL, you can pipe the output through `jq` to decode and save the image directly into your `Downloads` folder.
 
 1. **Create the output folders** first (if they don't exist):
@@ -81,8 +78,8 @@ Because the Gemini `images/generations` API returns a base64-encoded JSON respon
    ```
 *(Note: If you receive a "command not found: jq" error, you can install it via `brew install jq`).*
 
-**Test Video Generation (Asynchronous):**
-Video generation takes time, so it requires a multi-step process instead of a single pipeline.
+### 5. Test Video Generation
+Video generation is an asynchronous process, so it requires a multi-step script instead of a single pipeline.
 
 1. **Start Generation:** Send the prompt to the Veo model and save the returned `id` string into a terminal variable.
    ```bash
