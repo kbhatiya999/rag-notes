@@ -1032,6 +1032,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#create-the-launcher-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the Launcher Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-the-app" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1124,6 +1135,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#create-the-launcher-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the Launcher Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-the-app" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1167,6 +1189,24 @@
 
 <h1 id="6-optional-ui-launcher">6. Optional UI Launcher</h1>
 <p>If you prefer not to use the Terminal every time you want to search your notes, we can use a free tool called <strong>Platypus</strong> to wrap our launch script into a simple, double-clickable Mac app.</p>
+<h2 id="create-the-launcher-script">Create the Launcher Script</h2>
+<p>First, we need a simple script for Platypus to run. </p>
+<ol>
+<li>Open Finder (<code>⌃ + ⌥ + F</code>), press <code>⇧ + ⌘ + H</code> to go home, then open your <code>LightRAG</code> folder.</li>
+<li>Open Zed, create a new blank document, and paste this code:
+   <em>(Note: macOS GUI apps don't load your Terminal environment by default. We must explicitly export the Homebrew paths so it can find your installed tools.)</em>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/zsh</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/homebrew/bin:/usr/local/bin:</span><span class="nv">$HOME</span><span class="s2">/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">WORKING_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/LightRAG&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WORKING_DIR</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WORKING_DIR</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">exec</span><span class="w"> </span>lightrag-server<span class="w"> </span>--working-dir<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$WORKING_DIR</span><span class="s2">&quot;</span>
+</code></pre></div></li>
+<li>Save it into your <code>LightRAG</code> folder as <code>lightrag-launcher.sh</code>.</li>
+<li><strong>Make it Executable:</strong> While still in the <code>LightRAG</code> folder in Finder, press <code>⌥ + ⌘ + P</code> to show the Path Bar at the bottom of the window. <strong>Right-click</strong> <code>LightRAG</code> in that Path Bar and select <strong>Open in Terminal</strong>. Then run:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>~/LightRAG/lightrag-launcher.sh
+</code></pre></div></li>
+</ol>
 <h2 id="create-the-app">Create the App</h2>
 <ol>
 <li>Open <strong>Platypus</strong> from your Applications folder.</li>
