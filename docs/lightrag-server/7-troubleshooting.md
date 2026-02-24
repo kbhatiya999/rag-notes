@@ -40,7 +40,7 @@ rm ~/LightRAG/*.json ~/LightRAG/*.graphml ~/LightRAG/*.bin ~/LightRAG/*.db 2>/de
 ## File Locations
 
 - **Settings:** `~/LightRAG/.env`
-- **Data & DB:** `~/LightRAG/`
+- **Data & DB:** `~/LightRAG/` (Note: This is your "working directory" where the database files live. We do not use a separate `rag_storage` folder to keep things simple).
 - **Documents:** `~/LightRAG/inputs/`
 - **Script:** `~/LightRAG/lightrag-launcher.sh`
 - **The App (Optional):** `/Applications/LightRAG Server.app`

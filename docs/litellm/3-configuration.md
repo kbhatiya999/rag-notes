@@ -8,8 +8,8 @@ LiteLLM looks for a `config.yaml` file to know which models to serve and what AP
 2. **Important:** Press `⇧ + ⌘ + .` to show hidden files. Finder will not let you create a folder starting with a dot unless hidden files are visible.
 3. Create a new folder (`⇧ + ⌘ + N`) and name it exactly **`.litellm`** (starting with a dot). If Finder warns you, click **"Use ."** to confirm.
 4. Inside the `.litellm` folder, open [Zed](../dev-tools/zed-text-editor.md) and create a new blank document.
-4. Paste the configuration block (see below) into the document.
-5. Save the document inside `.litellm` and name it EXACTLY `config.yaml`.
+5. Paste the configuration block (see below) into the document.
+6. Save the document inside `.litellm` and name it EXACTLY `config.yaml`.
 
 ## 2. Config Template
 
