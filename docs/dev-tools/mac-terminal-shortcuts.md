@@ -63,3 +63,16 @@ If you are already working in the Terminal and want to visually see your files, 
 open .
 ```
 *(Note: The `.` represents your current directory).*
+---
+
+## 5. The Terminal "Brain" (.zshrc)
+
+Many advanced tools (like Zoxide or LiteLLM) require you to save settings or API keys to your **Terminal Profile**. On a Mac, this file is named `.zshrc`.
+
+**Where is it?** 
+The `.zshrc` file is located in your **Home Folder** (the one with the House icon 🏠), not inside any specific project folder like `LightRAG` or `.litellm`.
+
+**How to find it:**
+1. Open Finder (`⌃ + ⌥ + F`) and go to your home folder (`⇧ + ⌘ + H`).
+2. Press **`⇧ + ⌘ + .`** to show hidden files (dots are hidden by default).
+3. Right-click `.zshrc` and select **Open with > Zed**.

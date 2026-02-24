@@ -36,7 +36,9 @@ model_list:
 ```
 
 ## 3. Set Your API Key
-The config file searches your Mac's environment for the `GEMINI_API_KEY`. We need to save it to your Terminal profile so it's always available:
+The config file searches your Mac's environment for the `GEMINI_API_KEY`. We need to save it to your Terminal profile so it's always available.
+
+**Important:** The `.zshrc` file is located in your **Home Folder** (`⇧ + ⌘ + H`), NOT inside `.litellm` or `LightRAG`.
 
 1. Open Finder (`⌃ + ⌥ + F`) and go to your home folder (`⇧ + ⌘ + H`).
 2. Press `⇧ + ⌘ + .` to show hidden files.

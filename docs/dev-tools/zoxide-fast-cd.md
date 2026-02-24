@@ -14,6 +14,8 @@ brew install zoxide fzf
 ### 2. Hook into ZSH
 Zoxide needs to launch every time you open a Terminal. We add it to your `~/.zshrc` file.
 
+**Important:** The `.zshrc` file is located in your **Home Folder** (`⇧ + ⌘ + H`), NOT inside a specific project folder.
+
 1. Open Finder (`⌃ + ⌥ + F`) and go to your home folder (`⇧ + ⌘ + H`).
 2. Press `⇧ + ⌘ + .` to show hidden files.
 3. Find the `.zshrc` file and open it in [Zed](zed-text-editor.md). *(If it doesn't exist, create a new blank text document and name it `.zshrc`)*.
