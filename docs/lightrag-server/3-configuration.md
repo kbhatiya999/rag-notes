@@ -13,6 +13,9 @@
 
 If the `.env` file disappears after saving, press `⇧ + ⌘ + .` inside Finder to show hidden files.
 
+> [!IMPORTANT]
+> **Switching Models?** If you are changing your embedding model (e.g., from Ollama to Gemini), you must delete any existing database files in your `LightRAG` folder (like `*.json` or `*.graphml`) before starting the server. LightRAG cannot mix different model dimensions.
+
 For advanced customization beyond the basics below, refer to the official [LightRAG env.example](https://github.com/HKUDS/LightRAG/blob/main/env.example).
 
 ### The Config Template

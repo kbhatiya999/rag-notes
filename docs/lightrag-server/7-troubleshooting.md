@@ -21,6 +21,13 @@ This happens when LightRAG tries to use an embedding model that Ollama doesn't h
 2. If using Ollama for embeddings, open Terminal and run `ollama pull bge-m3` (or whichever model you specified).
 3. Check that your `EMBEDDING_MODEL` in `.env` matches the model name in Ollama exactly.
 
+**Embedding dimension mismatch (AssertionError)**
+This happens when you change your embedding model (e.g., switching from Ollama to Gemini). LightRAG cannot mix different dimensions in the same database.
+1. Open your `LightRAG` folder in Finder.
+2. **Delete** all files mapping to the database (e.g., `*.json`, `*.graphml`, `*.bin`, `*.db`). 
+3. **Warning:** This will delete your current index. Your original text files in `inputs/` are safe.
+4. Restart the server; it will now recreate the database using the new dimensions.
+
 ## File Locations
 
 - **Settings:** `~/LightRAG/.env`
