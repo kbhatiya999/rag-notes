@@ -226,6 +226,6 @@ Video generation is an asynchronous process, so it requires a multi-step script 
 
    **Generated Asset:**
 
-   <video controls src="assets/cat-yarn.mp4" width="100%"></video>
+   <video controls src="../assets/cat-yarn.mp4" width="100%"></video>
 
 **Next:** [6. Optional UI Launcher](6-optional-ui-launcher.md)
