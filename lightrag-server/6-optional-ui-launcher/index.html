@@ -1174,8 +1174,11 @@
 <li><strong>App Name:</strong> <code>LightRAG Server</code></li>
 <li><strong>Script Path:</strong> Click "Select...", press <code>⇧ + ⌘ + G</code> (Go to Folder), type <code>~/LightRAG</code>, and select <code>lightrag-launcher.sh</code>.</li>
 <li><strong>Interface:</strong> Change to <strong>Text Window</strong>.</li>
-<li><strong>Identifier:</strong> <code>com.lightrag.server.app</code></li>
-<li><strong>At the very bottom</strong>, make sure <strong>Remain running after execution</strong> and <strong>Run in background</strong> are both <strong>UNCHECKED</strong> (this ensures the app displays its log window and correctly shuts down the server when you quit it).</li>
+<li><strong>At the very bottom</strong>, make sure you <strong>UNCHECK</strong> these two options:<ul>
+<li><strong>Remain running after execution:</strong> <em>Keep unchecked.</em> If enabled, the app window stays open forever even if your server script crashes, forcing you to manually kill a "zombie" process.</li>
+<li><strong>Run in background:</strong> <em>Keep unchecked.</em> If enabled, the app hides itself from your macOS Dock and hides its log window, making it impossible to see errors or gracefully quit the server using <code>⌘ + Q</code>.</li>
+</ul>
+</li>
 <li>Click <strong>Create App</strong> at the bottom.</li>
 <li>Save it into your <strong>Applications</strong> folder.</li>
 </ol>
