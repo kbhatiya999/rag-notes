@@ -10,7 +10,7 @@ If you prefer not to use the Terminal every time you want to search your notes, 
    - **Script Path:** Click "Select...", press `⇧ + ⌘ + G` (Go to Folder), type `~/LightRAG`, and select `lightrag-launcher.sh`.
    - **Interface:** Change to **Text Window**.
    - **Identifier:** `com.lightrag.server.app`
-   - **At the very bottom**, make sure `Run script in background` and `Remain running after script exits` are both **UNCHECKED**.
+   - **At the very bottom**, make sure **Remain running after execution** and **Run in background** are both **UNCHECKED**.
 3. Click **Create App** at the bottom.
 4. Save it into your **Applications** folder.
 

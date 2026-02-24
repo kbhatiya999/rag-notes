@@ -28,7 +28,7 @@ First, we need a simple script for Platypus to run.
    - **Script Path:** Click "Select...", press `⇧ + ⌘ + G` (Go to Folder), type `~/.litellm`, and select your `litellm-launcher.sh` file.
    - **Interface:** Change to **Text Window**.
    - **Identifier:** `com.litellm.proxy.app`
-   - **At the very bottom**, make sure `Run script in background` and `Remain running after script exits` are both **UNCHECKED**.
+   - **At the very bottom**, make sure **Remain running after execution** and **Run in background** are both **UNCHECKED**.
 3. Click **Create App** at the bottom.
 4. Save it into your **Applications** folder.
 
