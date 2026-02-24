@@ -11,6 +11,12 @@ This site contains personal notes for setting up development tools, documentatio
 
 ## Finder & Global Shortcuts
 
+> **Mac Keyboard Symbols:**
+> - `⌃` = Control
+> - `⌥` = Option (Alt)
+> - `⇧` = Shift
+> - `⌘` = Command
+
 Because these guides rely heavily on the macOS Finder rather than complex Terminal commands, here are the most important keyboard shortcuts to remember:
 
 - **Launch Terminal Anywhere:** Press `⌃ + ⌥ + T` (requires [one-time setup](dev-tools/mac-terminal-shortcuts.md#1-global-terminal-shortcut)).
