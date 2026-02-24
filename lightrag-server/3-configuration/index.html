@@ -1204,7 +1204,9 @@
 <ol>
 <li>Open Finder (<code>⌃ + ⌥ + F</code>) and go to your home folder (<code>⇧ + ⌘ + H</code>).</li>
 <li>Create a folder named <code>LightRAG</code>.</li>
-<li>Open <code>LightRAG</code> and create a folder inside it named <code>inputs</code>.</li>
+<li>Open <code>LightRAG</code> and create two folders inside it:</li>
+<li><strong><code>inputs</code></strong>: Where you drop your text files.</li>
+<li><strong><code>rag_storage</code></strong>: Where the database will be saved (Standard default).</li>
 </ol>
 <h2 id="2-create-the-configuration-file">2. Create the Configuration File</h2>
 <ol>
@@ -1228,11 +1230,11 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># --- Directory Settings (Optional) ---</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># LightRAG defaults to these paths if left commented out:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># WORKING_DIR=/Users/YOUR_MAC_USERNAME/LightRAG</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># WORKING_DIR=/Users/YOUR_MAC_USERNAME/LightRAG/rag_storage</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># INPUT_DIR=/Users/YOUR_MAC_USERNAME/LightRAG/inputs</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="na">&gt; [!NOTE]</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="na">&gt; **Where is `rag_storage`?** The official LightRAG default is to create a folder called `rag_storage`. However, our launcher script explicitly sets the `WORKING_DIR` to your `~/LightRAG` folder directly. This puts all database files in the root of that folder for easier access.</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="na">&gt; [!TIP]</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="na">&gt; **Directory Setup</span><span class="o">:</span><span class="s">** We follow the official LightRAG standard by placing all database files inside the `rag_storage` folder. This keeps the root of `~/LightRAG` tidy, containing only your `.env` settings and the `inputs` folder.</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># --- Indexing Performance ---</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="na">MAX_ASYNC</span><span class="o">=</span><span class="s">4</span>
