@@ -54,7 +54,7 @@ LLM_BINDING_API_KEY=any-string-will-work
 
 EMBEDDING_BINDING=openai
 EMBEDDING_BINDING_HOST=http://localhost:4000/v1
-EMBEDDING_MODEL=gemini/text-embedding-004
+EMBEDDING_MODEL=gemini/gemini-embedding-001
 EMBEDDING_DIM=768
 EMBEDDING_BINDING_API_KEY=any-string-will-work
 
