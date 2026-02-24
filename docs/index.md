@@ -16,6 +16,9 @@ This site contains personal notes for setting up development tools, documentatio
 > - `⌥` = Option (Alt)
 > - `⇧` = Shift
 > - `⌘` = Command
+>
+> **The Terminal "Brain" (.zshrc):**
+> `.zshrc` is a special system file in your home folder that stores your API keys and custom settings. See the **[navigation guide](dev-tools/mac-terminal-shortcuts.md#5-the-terminal-brain-zshrc)** to find it.
 
 Because these guides rely heavily on the macOS Finder rather than complex Terminal commands, here are the most important keyboard shortcuts to remember:
 
