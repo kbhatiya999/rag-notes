@@ -17,12 +17,59 @@ curl -s http://localhost:4000/v1/models | jq
   "object": "list",
   "data": [
     {
+      "id": "gemini/*",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
       "id": "ollama/*",
       "object": "model",
       "created": 1677610602,
       "owned_by": "openai"
     },
-    "... (truncated for brevity)"
+    {
+      "id": "gemini/gemini-1.5-flash-8b-exp-0924",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "gemini/gemini-2.0-flash-exp",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "gemini/gemini-2.0-flash-thinking-exp-01-21",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "gemini/gemini-2.0-flash-001",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "gemini/gemini-2.0-flash-lite-preview-02-05",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "gemini/veo-2.0-generate-001",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    },
+    {
+      "id": "gemini/imagen-3.0-generate-001",
+      "object": "model",
+      "created": 1677610602,
+      "owned_by": "openai"
+    }
   ]
 }
 ```
