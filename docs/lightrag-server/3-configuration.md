@@ -49,13 +49,13 @@ CHUNK_OVERLAP_SIZE=100
 # Use this for both LLM and Embeddings via your local LiteLLM Gateway
 LLM_BINDING=openai
 LLM_BINDING_HOST=http://localhost:4000/v1
-LLM_MODEL=gemini/gemini-2.0-flash
+LLM_MODEL=gemini/gemini-2.5-flash
 LLM_BINDING_API_KEY=any-string-will-work
 
 EMBEDDING_BINDING=openai
 EMBEDDING_BINDING_HOST=http://localhost:4000/v1
 EMBEDDING_MODEL=gemini/gemini-embedding-001
-EMBEDDING_DIM=768
+EMBEDDING_DIM=3072
 EMBEDDING_BINDING_API_KEY=any-string-will-work
 
 # --- Option 2: OLLAMA ---
@@ -92,7 +92,7 @@ EMBEDDING_BINDING_API_KEY=any-string-will-work
 # EMBEDDING_MODEL=gemini-embedding-001
 # EMBEDDING_BINDING_HOST=https://generativelanguage.googleapis.com
 # EMBEDDING_BINDING_API_KEY=your-gemini-api-key-here
-# EMBEDDING_DIM=1536
+# EMBEDDING_DIM=3072
 ```
 
 
