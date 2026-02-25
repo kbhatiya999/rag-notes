@@ -13,10 +13,9 @@ First, we need a simple script for Platypus to run.
    #!/bin/zsh
    export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.local/bin:$PATH"
    WORKING_DIR="$HOME/LightRAG"
-   STORAGE_DIR="$WORKING_DIR/rag_storage"
-   mkdir -p "$STORAGE_DIR"
-   cd "$STORAGE_DIR"
-   exec lightrag-server --input-dir "$WORKING_DIR/inputs"
+   mkdir -p "$WORKING_DIR"
+   cd "$WORKING_DIR"
+   exec lightrag-server
    ```
 3. Save it into your `LightRAG` folder as `lightrag-launcher.sh`.
 4. **Make it Executable:** While still in the `LightRAG` folder in Finder, press `⌥ + ⌘ + P` to show the Path Bar at the bottom of the window. **Right-click** `LightRAG` in that Path Bar and select **Open in Terminal**. Then run:
