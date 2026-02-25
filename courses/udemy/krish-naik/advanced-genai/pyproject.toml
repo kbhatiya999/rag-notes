@@ -1,0 +1,11 @@
+[project]
+name = "advanced-genai"
+version = "0.1.0"
+description = "A nested course package"
+dependencies = [
+    "ipython",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

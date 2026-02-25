@@ -28,13 +28,31 @@ nav:
     - "5. Usage Guide": lightrag-server/5-usage.md
     - "6. Optional UI Launcher": lightrag-server/6-optional-ui-launcher.md
     - "7. Troubleshooting": lightrag-server/7-troubleshooting.md
+  - Courses:
+      - Udemy:
+          - Krish Naik:
+              - Advanced GenAI: courses/udemy/krish-naik/advanced-genai.md
 
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - from pathlib import Path
+            - "[sys.path.append(str(p)) for p in Path('courses').rglob('src')]"
 
 theme:
   name: material
