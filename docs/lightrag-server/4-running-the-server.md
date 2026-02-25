@@ -7,7 +7,7 @@ To start your Personal Search Server, you just need to run the launch script fro
 1. Open **Terminal**.
 2. Run this command:
    ```bash
-   bash ~/LightRAG/lightrag-launcher.sh
+   cd ~/LightRAG && lightrag-server
    ```
 3. Wait a few seconds until you see `Uvicorn running on http://127.0.0.1:8020`.
 

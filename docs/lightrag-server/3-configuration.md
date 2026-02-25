@@ -7,6 +7,11 @@
    - **`inputs`**: Where you drop your text files.
    - **`rag_storage`**: Where the database will be saved (Standard default).
 
+By the end of this step, you will have created the following complete paths:
+- `~/LightRAG`
+- `~/LightRAG/inputs`
+- `~/LightRAG/rag_storage`
+
 ## 2. Create the Configuration File
 1. Open [Zed](../dev-tools/zed-text-editor.md) and create a new blank document (`⌘ + N`).
 2. Paste the configuration block below into it (choose your provider section).
